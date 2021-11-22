@@ -10,10 +10,21 @@
 8.  [cat](#cat)
 9.  [rm](#rm)
 10. [ps](#ps)
-11. [stat](#stat)
-12. [alias](#alias)
-
-
+11. [kill](#kill)
+12. [stat](#stat)
+13. [alias](#alias)
+14. [grep](#grep)
+15. [man](#man)
+16. [ln](#ln)
+17. [df](#df)
+18. [chmod](#chmod)
+19. [mv](#mv)
+20. [setsid](#setsid)
+21. [find](#find)
+22. [halt](#halt)
+23. [poweroff](#poweroff)
+24. [reboot](#reboot)
+25. [shutdown](#pshutdown)
 
 ## ls
 
@@ -116,7 +127,7 @@ https://man7.org/linux/man-pages/man1/su.1.html
 <img src="https://github.com/Drakonof/references/tree/main/bash/doc/su.png" width="1000">
 
 To leaving su:
-    cntr + d
+cntr + d
 
 ## sudo
 
@@ -202,6 +213,24 @@ https://man7.org/linux/man-pages/man1/ps.1.html
 
 <img src="https://github.com/Drakonof/references/tree/main/bash/doc/ps to file.png" width="1000">
 
+## kill
+
+kill - terminate a process
+
+kill  [-signal|-s signal|-p]  [-q value] [-a] [--timeout milliseconds signal] [--] pid|name
+
+kill -l [number] | -L
+
+https://man7.org/linux/man-pages/man1/kill.1.html
+
+`$ kill 4455`
+
+<img src="https://github.com/Drakonof/references/tree/main/bash/doc/kill.png" width="1000">
+
+`$ kill -9 4455` - 100% kill of process
+
+<img src="https://github.com/Drakonof/references/tree/main/bash/doc/kill -9.png" width="1000">
+
 ## stat
 
 stat - display file or file system status
@@ -220,6 +249,8 @@ alias — define or display aliases in one session
 
 alias [alias-name[=string]]
 
+https://man7.org/linux/man-pages/man1/alias.1p.html
+
 `$ alias ll="ls -la"`
 
 <img src="https://github.com/Drakonof/references/tree/main/bash/doc/alias.png" width="1000">
@@ -229,8 +260,220 @@ alias [alias-name[=string]]
 <img src="https://github.com/Drakonof/references/tree/main/bash/doc/alias display.png" width="1000">
 
 For comstant setting aliases:
-    `$ nano ~/.bashrc`
-    `$ exec bash`
+
+`$ nano ~/.bashrc`
+
+`$ exec bash`
 
 <img src="https://github.com/Drakonof/references/tree/main/bash/doc/alias bashrc.png" width="1000">
 <img src="https://github.com/Drakonof/references/tree/main/bash/doc/alias exec.png" width="1000">
+
+## grep - NOT COMPLITE
+
+------------------------------------------------------
+grep - print lines that match patterns
+
+grep [options] PATTERNS [file]
+
+https://man7.org/linux/man-pages/man1/grep.1.html
+
+`$ grep Hello 'Hello World`
+
+<img src="https://github.com/Drakonof/references/tree/main/bash/doc/grep pattern.png" width="1000">
+
+ps -ax | grep nano
+------------------------------------------------------
+
+## man 
+
+man - an interface to the system reference manuals
+
+man [man options] [[section] page]
+
+man -k [apropos options] regexp
+
+man -K [man options] [section] term
+
+man -f [whatis options] page
+
+man -l [man options] file
+
+man -w|-W [man options] page
+
+https://man7.org/linux/man-pages/man1/man.1.html
+
+`$ man ls` - display a manual of ls command
+
+## ln
+
+ln - make links between files
+
+ln [options] [-T] target link_name
+
+ln [options] target
+
+ln [options] target directory
+
+ln [options] -t directory target
+
+https://man7.org/linux/man-pages/man1/ln.1.html
+
+`$ ln "hello World.txt Hello.txt"`
+
+<img src="https://github.com/Drakonof/references/tree/main/bash/doc/ln.png" width="1000">
+
+## df
+
+df - report file system disk space usage
+
+df [options] [file]
+
+https://man7.org/linux/man-pages/man1/df.1.html
+
+`$ df`
+
+<img src="https://github.com/Drakonof/references/tree/main/bash/doc/df.png" width="1000">
+
+## chmod
+
+chmod - change file mode bits
+
+chmod [options] mode[,mode] file
+
+chmod [options] octal-mode file
+
+chmod [options] --reference=rfile file
+
+https://man7.org/linux/man-pages/man1/chmod.1.html
+
+`$ chmod 777 'Hello World.txt'`
+
+<img src="https://github.com/Drakonof/references/tree/main/bash/doc/chmod.png" width="1000">
+
+777:
+
+N   Description                      ls   binary  
+
+0   No permissions at all            ---  000
+
+1   Only execute                     --x  001
+
+2   Only write                       -w-  010
+
+3   Write and execute                -wx  011
+
+4   Only read                        r--  100
+
+5   Read and execute                 r-x  101
+
+6   Read and write                   rw-  110
+
+7   Read, write, and execute         rwx  111
+
+-rw-r--r-- 1 Drakonof a 12.0K Apr  8 20:51 Hello World.txt
+|[-][-][-] - [------][-]
+| |  |  |  |    |     |
+| |  |  |  |    |     +--------------> 7. Group
+| |  |  |  |    +--------------------> 6. Owner
+| |  |  |  +-------------------------> 5. Alternate Access Method
+| |  |  +----------------------------> 4. Others Permissions
+| |  +-------------------------------> 3. Group Permissions
+| +----------------------------------> 2. Owner Permissions
++------------------------------------> 1. File Type
+
+## mv
+
+mv — move files
+
+mv [-if] file target_file
+
+mv [-if] file... target_dir
+
+https://man7.org/linux/man-pages/man1/mv.1p.html
+
+`$ mv 'Hello World.txt' 'Hello World'`
+
+<img src="https://github.com/Drakonof/references/tree/main/bash/doc/vm.png" width="1000">
+
+## setsid
+
+setsid - run a program in a new session
+
+setsid [options] program [arguments]
+
+`$ setsid konsole` - launch the konsole in a new session
+
+https://man7.org/linux/man-pages/man1/setsid.1.html
+
+<img src="https://github.com/Drakonof/references/tree/main/bash/doc/setsid.png" width="1000">
+
+## find
+
+find - search for files in a directory hierarchy
+
+find [-H] [-L] [-P] [-D debugopts] [-Olevel] [starting-point...] [expression]
+
+`$ find .|grep Hello` - find Hello files from this dir
+
+https://man7.org/linux/man-pages/man1/setsid.1.html
+
+<img src="https://github.com/Drakonof/references/tree/main/bash/doc/fnd.png" width="1000">
+
+## halt
+
+halt - instructs hardware to stop CPU functions
+
+halt [options]
+
+https://man7.org/linux/man-pages/man8/halt.8.html
+
+`$ halt`
+
+`$ halt -p`
+
+`$ halt --reboot`
+
+
+## poweroff
+
+poweroff - instructs the system to power down
+
+poweroff [options]
+
+https://man7.org/linux/man-pages/man8/halt.8.html
+
+`$ poweroff`
+
+`$ poweroff --halt`
+
+`$ poweroff --reboot`
+
+## reboot
+
+reboot - restarts or reboots the system
+
+https://man7.org/linux/man-pages/man8/halt.8.html
+
+`$ reboot --halt`
+
+`$ reboot -p`
+
+`$ reboot`
+
+## shutdown
+
+shutdown - halt, power-off or reboot the machine
+
+shutdown [options] [time] [wall]
+
+`$ sudo shutdown 11:00` - will schedule system shutdown at 11 A.M
+
+`$ sudo shutdown +10` - will schedule system shutdown in 10 minutes from now
+
+`$ sudo shutdown now` - shuts down a system immediately
+
+`$ sudo shutdown +30 "Hardware upgrade"` - will shut down the system in 30 minutes from now and notify the users that a hardware upgrade will be performed
+
+`$ sudo shutdown -r` - reboots the system
+
+`$ sudo shutdown -c` - cancel and stop shutdown
