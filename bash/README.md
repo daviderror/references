@@ -20,15 +20,15 @@ https://man7.org/linux/man-pages/man1/ls.1.html
 
 `$ ls`
 
-<img src="https://github.com/Drakonof/references/tree/main/bash/docls.png" width="1000"> 
+<img src="https://github.com/Drakonof/references/tree/main/bash/doc/ls.png" width="1000"> 
 
 `$ ls -l` use a long listing format
 
-<img src="https://github.com/Drakonof/references/tree/main/bash/docls_l.png" width="1000"> 
+<img src="https://github.com/Drakonof/references/tree/main/bash/doc/ls_l.png" width="1000"> 
 
 `$ ls -l /etc/network/`
 
-<img src="https://github.com/Drakonof/references/tree/main/bash/docls_l_dir.png" width="1000"> 
+<img src="https://github.com/Drakonof/references/tree/main/bash/doc/ls_l_dir.png" width="1000"> 
 
 
 aliases: `$ ll` == `$ ls -l`
@@ -44,11 +44,11 @@ https://man7.org/linux/man-pages/man1/mkdir.1.html
 
 `$ mkdir some_dir`
 
-<img src="https://github.com/Drakonof/references/tree/main/bash/docmkdir.png" width="1000"> 
+<img src="https://github.com/Drakonof/references/tree/main/bash/doc/mkdir.png" width="1000"> 
 
 `$ mkdir "some_dir"`
 
-<img src="https://github.com/Drakonof/references/tree/main/bash/docmkdir 2.png" width="1000">
+<img src="https://github.com/Drakonof/references/tree/main/bash/doc/mkdir 2.png" width="1000">
 
 ## cd
 
@@ -60,31 +60,31 @@ https://man7.org/linux/man-pages/man1/cd.1p.html
 
 `$ cd` - to home directory
 
-<img src="https://github.com/Drakonof/references/tree/main/bash/doccd.png" width="1000">
+<img src="https://github.com/Drakonof/references/tree/main/bash/doc/cd.png" width="1000">
 
 `$ cd -` - to previous directory
 
-<img src="https://github.com/Drakonof/references/tree/main/bash/doccd_prew.png" width="1000">
+<img src="https://github.com/Drakonof/references/tree/main/bash/doc/cd_prew.png" width="1000">
 
 `$ cd ../` - to one below directory
 
-<img src="https://github.com/Drakonof/references/tree/main/bash/doccd_one_below.png" width="1000">
+<img src="https://github.com/Drakonof/references/tree/main/bash/doc/cd_one_below.png" width="1000">
 
 `$ cd ../../` - to two below directories, and so on accordingly number of ../
 
-<img src="https://github.com/Drakonof/references/tree/main/bash/doccd_two_below.png" width="1000">
+<img src="https://github.com/Drakonof/references/tree/main/bash/doc/cd_two_below.png" width="1000">
 
 `$ cd /dir1/dir2/` - in two directories from the root directory, from any directory
 
- <img src="https://github.com/Drakonof/references/tree/main/bash/doccd_two_dir.png" width="1000">
+ <img src="https://github.com/Drakonof/references/tree/main/bash/doc/cd_two_dir.png" width="1000">
 
 `$ cd /root dir1/root dir2/` - in two directories from the root directory, from any directory
 
- <img src="https://github.com/Drakonof/references/tree/main/bash/doccd_two_root_dir.png" width="1000">
+ <img src="https://github.com/Drakonof/references/tree/main/bash/doc/cd_two_root_dir.png" width="1000">
 
 `$ cd /` - to a root directory, from any directory
 
-<img src="https://github.com/Drakonof/references/tree/main/bash/doccd_root.png" width="1000">
+<img src="https://github.com/Drakonof/references/tree/main/bash/doc/cd_root.png" width="1000">
 
  ## whoami
 
@@ -96,7 +96,7 @@ https://man7.org/linux/man-pages/man1/whoami.1.html
 
 `$ whoami`
 
-<img src="https://github.com/Drakonof/references/tree/main/bash/docwhoami.png" width="1000">
+<img src="https://github.com/Drakonof/references/tree/main/bash/doc/whoami.png" width="1000">
 
  ## su
 
@@ -108,7 +108,7 @@ https://man7.org/linux/man-pages/man1/su.1.html
 
 `$ su`
 
-<img src="https://github.com/Drakonof/references/tree/main/bash/docsu.png" width="1000">
+<img src="https://github.com/Drakonof/references/tree/main/bash/doc/su.png" width="1000">
 
 cntr + d - to leaving su
 
@@ -128,7 +128,7 @@ https://man7.org/linux/man-pages/man8/sudo.8.html
 
 `$ sudo ls`
 
-<img src="https://github.com/Drakonof/references/tree/main/bash/docsudo ls.png" width="1000">
+<img src="https://github.com/Drakonof/references/tree/main/bash/doc/sudo ls.png" width="1000">
 
 ## echo
 
