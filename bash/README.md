@@ -24,7 +24,7 @@
 22. [halt](#halt)
 23. [poweroff](#poweroff)
 24. [reboot](#reboot)
-25. [shutdown](#pshutdown)
+25. [shutdown](#shutdown)
 
 ## ls
 
@@ -371,14 +371,23 @@ N   Description                      ls   binary
 7   Read, write, and execute         rwx  111
 
 -rw-r--r-- 1 Drakonof a 12.0K Apr  8 20:51 Hello World.txt
+
 |[-][-][-] - [------][-]
+
 | |  |  |  |    |     |
+
 | |  |  |  |    |     +--------------> 7. Group
+
 | |  |  |  |    +--------------------> 6. Owner
+
 | |  |  |  +-------------------------> 5. Alternate Access Method
+
 | |  |  +----------------------------> 4. Others Permissions
+
 | |  +-------------------------------> 3. Group Permissions
+
 | +----------------------------------> 2. Owner Permissions
+
 +------------------------------------> 1. File Type
 
 ## mv
