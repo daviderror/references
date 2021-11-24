@@ -36,15 +36,15 @@ https://man7.org/linux/man-pages/man1/ls.1.html
 
 `$ ls`
 
-<img src="https://drive.google.com/uc?export=view&id=12Qsd1pVQ53_3P_lRkVKAThBCBnqpkeMi" width="1000"> <!--- ls --->
+<img src="https://drive.google.com/uc?export=view&id=12Qsd1pVQ53_3P_lRkVKAThBCBnqpkeMi" width="1000"> <!--- ls -->
 
 `$ ls -l` use a long listing format
 
-<img src="https://drive.google.com/uc?export=view&id=1bZL9znYFJ80woAf0kM1_Fqvqy2bPsw97" width="1000"> <!--- ls_l --->
+<img src="https://drive.google.com/uc?export=view&id=1bZL9znYFJ80woAf0kM1_Fqvqy2bPsw97" width="1000"> <!--- ls_l -->
 
 `$ ls -l /etc/network/`
 
-<img src="https://drive.google.com/uc?export=view&id=1YwMXfdTtE0qzSHqD9YFtG-9B7frgBW-e" width="1000"> <!--- ls_dir --->
+<img src="https://drive.google.com/uc?export=view&id=1YwMXfdTtE0qzSHqD9YFtG-9B7frgBW-e" width="1000"> <!--- ls_dir -->
 
 
 aliases: `$ ll` == `$ ls -l`
@@ -60,11 +60,11 @@ https://man7.org/linux/man-pages/man1/mkdir.1.html
 
 `$ mkdir some_dir`
 
-<img src="https://drive.google.com/uc?export=view&id=14cCRvElgUA9uixSuS-bK_m5zOkL4nVUi" width="1000"> <!--- mkdir --->
+<img src="https://drive.google.com/uc?export=view&id=14cCRvElgUA9uixSuS-bK_m5zOkL4nVUi" width="1000"> <!--- mkdir -->
 
 `$ mkdir "some_dir"`
 
-<img src="https://drive.google.com/uc?export=view&id=1CqC-wFQFOXY2uwpAkVvvVHGaj3uIkaMw" width="1000"> <!--- mkdir 2 --->
+<img src="https://drive.google.com/uc?export=view&id=1CqC-wFQFOXY2uwpAkVvvVHGaj3uIkaMw" width="1000"> <!--- mkdir 2 -->
 
 ## cd
 
