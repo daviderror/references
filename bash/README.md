@@ -112,7 +112,7 @@ https://man7.org/linux/man-pages/man1/whoami.1.html
 
 `$ whoami`
 
-<img src="https://drive.google.com/drive/folders/1r9imgDOkOCUT06yPJ4HFIO8wOT4kzC5p?usp=sharing/whoami.png" width="1000">
+<img src="https://drive.google.com/file/d/1-NNH-d8XFfYuTKxtsCsKcqMQWFoo7tZS/view?usp=sharing" width="1000">
 
  ## su
 
