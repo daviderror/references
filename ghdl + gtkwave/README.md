@@ -1,6 +1,6 @@
---std=08            - vhdl standart 2008
---ieee=synopsys     - addind synopsys for ieee.std_logic_textio.all  
---max-stack-alloc=0 -
+--std=08        - vhdl standart 2008
+
+--ieee=synopsys - addind synopsys for ieee.std_logic_textio.all  
 
 ## syntax check
 

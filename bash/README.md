@@ -36,15 +36,15 @@ https://man7.org/linux/man-pages/man1/ls.1.html
 
 `$ ls`
 
-<img src="https://github.com/Drakonof/references/tree/main/bash/doc/ls.png" width="1000"> 
+<img src="https://drive.google.com/drive/folders/1r9imgDOkOCUT06yPJ4HFIO8wOT4kzC5p/ls.png" width="1000"> 
 
 `$ ls -l` use a long listing format
 
-<img src="https://github.com/Drakonof/references/tree/main/bash/doc/ls_l.png" width="1000"> 
+<img src="https://drive.google.com/drive/folders/1r9imgDOkOCUT06yPJ4HFIO8wOT4kzC5p/ls_l.png" width="1000"> 
 
 `$ ls -l /etc/network/`
 
-<img src="https://github.com/Drakonof/references/tree/main/bash/doc/ls_l_dir.png" width="1000"> 
+<img src="https://drive.google.com/drive/folders/1r9imgDOkOCUT06yPJ4HFIO8wOT4kzC5p/ls_l_dir.png" width="1000"> 
 
 
 aliases: `$ ll` == `$ ls -l`
@@ -60,11 +60,11 @@ https://man7.org/linux/man-pages/man1/mkdir.1.html
 
 `$ mkdir some_dir`
 
-<img src="https://github.com/Drakonof/references/tree/main/bash/doc/mkdir.png" width="1000"> 
+<img src="https://drive.google.com/drive/folders/1r9imgDOkOCUT06yPJ4HFIO8wOT4kzC5p/mkdir.png" width="1000"> 
 
 `$ mkdir "some_dir"`
 
-<img src="https://github.com/Drakonof/references/tree/main/bash/doc/mkdir 2.png" width="1000">
+<img src="https://drive.google.com/drive/folders/1r9imgDOkOCUT06yPJ4HFIO8wOT4kzC5p/mkdir 2.png" width="1000">
 
 ## cd
 
@@ -76,31 +76,31 @@ https://man7.org/linux/man-pages/man1/cd.1p.html
 
 `$ cd` - to home directory
 
-<img src="https://github.com/Drakonof/references/tree/main/bash/doc/cd.png" width="1000">
+<img src="https://drive.google.com/drive/folders/1r9imgDOkOCUT06yPJ4HFIO8wOT4kzC5p/cd.png" width="1000">
 
 `$ cd -` - to previous directory
 
-<img src="https://github.com/Drakonof/references/tree/main/bash/doc/cd_prew.png" width="1000">
+<img src="https://drive.google.com/drive/folders/1r9imgDOkOCUT06yPJ4HFIO8wOT4kzC5p/cd_prew.png" width="1000">
 
 `$ cd ../` - to one below directory
 
-<img src="https://github.com/Drakonof/references/tree/main/bash/doc/cd_one_below.png" width="1000">
+<img src="https://drive.google.com/drive/folders/1r9imgDOkOCUT06yPJ4HFIO8wOT4kzC5p/cd_one_below.png" width="1000">
 
 `$ cd ../../` - to two below directories, and so on accordingly number of ../
 
-<img src="https://github.com/Drakonof/references/tree/main/bash/doc/cd_two_below.png" width="1000">
+<img src="https://drive.google.com/drive/folders/1r9imgDOkOCUT06yPJ4HFIO8wOT4kzC5p/cd_two_below.png" width="1000">
 
 `$ cd /dir1/dir2/` - in two directories from the root directory, from any directory
 
- <img src="https://github.com/Drakonof/references/tree/main/bash/doc/cd_two_dir.png" width="1000">
+ <img src="https://drive.google.com/drive/folders/1r9imgDOkOCUT06yPJ4HFIO8wOT4kzC5p/cd_two_dir.png" width="1000">
 
 `$ cd /root dir1/root dir2/` - in two directories from the root directory, from any directory
 
- <img src="https://github.com/Drakonof/references/tree/main/bash/doc/cd_two_root_dir.png" width="1000">
+ <img src="https://drive.google.com/drive/folders/1r9imgDOkOCUT06yPJ4HFIO8wOT4kzC5p/cd_two_root_dir.png" width="1000">
 
 `$ cd /` - to a root directory, from any directory
 
-<img src="https://github.com/Drakonof/references/tree/main/bash/doc/cd_root.png" width="1000">
+<img src="https://drive.google.com/drive/folders/1r9imgDOkOCUT06yPJ4HFIO8wOT4kzC5p/cd_root.png" width="1000">
 
  ## whoami
 
@@ -112,7 +112,7 @@ https://man7.org/linux/man-pages/man1/whoami.1.html
 
 `$ whoami`
 
-<img src="https://github.com/Drakonof/references/tree/main/bash/doc/whoami.png" width="1000">
+<img src="https://drive.google.com/drive/folders/1r9imgDOkOCUT06yPJ4HFIO8wOT4kzC5p/whoami.png" width="1000">
 
  ## su
 
@@ -124,7 +124,7 @@ https://man7.org/linux/man-pages/man1/su.1.html
 
 `$ su`
 
-<img src="https://github.com/Drakonof/references/tree/main/bash/doc/su.png" width="1000">
+<img src="https://drive.google.com/drive/folders/1r9imgDOkOCUT06yPJ4HFIO8wOT4kzC5p/su.png" width="1000">
 
 To leaving su:
 cntr + d
@@ -145,7 +145,7 @@ https://man7.org/linux/man-pages/man8/sudo.8.html
 
 `$ sudo ls`
 
-<img src="https://github.com/Drakonof/references/tree/main/bash/doc/sudo ls.png" width="1000">
+<img src="https://drive.google.com/drive/folders/1r9imgDOkOCUT06yPJ4HFIO8wOT4kzC5p/sudo ls.png" width="1000">
 
 ## echo
 
@@ -159,7 +159,7 @@ https://man7.org/linux/man-pages/man1/echo.1p.html
 `$ echo -n Hello World` - write a string to standard output without a new line after
 `$ echo -n Hello World > 'Hello World.txt'` - write a string to a file
 
-<img src="https://github.com/Drakonof/references/tree/main/bash/doc/echo.png" width="1000">
+<img src="https://drive.google.com/drive/folders/1r9imgDOkOCUT06yPJ4HFIO8wOT4kzC5p/echo.png" width="1000">
 
 ## cat
 
@@ -171,7 +171,7 @@ https://man7.org/linux/man-pages/man1/cat.1.html
 
 `$ cat 'Hello World.txt'`
 
-<img src="https://github.com/Drakonof/references/tree/main/bash/doc/cat.png" width="1000">
+<img src="https://drive.google.com/drive/folders/1r9imgDOkOCUT06yPJ4HFIO8wOT4kzC5p/cat.png" width="1000">
 
 ## rm
 
@@ -183,11 +183,11 @@ https://man7.org/linux/man-pages/man1/rm.1.html
 
 `$ rm 'Hello World.txt'` - remove files or empty directories
 
-<img src="https://github.com/Drakonof/references/tree/main/bash/doc/rm file.png" width="1000">
+<img src="https://drive.google.com/drive/folders/1r9imgDOkOCUT06yPJ4HFIO8wOT4kzC5p/rm file.png" width="1000">
 
 `$ rm -r 'Hello World.txt'`  - remove files or not empty directories
 
-<img src="https://github.com/Drakonof/references/tree/main/bash/doc/rm r.png" width="1000">
+<img src="https://drive.google.com/drive/folders/1r9imgDOkOCUT06yPJ4HFIO8wOT4kzC5p/rm r.png" width="1000">
 
 ## ps
 
@@ -199,19 +199,19 @@ https://man7.org/linux/man-pages/man1/ps.1.html
 
 `$ ps`
 
-<img src="https://github.com/Drakonof/references/tree/main/bash/doc/ps.png" width="1000">
+<img src="https://drive.google.com/drive/folders/1r9imgDOkOCUT06yPJ4HFIO8wOT4kzC5p/ps.png" width="1000">
 
 `$ ps -a` - select all processes except both session leaders and processes not associated with a terminal
 
-<img src="https://github.com/Drakonof/references/tree/main/bash/doc/ps -a.png" width="1000">
+<img src="https://drive.google.com/drive/folders/1r9imgDOkOCUT06yPJ4HFIO8wOT4kzC5p/ps -a.png" width="1000">
 
 `$ ps -A` - select all processes
 
-<img src="https://github.com/Drakonof/references/tree/main/bash/doc/ps -A.png" width="1000">
+<img src="https://drive.google.com/drive/folders/1r9imgDOkOCUT06yPJ4HFIO8wOT4kzC5p/ps -A.png" width="1000">
 
 `$ ps` - just ps output to a file
 
-<img src="https://github.com/Drakonof/references/tree/main/bash/doc/ps to file.png" width="1000">
+<img src="https://drive.google.com/drive/folders/1r9imgDOkOCUT06yPJ4HFIO8wOT4kzC5p/ps to file.png" width="1000">
 
 ## kill
 
@@ -225,11 +225,11 @@ https://man7.org/linux/man-pages/man1/kill.1.html
 
 `$ kill 4455`
 
-<img src="https://github.com/Drakonof/references/tree/main/bash/doc/kill.png" width="1000">
+<img src="https://drive.google.com/drive/folders/1r9imgDOkOCUT06yPJ4HFIO8wOT4kzC5p/kill.png" width="1000">
 
 `$ kill -9 4455` - 100% kill of process
 
-<img src="https://github.com/Drakonof/references/tree/main/bash/doc/kill -9.png" width="1000">
+<img src="https://drive.google.com/drive/folders/1r9imgDOkOCUT06yPJ4HFIO8wOT4kzC5p/kill -9.png" width="1000">
 
 ## stat
 
@@ -241,7 +241,7 @@ https://man7.org/linux/man-pages/man1/stat.1.html
 
 `$ stat 'Hello World.txt`
 
-<img src="https://github.com/Drakonof/references/tree/main/bash/doc/stat.png" width="1000">
+<img src="https://drive.google.com/drive/folders/1r9imgDOkOCUT06yPJ4HFIO8wOT4kzC5p/stat.png" width="1000">
 
 ## alias
 
@@ -253,11 +253,11 @@ https://man7.org/linux/man-pages/man1/alias.1p.html
 
 `$ alias ll="ls -la"`
 
-<img src="https://github.com/Drakonof/references/tree/main/bash/doc/alias.png" width="1000">
+<img src="https://drive.google.com/drive/folders/1r9imgDOkOCUT06yPJ4HFIO8wOT4kzC5p/alias.png" width="1000">
 
 `$ alias` - display aliases
 
-<img src="https://github.com/Drakonof/references/tree/main/bash/doc/alias display.png" width="1000">
+<img src="https://drive.google.com/drive/folders/1r9imgDOkOCUT06yPJ4HFIO8wOT4kzC5p/alias display.png" width="1000">
 
 For comstant setting aliases:
 
@@ -265,8 +265,8 @@ For comstant setting aliases:
 
 `$ exec bash`
 
-<img src="https://github.com/Drakonof/references/tree/main/bash/doc/alias bashrc.png" width="1000">
-<img src="https://github.com/Drakonof/references/tree/main/bash/doc/alias exec.png" width="1000">
+<img src="https://drive.google.com/drive/folders/1r9imgDOkOCUT06yPJ4HFIO8wOT4kzC5p/alias bashrc.png" width="1000">
+<img src="https://drive.google.com/drive/folders/1r9imgDOkOCUT06yPJ4HFIO8wOT4kzC5p/alias exec.png" width="1000">
 
 ## grep - NOT COMPLITE
 
@@ -279,7 +279,7 @@ https://man7.org/linux/man-pages/man1/grep.1.html
 
 `$ grep Hello 'Hello World`
 
-<img src="https://github.com/Drakonof/references/tree/main/bash/doc/grep pattern.png" width="1000">
+<img src="https://drive.google.com/drive/folders/1r9imgDOkOCUT06yPJ4HFIO8wOT4kzC5p/grep pattern.png" width="1000">
 
 ps -ax | grep nano
 ------------------------------------------------------
@@ -320,7 +320,7 @@ https://man7.org/linux/man-pages/man1/ln.1.html
 
 `$ ln "hello World.txt Hello.txt"`
 
-<img src="https://github.com/Drakonof/references/tree/main/bash/doc/ln.png" width="1000">
+<img src="https://drive.google.com/drive/folders/1r9imgDOkOCUT06yPJ4HFIO8wOT4kzC5p/ln.png" width="1000">
 
 ## df
 
@@ -332,7 +332,7 @@ https://man7.org/linux/man-pages/man1/df.1.html
 
 `$ df`
 
-<img src="https://github.com/Drakonof/references/tree/main/bash/doc/df.png" width="1000">
+<img src="https://drive.google.com/drive/folders/1r9imgDOkOCUT06yPJ4HFIO8wOT4kzC5p/df.png" width="1000">
 
 ## chmod
 
@@ -348,7 +348,7 @@ https://man7.org/linux/man-pages/man1/chmod.1.html
 
 `$ chmod 777 'Hello World.txt'`
 
-<img src="https://github.com/Drakonof/references/tree/main/bash/doc/chmod.png" width="1000">
+<img src="https://drive.google.com/drive/folders/1r9imgDOkOCUT06yPJ4HFIO8wOT4kzC5p/chmod.png" width="1000">
 
 777:
 
@@ -370,7 +370,7 @@ N   Description                      ls   binary
 
 7   Read, write, and execute         rwx  111
 
-<img src="https://github.com/Drakonof/references/tree/main/bash/doc/chmod 2.png" width="1000">
+<img src="https://drive.google.com/drive/folders/1r9imgDOkOCUT06yPJ4HFIO8wOT4kzC5p/chmod 2.png" width="1000">
 
 ## mv
 
@@ -384,7 +384,7 @@ https://man7.org/linux/man-pages/man1/mv.1p.html
 
 `$ mv 'Hello World.txt' 'Hello World'`
 
-<img src="https://github.com/Drakonof/references/tree/main/bash/doc/vm.png" width="1000">
+<img src="https://drive.google.com/drive/folders/1r9imgDOkOCUT06yPJ4HFIO8wOT4kzC5p/vm.png" width="1000">
 
 ## setsid
 
@@ -396,7 +396,7 @@ setsid [options] program [arguments]
 
 https://man7.org/linux/man-pages/man1/setsid.1.html
 
-<img src="https://github.com/Drakonof/references/tree/main/bash/doc/setsid.png" width="1000">
+<img src="https://drive.google.com/drive/folders/1r9imgDOkOCUT06yPJ4HFIO8wOT4kzC5p/setsid.png" width="1000">
 
 ## find
 
@@ -408,7 +408,7 @@ find [-H] [-L] [-P] [-D debugopts] [-Olevel] [starting-point...] [expression]
 
 https://man7.org/linux/man-pages/man1/setsid.1.html
 
-<img src="https://github.com/Drakonof/references/tree/main/bash/doc/fnd.png" width="1000">
+<img src="https://drive.google.com/drive/folders/1r9imgDOkOCUT06yPJ4HFIO8wOT4kzC5p/fnd.png" width="1000">
 
 ## halt
 
