@@ -24,7 +24,7 @@
 
 `$ gtkwave some_file.vcd`
 
-<img src="https://github.com/Drakonof/references/tree/main/bash/doc/mkdir.png" width="1000">
-<img src="https://github.com/Drakonof/references/tree/main/bash/doc/mkdir.png" width="1000">
-<img src="https://github.com/Drakonof/references/tree/main/bash/doc/mkdir.png" width="1000">
-<img src="https://github.com/Drakonof/references/tree/main/bash/doc/mkdir.png" width="1000">
+<img src="https://github.com/Drakonof/references/tree/main/ghdl%20%2B%20gtkwave/img/step_1.png" width="1000">
+<img src="https://github.com/Drakonof/references/tree/main/ghdl%20%2B%20gtkwave/img/step_2.png" width="1000">
+<img src="https://github.com/Drakonof/references/tree/main/ghdl%20%2B%20gtkwave/img/step_3.png" width="1000">
+<img src="https://github.com/Drakonof/references/tree/main/ghdl%20%2B%20gtkwave/img/step_4.png" width="1000">
