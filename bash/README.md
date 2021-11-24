@@ -36,15 +36,15 @@ https://man7.org/linux/man-pages/man1/ls.1.html
 
 `$ ls`
 
-<img src="https://drive.google.com/uc?export=view&id=12Qsd1pVQ53_3P_lRkVKAThBCBnqpkeMi" width="1000"> <!--- ls -->
+<img src="https://drive.google.com/uc?export=view&id=12Qsd1pVQ53_3P_lRkVKAThBCBnqpkeMi" width="1000"> <!--- ls.png -->
 
 `$ ls -l` use a long listing format
 
-<img src="https://drive.google.com/uc?export=view&id=1bZL9znYFJ80woAf0kM1_Fqvqy2bPsw97" width="1000"> <!--- ls_l -->
+<img src="https://drive.google.com/uc?export=view&id=1bZL9znYFJ80woAf0kM1_Fqvqy2bPsw97" width="1000"> <!--- ls_l.png -->
 
 `$ ls -l /etc/network/`
 
-<img src="https://drive.google.com/uc?export=view&id=1YwMXfdTtE0qzSHqD9YFtG-9B7frgBW-e" width="1000"> <!--- ls_dir -->
+<img src="https://drive.google.com/uc?export=view&id=1YwMXfdTtE0qzSHqD9YFtG-9B7frgBW-e" width="1000"> <!--- ls_dir.png -->
 
 
 aliases: `$ ll` == `$ ls -l`
@@ -60,11 +60,11 @@ https://man7.org/linux/man-pages/man1/mkdir.1.html
 
 `$ mkdir some_dir`
 
-<img src="https://drive.google.com/uc?export=view&id=14cCRvElgUA9uixSuS-bK_m5zOkL4nVUi" width="1000"> <!--- mkdir -->
+<img src="https://drive.google.com/uc?export=view&id=14cCRvElgUA9uixSuS-bK_m5zOkL4nVUi" width="1000"> <!--- mkdir.png -->
 
 `$ mkdir "some_dir"`
 
-<img src="https://drive.google.com/uc?export=view&id=1CqC-wFQFOXY2uwpAkVvvVHGaj3uIkaMw" width="1000"> <!--- mkdir 2 -->
+<img src="https://drive.google.com/uc?export=view&id=1CqC-wFQFOXY2uwpAkVvvVHGaj3uIkaMw" width="1000"> <!--- mkdir_2.png -->
 
 ## cd
 
@@ -76,31 +76,31 @@ https://man7.org/linux/man-pages/man1/cd.1p.html
 
 `$ cd` - to home directory
 
-<img src="https://drive.google.com/uc?export=view&id=cd.png" width="1000">
+<img src="https://drive.google.com/uc?export=view&id=1YxtDwENCQ_1qTAocQ2cziIvU-qibeS6j" width="1000"> <!--- cd.png -->
 
 `$ cd -` - to previous directory
 
-<img src="https://drive.google.com/uc?export=view&id=cd_prew.png" width="1000">
+<img src="https://drive.google.com/uc?export=view&id=1iNAg29-bHiYl8B84Slaw1_BMKdo8MLYz" width="1000"> <!--- cd_prew.png -->
 
 `$ cd ../` - to one below directory
 
-<img src="https://drive.google.com/uc?export=view&id=cd_one_below.png" width="1000">
+<img src="https://drive.google.com/uc?export=view&id=1kPhF6mjV0DNxz_AxocbkO4tYOGglbzgV" width="1000"> <!--- cd_one_below.png -->
 
 `$ cd ../../` - to two below directories, and so on accordingly number of ../
 
-<img src="https://drive.google.com/uc?export=view&id=cd_two_below.png" width="1000">
+<img src="https://drive.google.com/uc?export=view&id=1BmLFxNxEexC6anZSQWu7ObYhCLCUkDoL" width="1000"> <!--- cd_two_below.png -->
 
 `$ cd /dir1/dir2/` - in two directories from the root directory, from any directory
 
- <img src="https://drive.google.com/uc?export=view&id=cd_two_dir.png" width="1000">
+<img src="https://drive.google.com/uc?export=view&id=19m0ERWETnHk9vz_RpQNMN2ANQBrb1xYn" width="1000"> <!--- cd_two_dir.png -->
 
 `$ cd /root dir1/root dir2/` - in two directories from the root directory, from any directory
 
- <img src="https://drive.google.com/uc?export=view&id=cd_two_root_dir.png" width="1000">
+<img src="https://drive.google.com/uc?export=view&id=1BMEUuoqY950Y4qJjTAiqiJEHVjRrxkqO" width="1000"> <!--- cd_two_root_dir.png -->
 
 `$ cd /` - to a root directory, from any directory
 
-<img src="https://drive.google.com/uc?export=view&id=cd_root.png" width="1000">
+<img src="https://drive.google.com/uc?export=view&id=1D1iNnXLtBNU7dXCTRGma2FP8Ju3IJNwS" width="1000"> <!--- cd_root.png -->
 
  ## whoami
 
@@ -112,7 +112,7 @@ https://man7.org/linux/man-pages/man1/whoami.1.html
 
 `$ whoami`
 
-<img src="https://drive.google.com/uc?export=view&id=1-NNH-d8XFfYuTKxtsCsKcqMQWFoo7tZS" width="1000">
+<img src="https://drive.google.com/uc?export=view&id=1-NNH-d8XFfYuTKxtsCsKcqMQWFoo7tZS" width="1000"> <!---  -->
 
  ## su
 
@@ -124,7 +124,7 @@ https://man7.org/linux/man-pages/man1/su.1.html
 
 `$ su`
 
-<img src="https://drive.google.com/uc?export=view&id=su.png" width="1000">
+<img src="https://drive.google.com/uc?export=view&id=su.png" width="1000"> <!--- whoami.png -->
 
 To leaving su:
 cntr + d
@@ -145,7 +145,7 @@ https://man7.org/linux/man-pages/man8/sudo.8.html
 
 `$ sudo ls`
 
-<img src="https://drive.google.com/uc?export=view&id=sudo ls.png" width="1000">
+<img src="https://drive.google.com/uc?export=view&id=1rGRhH-Us6YoTAc5YLJ0qz0_idouf27zf" width="1000"> <!---sudo_ls.png  -->
 
 ## echo
 
@@ -159,7 +159,7 @@ https://man7.org/linux/man-pages/man1/echo.1p.html
 `$ echo -n Hello World` - write a string to standard output without a new line after
 `$ echo -n Hello World > 'Hello World.txt'` - write a string to a file
 
-<img src="https://drive.google.com/uc?export=view&id=echo.png" width="1000">
+<img src="https://drive.google.com/uc?export=view&id=1EPsVRaYAQmLSXazWHv5K2pPECv6WInA5" width="1000"> <!--- echo.png -->
 
 ## cat
 
@@ -171,7 +171,7 @@ https://man7.org/linux/man-pages/man1/cat.1.html
 
 `$ cat 'Hello World.txt'`
 
-<img src="https://drive.google.com/uc?export=view&id=cat.png" width="1000">
+<img src="https://drive.google.com/uc?export=view&id=1f7k47L5x-_c97dO4vKWQGN8g7QvbIsI4" width="1000"> <!--- cat.png -->
 
 ## rm
 
@@ -183,11 +183,11 @@ https://man7.org/linux/man-pages/man1/rm.1.html
 
 `$ rm 'Hello World.txt'` - remove files or empty directories
 
-<img src="https://drive.google.com/uc?export=view&id=rm file.png" width="1000">
+<img src="https://drive.google.com/uc?export=view&id=18D66rhORRLm0gZXfU8mxBbU02mPCPVLS" width="1000"> <!--- rm_file.png -->
 
 `$ rm -r 'Hello World.txt'`  - remove files or not empty directories
 
-<img src="https://drive.google.com/uc?export=view&id=rm r.png" width="1000">
+<img src="https://drive.google.com/uc?export=view&id=1J8QHcSqj6s4CSCaz2Dv8IAGIN94JkJB9" width="1000"> <!--- rm_r.png -->
 
 ## ps
 
@@ -199,19 +199,19 @@ https://man7.org/linux/man-pages/man1/ps.1.html
 
 `$ ps`
 
-<img src="https://drive.google.com/uc?export=view&id=ps.png" width="1000">
+<img src="https://drive.google.com/uc?export=view&id=1BuFP4d_yXY2_fXbvaMO--qaRLRDl8AGz" width="1000"> <!--- ps.png -->
 
 `$ ps -a` - select all processes except both session leaders and processes not associated with a terminal
 
-<img src="https://drive.google.com/uc?export=view&id=ps -a.png" width="1000">
+<img src="https://drive.google.com/uc?export=view&id=19oSZmJg8w2EFP8sQDodmhUj9CzkehHfg" width="1000"> <!--- ps_a.png -->
 
 `$ ps -A` - select all processes
 
-<img src="https://drive.google.com/uc?export=view&id=ps -A.png" width="1000">
+<img src="https://drive.google.com/uc?export=view&id=18-WQRvUi0IG-N3FBl88jmPf6w6KN3TOY" width="1000"> <!--- ps_A.png -->
 
 `$ ps` - just ps output to a file
 
-<img src="https://drive.google.com/uc?export=view&id=ps to file.png" width="1000">
+<img src="https://drive.google.com/uc?export=view&id=1BllfYkpGdpF9PG6XnC5gtD72H143InxD" width="1000"> <!--- ps_to_file.png -->
 
 ## kill
 
@@ -225,11 +225,11 @@ https://man7.org/linux/man-pages/man1/kill.1.html
 
 `$ kill 4455`
 
-<img src="https://drive.google.com/uc?export=view&id=kill.png" width="1000">
+<img src="https://drive.google.com/uc?export=view&id=1GD3wu491XEpONZguGRWLI-cuddE2tJpW" width="1000"> <!--- kill.png -->
 
 `$ kill -9 4455` - 100% kill of process
 
-<img src="https://drive.google.com/uc?export=view&id=kill -9.png" width="1000">
+<img src="https://drive.google.com/uc?export=view&id=IS APSENT" width="1000"> <!---  kill_9.png-->
 
 ## stat
 
@@ -241,7 +241,7 @@ https://man7.org/linux/man-pages/man1/stat.1.html
 
 `$ stat 'Hello World.txt`
 
-<img src="https://drive.google.com/uc?export=view&id=stat.png" width="1000">
+<img src="https://drive.google.com/uc?export=view&id=1CtQ8pu3HAs5lD4M5g954WBsG9CRCJg8H" width="1000"> <!--- stat.png -->
 
 ## alias
 
@@ -253,11 +253,11 @@ https://man7.org/linux/man-pages/man1/alias.1p.html
 
 `$ alias ll="ls -la"`
 
-<img src="https://drive.google.com/uc?export=view&id=alias.png" width="1000">
+<img src="https://drive.google.com/uc?export=view&id=1fcQHfyvubmSAjokeBZuwTukNB6N76pgE" width="1000"> <!--- alias.png -->
 
 `$ alias` - display aliases
 
-<img src="https://drive.google.com/uc?export=view&id=alias display.png" width="1000">
+<img src="https://drive.google.com/uc?export=view&id=1Icgt-PErRkM4KmEByH2z6mmLKU5uU9NV" width="1000"> <!--- alias_display.png -->
 
 For comstant setting aliases:
 
@@ -265,8 +265,8 @@ For comstant setting aliases:
 
 `$ exec bash`
 
-<img src="https://drive.google.com/uc?export=view&id=alias bashrc.png" width="1000">
-<img src="https://drive.google.com/uc?export=view&id=alias exec.png" width="1000">
+<img src="https://drive.google.com/uc?export=view&id=1gFxn5Pv8UTsjOKI8yI1--2dKvcHB6RyY" width="1000"> <!--- alias_bashrc.png -->
+<img src="https://drive.google.com/uc?export=view&id=1gaF_C7yJGt13Thm8ZzmuzMWZqDC0aHWe" width="1000"> <!--- alias_exec.png -->
 
 ## grep - NOT COMPLITE
 
@@ -279,7 +279,7 @@ https://man7.org/linux/man-pages/man1/grep.1.html
 
 `$ grep Hello 'Hello World`
 
-<img src="https://drive.google.com/uc?export=view&id=grep pattern.png" width="1000">
+<img src="https://drive.google.com/uc?export=view&id=1PcA9KKxykN0JEVQ3__IHvK5_3GDWChtY" width="1000"> <!--- grep_pattern.png -->
 
 ps -ax | grep nano
 ------------------------------------------------------
@@ -320,7 +320,7 @@ https://man7.org/linux/man-pages/man1/ln.1.html
 
 `$ ln "hello World.txt Hello.txt"`
 
-<img src="https://drive.google.com/uc?export=view&id=ln.png" width="1000">
+<img src="https://drive.google.com/uc?export=view&id=1eY8NPdW8OG8jpiSsVCvRjMVytanDJvzW" width="1000"> <!--- ln.png -->
 
 ## df
 
@@ -332,7 +332,7 @@ https://man7.org/linux/man-pages/man1/df.1.html
 
 `$ df`
 
-<img src="https://drive.google.com/uc?export=view&id=df.png" width="1000">
+<img src="https://drive.google.com/uc?export=view&id=1BvnUqXvUXZM_XuRzdYPJxFdrzSrXU1Xh" width="1000"> <!--- df.png -->
 
 ## chmod
 
@@ -348,7 +348,7 @@ https://man7.org/linux/man-pages/man1/chmod.1.html
 
 `$ chmod 777 'Hello World.txt'`
 
-<img src="https://drive.google.com/uc?export=view&id=chmod.png" width="1000">
+<img src="https://drive.google.com/uc?export=view&id=1PKKQ6cxo6s1d00RziD5UnSPOihDyRjjb" width="1000"> <!--- chmod.png -->
 
 777:
 
@@ -370,7 +370,7 @@ N   Description                      ls   binary
 
 7   Read, write, and execute         rwx  111
 
-<img src="https://drive.google.com/uc?export=view&id=chmod 2.png" width="1000">
+<img src="https://drive.google.com/uc?export=view&id=17M3uJc_jI2EM9TEHzewhhBq8Oa3DzYsc" width="1000"> <!--- chmod_2.png -->
 
 ## mv
 
@@ -384,7 +384,7 @@ https://man7.org/linux/man-pages/man1/mv.1p.html
 
 `$ mv 'Hello World.txt' 'Hello World'`
 
-<img src="https://drive.google.com/uc?export=view&id=vm.png" width="1000">
+<img src="https://drive.google.com/uc?export=view&id=1K7MUnWMyQnMcfc1ULC-gxXspFNZzhyqf" width="1000"> <!--- vm.png -->
 
 ## setsid
 
@@ -396,7 +396,7 @@ setsid [options] program [arguments]
 
 https://man7.org/linux/man-pages/man1/setsid.1.html
 
-<img src="https://drive.google.com/uc?export=view&id=setsid.png" width="1000">
+<img src="https://drive.google.com/uc?export=view&id=1a2CwYygBXMa8gsq56FLzsS02V366kXIj" width="1000"> <!--- setsid.png -->
 
 ## find
 
@@ -408,7 +408,7 @@ find [-H] [-L] [-P] [-D debugopts] [-Olevel] [starting-point...] [expression]
 
 https://man7.org/linux/man-pages/man1/setsid.1.html
 
-<img src="https://drive.google.com/uc?export=view&id=fnd.png" width="1000">
+<img src="https://drive.google.com/uc?export=view&id=1WhGGcGYnkVdc2aKrwVcqi5wgGo4-rqnQ" width="1000"> <!--- find.png -->
 
 ## halt
 
