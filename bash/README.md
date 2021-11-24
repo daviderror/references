@@ -36,7 +36,7 @@ https://man7.org/linux/man-pages/man1/ls.1.html
 
 `$ ls`
 
-<img src="https://drive.google.com/uc?export=view&id=12Qsd1pVQ53_3P_lRkVKAThBCBnqpkeMi" width="1000"> <!ls> 
+<img src="https://drive.google.com/uc?export=view&id=12Qsd1pVQ53_3P_lRkVKAThBCBnqpkeMi" width="1000"> #(ls)
 
 `$ ls -l` use a long listing format
 
