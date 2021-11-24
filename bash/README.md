@@ -112,7 +112,7 @@ https://man7.org/linux/man-pages/man1/whoami.1.html
 
 `$ whoami`
 
-<img src="https://drive.google.com/uc?export=view&id=1-NNH-d8XFfYuTKxtsCsKcqMQWFoo7tZS" width="1000"> <!---  -->
+<img src="https://drive.google.com/uc?export=view&id=1-NNH-d8XFfYuTKxtsCsKcqMQWFoo7tZS" width="1000"> <!--- whoami.png -->
 
  ## su
 
@@ -124,7 +124,7 @@ https://man7.org/linux/man-pages/man1/su.1.html
 
 `$ su`
 
-<img src="https://drive.google.com/uc?export=view&id=su.png" width="1000"> <!--- whoami.png -->
+<img src="https://drive.google.com/uc?export=view&id=1sJaAjFg3hr-cf-17Uf-cPNSWXWeWs-eQ" width="1000"> <!--- su.png -->
 
 To leaving su:
 cntr + d
@@ -227,9 +227,9 @@ https://man7.org/linux/man-pages/man1/kill.1.html
 
 <img src="https://drive.google.com/uc?export=view&id=1GD3wu491XEpONZguGRWLI-cuddE2tJpW" width="1000"> <!--- kill.png -->
 
-`$ kill -9 4455` - 100% kill of process
+`$ kill -9 7628` - 100% kill of process
 
-<img src="https://drive.google.com/uc?export=view&id=IS APSENT" width="1000"> <!---  kill_9.png-->
+<img src="https://drive.google.com/uc?export=view&id=1JhhPaO7efIFQE7UVsep0hm8RQCLr532F" width="1000"> <!---  kill_9.png-->
 
 ## stat
 
