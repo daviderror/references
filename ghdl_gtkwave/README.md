@@ -24,7 +24,7 @@
 
 `$ gtkwave some_file.vcd`
 
-<img src="https://github.com/Drakonof/references/tree/main/ghdl%20%2B%20gtkwave/img/step_1.png" width="1000">
-<img src="https://github.com/Drakonof/references/tree/main/ghdl%20%2B%20gtkwave/img/step_2.png" width="1000">
-<img src="https://github.com/Drakonof/references/tree/main/ghdl%20%2B%20gtkwave/img/step_3.png" width="1000">
-<img src="https://github.com/Drakonof/references/tree/main/ghdl%20%2B%20gtkwave/img/step_4.png" width="1000">
+<img src="https://drive.google.com/uc?export=view&id=1hQEtz6bkqaXmWWITWa5ZrWhqlu_ZvVo5" width="1000"> <!--- step_1.png -->
+<img src="https://drive.google.com/uc?export=view&id=1L5nCIWRIPd9Rg7hZvP8lrQusNEUld0XO" width="1000"> <!--- step_2.png -->
+<img src="https://drive.google.com/uc?export=view&id=124OyyvJOBlhgCf7ryaap2RRVjgciQEx-" width="1000"> <!--- step_3.png -->
+<img src="https://drive.google.com/uc?export=view&id=1cAN-RA6kA2EK7xIB9AtGb5Riiq87gQtl" width="1000"> <!--- step_4.png -->
