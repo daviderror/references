@@ -117,6 +117,7 @@ To initialize a new Git repository
 .gitignore file exludes files or dirs from committing to a Git repository
 
 Example:
+
 `*.hex`
 
 `*.bin`
