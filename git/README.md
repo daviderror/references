@@ -3,7 +3,7 @@
 1.  [install](#install)
 2.  [building](#building)
 3.  [uninstall](#uninstall)
-4.  [add files](#add\files)
+4.  [add files](#add_files)
 
 ## install
 
@@ -45,4 +45,4 @@ It is alternative way to install of git.
 
 `$ sudo apt-get purge --auto-remove git` - to remove configuration and data files of git and it's dependencies
 
-## add files
+## add_files
