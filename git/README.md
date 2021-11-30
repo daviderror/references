@@ -117,11 +117,16 @@ To initialize a new Git repository
 .gitignore file exludes files or dirs from committing to a Git repository
 
 Example:
-`*.hex 
- *.bin
-  src/bin/*.json
-  !src/bin/.sone_json.json
-  dir/build/*
-  !dir/biuld/debug/`
+`*.hex`
+
+`*.bin`
+
+`src/bin/*.json`
+
+`!src/bin/.sone_json.json`
+
+`dir/build/*`
+
+`!dir/biuld/debug/`
  
  If in dir/build/* is no files so !dir/biuld/debug/ will not work.
