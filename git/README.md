@@ -3,7 +3,7 @@
 1.  [install](#install)
 2.  [building](#building)
 3.  [uninstall](#uninstall)
-4.  [add files](#add files)
+4.  [add files](#add\files)
 
 ## install
 
