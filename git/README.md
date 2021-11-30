@@ -129,5 +129,3 @@ Example:
 `dir/build/*`
 
 `!dir/biuld/debug/`
- 
- If in dir/build/* is no files and are only dirs so !dir/biuld/debug/ will not work.
