@@ -6,6 +6,11 @@
 4.  [adding](#adding)
 5.  [removing](#removing)
 6.  [committing](#committing)
+7.  [initialization](#initialization)
+8.  [pulling](#pulling)
+9.  [clonning](#clonning)
+10. [pushing](#pushing)
+11. [gitignore](#gitignore)
 
 ## installing
 
@@ -106,3 +111,17 @@ To initialize a new Git repository
 `git remote add origin git@github.com:drakonof/new_repository_name.git`
 
 `git push -u origin master`
+
+## gitignore
+
+.gitignore file exludes files or dirs from committing to a Git repository
+
+Example:
+`*.hex 
+ *.bin
+  src/bin/*.json
+  !src/bin/.sone_json.json
+  dir/build/*
+  !dir/biuld/debug/`
+ 
+ If in dir/build/* is no files so !dir/biuld/debug/ will not work.
