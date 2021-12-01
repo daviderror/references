@@ -1,0 +1,17 @@
+#!/bin/bash
+
+project_name=xc7z045_pcie_v_1
+
+rm -r ../bd/${project_name}_bd
+
+rm -r \
+../.Xil \
+../$project_name.cache \
+../$project_name.hw \
+../$project_name.ip_user_files \
+../$project_name.runs \
+../$project_name.sdk \
+../$project_name.sim \
+../$project_name.srcs \
+
+rm ../*.xpr ../*.jou ../*.log 
