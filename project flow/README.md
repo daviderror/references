@@ -7,7 +7,7 @@
 ## FPGA
 1. rtl <- tb <- script
 2. ip <- tb/test??
-3. bd
+3. db_wrapper <- bd
 4. top module
 5. pin constraints
 6. time constraints
