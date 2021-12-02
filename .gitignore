@@ -12,7 +12,9 @@ pcie/xc7z045_pcie_v_1/hardware/bd/
 *.symver
 *.o
 *.order
-*.ko
+
+*.kdev4
+pcie/xc7z045_pcie_v_1/software/xdma_rd_wr_test/build/*
 #--------------------------------------------------
 
 #--------------------------------------------------
