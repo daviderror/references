@@ -2,13 +2,15 @@
 #include <fcntl.h>
 #include <unistd.h>
 
+#include "xdma_test.h"
+
 constexpr const char *h2c = "/dev/xdma0_h2c_0";
 constexpr const char *c2h = "/dev/xdma0_c2h_0";
 
 constexpr const size_t buffer_size = 10;
 
-int main() {
-    
+int xdma_test(void) {
+
     uint8_t h2c_buffer[buffer_size]{0x30,0x31,0x32,0x33,0x34,0x35,0x36,0x37,0x38,0x39},
             c2h_buffer[buffer_size]{};    
     
@@ -21,26 +23,26 @@ int main() {
 
     if ((h2c_fd = open(h2c, O_RDWR)) < 0) {
         std::cerr << "open h2c failed" << std::endl;
-        exit(EXIT_FAILURE);
+        return EXIT_FAILURE;
     }
     
     if (buffer_size != (counter = write(h2c_fd, h2c_buffer, buffer_size))) {
         std::cerr << "write failed. counter: " << counter <<std::endl;
         close(h2c_fd);
-        exit(EXIT_FAILURE);
+        return EXIT_FAILURE;
     }
     
     close(h2c_fd);
     
     if ((c2h_fd = open(c2h, O_RDWR)) < 0) {
         std::cerr << "open c2h failed" << std::endl;
-        exit(EXIT_FAILURE);
+        return EXIT_FAILURE;
     }
     
     if (buffer_size != (counter = read(c2h_fd, c2h_buffer, buffer_size))) {
         std::cerr << "read failed. Counter: " << counter <<std::endl;
         close(c2h_fd);
-        exit(EXIT_FAILURE);
+        return EXIT_FAILURE;
     }
     
     close(c2h_fd);
@@ -66,6 +68,6 @@ int main() {
     else{
         std::cout << "The test successed" << std::endl;
     }
-            
-    exit(EXIT_SUCCESS);
+    
+    return EXIT_SUCCESS;
 }
