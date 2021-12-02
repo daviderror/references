@@ -8,11 +8,11 @@ pcie/xc7z045_pcie_v_1/hardware/*
 pcie/xc7z045_pcie_v_1/hardware/bd/
 !pcie/xc7z045_pcie_v_1/hardware/bd/xc7z045_pcie_v_1.tcl
 
-pcie/xc7z045_pcie_v_1/software/XDMA/*.cmd
-pcie/xc7z045_pcie_v_1/software/XDMA/*.symver
-pcie/xc7z045_pcie_v_1/software/XDMA/*.o
-pcie/xc7z045_pcie_v_1/software/XDMA/*.order
-pcie/xc7z045_pcie_v_1/software/XDMA/*.ko
+*.cmd
+*.symver
+*.o
+*.order
+*.ko
 #--------------------------------------------------
 
 #--------------------------------------------------
