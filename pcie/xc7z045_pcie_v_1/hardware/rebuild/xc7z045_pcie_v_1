@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #change both the vivado_path and the project name to yours if required.
-vivado_path=/tools/Xilinx/Vivado/2019.2/bin
+vivado_path=/tools/Xilinx/Vivado/2018.3/bin
 project_name=xc7z045_pcie_v_1
 
 cd ../

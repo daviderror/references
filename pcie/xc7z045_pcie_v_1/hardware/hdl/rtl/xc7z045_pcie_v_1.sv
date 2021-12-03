@@ -40,7 +40,8 @@ module xc7z045_pcie_v_1
     localparam integer SPEED_GRADE = 2;
 
 
-    logic pcie_axi_aclk;
+    logic pcie_axi_clk;
+    logic pcie_axi_rst_n;
     
     xc7z045_pcie_v_1_bd_wrapper
     xc7z045_pcie_v_1_bd_wrapper_inst
@@ -68,7 +69,8 @@ module xc7z045_pcie_v_1
         .FIXED_IO_ps_porb    (FIXED_IO_ps_porb   ),
         .FIXED_IO_ps_srstb   (FIXED_IO_ps_srstb  ),
         
-        .pcie_axi_aclk       (pcie_axi_aclk      ),
+        .pcie_axi_clk        (pcie_axi_clk      ),
+        .pcie_axi_rst_n      (pcie_axi_rst_n     ),
         .pcie_link_up_led    (pcie_link_up_led   ),   
         .pcie_rx_n           (pcie_rx_n          ),          
         .pcie_rx_p           (pcie_rx_p          ),          
@@ -86,8 +88,8 @@ module xc7z045_pcie_v_1
     )
     heart_beat_inst
     (
-        .i_clk        (pcie_axi_aclk      ),
-        .i_srst_n     (pcie_sys_rst_n     ),
+        .i_clk        (pcie_axi_clk      ),
+        .i_srst_n     (pcie_axi_rst_n     ),
                   
         .o_heart_beat (pcie_heart_beat_led)
      );

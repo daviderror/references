@@ -1,6 +1,6 @@
 # The setups field. ########################################
 
-set vivado_vertion   "2019.2"          
+set vivado_vertion   "2018.3"          
 set project_name      xc7z045_pcie_v_1
 set project_device    xc7z045ffg900-2
 set project_direction "."
