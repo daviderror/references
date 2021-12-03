@@ -6,7 +6,7 @@ pcie/xc7z045_pcie_v_1/hardware/*
 !pcie/xc7z045_pcie_v_1/hardware/rebuild/
 
 #pcie/xc7z045_pcie_v_1/hardware/bd/
-#!pcie/xc7z045_pcie_v_1/hardware/bd/xc7z045_pcie_v_1_bd.tcl
+!pcie/xc7z045_pcie_v_1/hardware/bd/xc7z045_pcie_v_1_bd.tcl
 
 *.cmd
 *.symver
