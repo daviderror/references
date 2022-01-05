@@ -7,6 +7,7 @@
 5.  [issue_2](#issue_2)
 6.  [issue_3](#issue_3)
 7.  [issue_4](#issue_4)
+8.  [issue_5](#issue_5)
 
 ## downloading
 Download the modelsim 18.1 lite from the Intel as an individual file: https://fpgasoftware.intel.com/?product=modelsim_ae#tabs-2
@@ -51,17 +52,19 @@ aka: could not find ./../linux_rh60/vsim
 
 referance: https://gist.github.com/Razer6/cafc172b5cffae189b4ecda06cf6c64f
 
-aka:
-
-"InitializeINIFile quietly"    
-
-invoked from within "ncFyP12 -+"  
-
-(file "/mtitcl/vsim/vsim" line 1)
-
-Fatal: Read failure in vlm process (0,0)
-
-Segmentation fault (core dumped)
+version 1 aka:
+    
+    Error in startup script: 
+    Initialization problem, exiting.
+     
+    Initialization problem, exiting.
+     
+    while executing
+    "InitializeINIFile quietly"
+    invoked from within
+    "ncFyP12 -+"
+        (file "/mtitcl/vsim/vsim" line 1)
+    ** Fatal: Read failure in vlm process (0,0)
 
     download freetype-2.11.0
 
@@ -90,15 +93,48 @@ freetype-2.11.0: https://ftp.osuosl.org/pub/blfs/conglomeration/freetype/
     dir=`dirname "$arg0"`
     LD_LIBRARY_PATH=${dir}/lib32
 
+There are the version 2 and continue in the issue_3 for this error.
+
 ## issue_3
+
+version 2 aka:
+    
+    Error in startup script: 
+    Initialization problem, exiting.
+     
+    Initialization problem, exiting.
+     
+    while executing
+    "InitializeINIFile quietly"
+    invoked from within
+    "ncFyP12 -+"
+        (file "/mtitcl/vsim/vsim" line 1)
+    ** Fatal: Read failure in vlm process (0,0)
+
+After the issue_2 download and install the Modelsim/Questa compatible libraries
+
+    sudo wget http://security.ubuntu.com/ubuntu/pool/main/libp/libpng/libpng12-0_1.2.54-1ubuntu1.1_amd64.deb
+    sudo wget http://security.ubuntu.com/ubuntu/pool/main/libp/libpng/libpng12-0_1.2.54-1ubuntu1.1_i386.deb
+    sudo wget http://archive.ubuntu.com/ubuntu/pool/main/f/freetype/libfreetype6_2.6.1-0.1ubuntu2_i386.deb
+    sudo wget http://archive.ubuntu.com/ubuntu/pool/main/f/freetype/libfreetype6_2.6.1-0.1ubuntu2_amd64.deb
+
+    sudo dpkg -i libpng12-0_1.2.54-1ubuntu1.1_i386.deb
+    sudo dpkg -i libpng12-0_1.2.54-1ubuntu1.1_amd64.deb
+    sudo dpkg -i libfreetype6_2.6.1-0.1ubuntu2_i386.deb
+    sudo dpkg -i libfreetype6_2.6.1-0.1ubuntu2_amd64.deb
+
+There is the version 1 in the issue_5 for this error.
+
+## issue_4
 
 aka: libXft.so.2: cannot open shared object file
 
     sudo  apt-get install libxft2 libxft2:i386 lib32ncurses5
 
-## issue_4
+## issue_5
 
 aka: libXext.so.6: cannot open shared object file. libXext.so.6 not found
 
     sudo apt install libxext6
     sudo apt install libxext6:i386
+
