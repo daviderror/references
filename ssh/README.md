@@ -3,7 +3,7 @@
      Можно использовать для удалённого доступа (X2Go) и обмена файлами (FTP)
 
 1.  [Console_connection](#Console_connection)
-2.  [X2Go](https://github.com/Drakonof/references/tree/main/X2Go)
+2.  [X2Go ->](https://github.com/Drakonof/references/tree/main/X2Go)
 
 
 ## Console_connection
