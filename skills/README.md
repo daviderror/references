@@ -8,7 +8,6 @@
 ## fpga
      
      Hobby
-     Simulteniusly with firmware
 
 | aprentice          | master             | adept              |
 | :---               | :---               | :---               |
@@ -59,7 +58,6 @@
 ## firmware
 
      Hobby
-     Simulteniusly with fpga
 
 | aprentice          | master             | adept              |
 | :---               | :---               | :---               |
@@ -93,10 +91,22 @@
 | timings            |                    |                    |
 | linux arch         |                    |                    |
 | LKM Rasp dev drvs  |                    |                    |
-| qemu               |                    |                    |
-| ssh                |                    |                    |
-| device tree        |                    |                    |
-| yocto              |                    |                    |
 | tcp/ip??           |                    |                    |
-| git                |                    |                    |
+|                    |                    |                    |
+
+
+
+
+## environment
+
+    Profesional
+
+| aprentice          | master             | adept              |
+| :---               | :---               | :---               |
+| git                | qemu               |                    |
+| readmine           | python             |                    |
+| jira               | yocto              |                    |
+| mc                 | device tree        |                    |
+| bash               | x2go               |                    |
+| ssh                |                    |                    |
 |                    |                    |                    |
