@@ -1,0 +1,17 @@
+*.symvers
+*.order       
+*.mod.c
+*.*.flags
+*.cmd
+*.*.cmd
+*.*.*.cmd
+*.symver
+*.o
+*.ko
+*.mod
+*.order
+*.xsa
+*.kdev4
+*.json
+*.bin
+*.cmake
