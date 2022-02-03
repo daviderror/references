@@ -41,7 +41,7 @@
 | spi                |                    |                    |
 | timer              |                    |                    |
 | stdlib             |                    |                    |
-| <ins>Harris Comp arch</ins>   |                    |                    |
+| <ins>Harris</ins>  |                    |                    |
 | MIPS               |                    |                    |
 | compilation        |                    |                    |
 | optimization       |                    |                    |
