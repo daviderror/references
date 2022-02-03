@@ -12,7 +12,7 @@
 
 | aprentice          | master             | adept              |
 | :---               | :---               | :---               |
-| Соловьёв           | КНИГА              |                    |
+| Соловьёв           | ~~КНИГА~~          |                    |
 | verilog            | system verilog     |                    |
 | rtl                | 1GE (vendor)       |                    |
 | vivado             | 10GE (vendor)      |                    |
@@ -41,7 +41,7 @@
 | spi                |                    |                    |
 | timer              |                    |                    |
 | stdlib             |                    |                    |
-| Harris Comp arch   |                    |                    |
+| <ins>Harris Comp arch</ins>   |                    |                    |
 | MIPS               |                    |                    |
 | compilation        |                    |                    |
 | optimization       |                    |                    |
