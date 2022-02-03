@@ -101,6 +101,7 @@
 | LKM Rasp dev drvs  |                    |                    |
 | tcp/ip??           |                    |                    |
 | Zynq my pl uart LKM |                   |                    |
+| block schem        |                    |                    |
 |                    |                    |                    |
 
 ## environment
