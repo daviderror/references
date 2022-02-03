@@ -4,23 +4,26 @@
 2.  [firmware](#firmware)
 3.  [software](#software)
 4.  [environment](#environment)
-3
+
 ## fpga
 
 | aprentice          | master         | adept         |
 | :---               | :---           | :---          |
-| verilog            |                |               |
-| rtl                |                |               |
-| vivado             |                |               |
-| tb                 |                |               |
-| tcl(IDEs)          |                |               |
-| modelsim           |                |               |
-| pin con-ts         |                |               |
-| florplan           |                |               |
-| time con-ts        |                |               |
+| Соловьёв           | КНИГА          |               |
+| verilog            | System Verilog |               |
+| rtl                | 1GE (vendor)   |               |
+| vivado             | 10GE (vendor)  |               |
+| tb                 | PCIe (vendor)  |               |
+| tcl(IDEs)          | 1GE            |               |
+| modelsim           | 10GE           |               |
+| pin con-ts         | PCIe           |               |
+| florplan           | Harris ARM     |               |
+| time con-ts        | ARM            |               |
 | primitives         |                |               |
 | counter            |                |               |
 | fifo               |                |               |
+| axi-lite           |                |               |
+| axi-stream         |                |               |
 | gray counter       |                |               |
 | asinc fifo         |                |               |
 | single port bram   |                |               |
@@ -32,7 +35,14 @@
 | spi                |                |               |
 | timer              |                |               |
 | stdlib             |                |               |
-| Harris and Harris  |                |               |
+| Harris Comp Arc    |                |               |
 | MIPS               |                |               |
+| compilation stages |                |               |
+| optimization       |                |               |
+| ILA                |                |               |
+| BD                 |                |               |
+| project struct     |                |               |
+| SoC burning        |                |               |
+| FPGA burning       |                |               |
 |                    |                |               |
 
