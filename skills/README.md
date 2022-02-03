@@ -79,7 +79,7 @@
 | std lib            | Zynq b-l dev drvs  |                    |
 |                    | tcp/ip??           |                    |
 |                    | ARM arch           |                    |
-|                    | <ins>atmega8a_clock</ins> |             |
+| <ins>atmega8a_clock</ins> |             |             |
 |                    |                    |                    |
 
 ## software
