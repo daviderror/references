@@ -11,31 +11,33 @@
 
 | aprentice          | master             | adept              |
 | :---               | :---               | :---               |
-| Соловьёв           | ~~КНИГА~~          |                    |
-| verilog            | system verilog     |                    |
-| rtl                | 1GE (vendor)       |                    |
-| vivado             | 10GE (vendor)      |                    |
-| tb                 | PCIe (vendor)      |                    |
+| Соловьёв           | ~~КНИГА~~          | <ins>hyperion</ins> |
+| <ins>verilog</ins> | <ins>system verilog</ins> |             |
+| <ins>rtl</ins>     | fanout             |                    |
+| <ins>vivado</ins>  | <ins>rebulding</ins> |                  |
+| <ins>tb</ins>      | ecoflow            |                    |
 | tcl                | 1GE                |                    |
 | modelsim           | 10GE               |                    |
-| pins constraints   | PCIe               |                    |
-| FPGA arch          | make               |                    |
+| pins constraints   | <ins>PCIe</ins>    |                    |
+| fsm                | make               |                    |
 | florplan           | Harris ARM         |                    |
 | timings            | ARM                |                    |
-| piplining          | power supply       |                    |
+| block diagramms    | power supply       |                    |
 | primitives         | device controllers |                    |
-| fanout             |                    |                    |
-| counter            |                    |                    |
-| fifo               |                    |                    |
+| fsm diagramms      | piplining          |                    |
+| counter            | ПРОЭКТЫ??          |                    |
+| <ins>fifo</ins>    |                    |                    |
+| <ins>piso          |                    |                    |
+| sipo               |                    |                    |
 | axi-lite           |                    |                    |
 | axi-stream         |                    |                    |
 | gray counter       |                    |                    |
 | asinc fifo         |                    |                    |
 | single port bram   |                    |                    |
-| dualport bram      |                    |                    |
-| true dualport bram |                    |                    |
+|<ins>dualport bram</ins> |               |                    |
+| <ins>true dual bram</ins> |             |                    |
 | interrupts         |                    |                    |
-| uart               |                    |                    |
+| <ins>uart</ins>    |                    |                    |
 | i2c                |                    |                    |
 | spi                |                    |                    |
 | timer              |                    |                    |
@@ -44,15 +46,14 @@
 | MIPS               |                    |                    |
 | compilation        |                    |                    |
 | optimization       |                    |                    |
-| ILA                |                    |                    |
+| ILA and VIO        |                    |                    |
 | BD                 |                    |                    |
-| project struct     |                    |                    |
-| SoC burning        |                    |                    |
+| <ins>project struct</ins> |             |                    |
+| <ins>SoC burning</ins> |                |                    |
 | FPGA burning       |                    |                    |
 | bandwidth          |                    |                    |
-| fsm                |                    |                    |
-| fsm diagramms      |                    |                    |
-| block diagramms    |                    |                    |
+| FPGA arch          |                    |                    |
+| Тарасов            |                    |                    |
 |                    |                    |                    |
 
 ## firmware
@@ -61,17 +62,24 @@
 
 | aprentice          | master             | adept              |
 | :---               | :---               | :---               |
-| Pratta C           | Zynq b-l drivers   |                    |
+| Pratta C           | Zynq BM drivers    |                    |
 | C                  | FreeRTOS           |                    |
 | make               | Zynq F-S drivers   |                    |
 | Eclipse            | Zynq bootloader    |                    |
-| ARM arch           | timings            |                    |
+| <ins>UART</ins>    | timings            |                    |
+| I2C                | Zynq my pl uart driver |                |                    
+| SPI                |                    |                    |
+| ADC                |                    |                    |
+| Timers             |                    |                    |
+| EEPROM             |                    |                    |
 | AVR bootloader     | misra              |                    |
 | device drivers     | metaprogramming    |                    |
 | schemes            | optimizatiom       |                    |
 | timings            | Zynq F-S dev drvs  |                    |
 | std lib            | Zynq b-l dev drvs  |                    |
 |                    | tcp/ip??           |                    |
+|                    | ARM arch           |                    |
+|                    | <ins>atmega8a_clock</ins> |             |
 |                    |                    |                    |
 
 ## software
@@ -92,10 +100,8 @@
 | linux arch         |                    |                    |
 | LKM Rasp dev drvs  |                    |                    |
 | tcp/ip??           |                    |                    |
+| Zynq my pl uart LKM |                   |                    |
 |                    |                    |                    |
-
-
-
 
 ## environment
 
