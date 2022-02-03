@@ -1,0 +1,7 @@
+/media/Drakonof/2E0A00DD0A00A445/workspace/linux_mastering/userspace/tcp_server/build/CMakeFiles/install/strip.dir
+/media/Drakonof/2E0A00DD0A00A445/workspace/linux_mastering/userspace/tcp_server/build/CMakeFiles/install/local.dir
+/media/Drakonof/2E0A00DD0A00A445/workspace/linux_mastering/userspace/tcp_server/build/CMakeFiles/install.dir
+/media/Drakonof/2E0A00DD0A00A445/workspace/linux_mastering/userspace/tcp_server/build/CMakeFiles/list_install_components.dir
+/media/Drakonof/2E0A00DD0A00A445/workspace/linux_mastering/userspace/tcp_server/build/CMakeFiles/rebuild_cache.dir
+/media/Drakonof/2E0A00DD0A00A445/workspace/linux_mastering/userspace/tcp_server/build/CMakeFiles/edit_cache.dir
+/media/Drakonof/2E0A00DD0A00A445/workspace/linux_mastering/userspace/tcp_server/build/CMakeFiles/tcp_server.dir

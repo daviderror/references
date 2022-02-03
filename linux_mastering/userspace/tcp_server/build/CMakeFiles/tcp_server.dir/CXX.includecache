@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../inc/tcp.h
+sys/socket.h
+-
+arpa/inet.h
+-
+unistd.h
+-
+
+../inc/tcp_server.h
+string.h
+-
+string
+-
+unistd.h
+-
+tcp.h
+../inc/tcp.h
+
+/media/Drakonof/2E0A00DD0A00A445/workspace/linux_mastering/userspace/tcp_server/src/main.cpp
+iostream
+-
+tcp_server.h
+/media/Drakonof/2E0A00DD0A00A445/workspace/linux_mastering/userspace/tcp_server/src/tcp_server.h
+
