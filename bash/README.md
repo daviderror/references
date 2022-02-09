@@ -25,6 +25,7 @@
 23. [poweroff](#poweroff)
 24. [reboot](#reboot)
 25. [shutdown](#shutdown)
+26. [i2cdetect](#i2cdetect)
 
 ## ls
 
@@ -468,3 +469,17 @@ shutdown [options] [time] [wall]
 `$ sudo shutdown -r` - reboots the system
 
 `$ sudo shutdown -c` - cancel and stop shutdown
+
+## i2cdetect
+    installing:
+```
+$ sudo apt-get install i2c-tools
+```
+    print a list i2c devices:
+```
+$ sudo i2cdetect -l
+```
+    print a table of i2c deviced on first i2c bus 
+```
+$ sudo i2cdetect -y 1
+```
