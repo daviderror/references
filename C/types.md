@@ -2,6 +2,7 @@
 
 1.  [integer](#integer)
 1.  [floating_points](#floating_points)
+1.  [struct](#struct)
 
 ## integer
 
@@ -99,3 +100,53 @@ else {
     printf log: T
     
     Но вообще в stdlib есть платформазависимый DBL_EPSILON дефайн.
+
+## struct
+
+    Объявление обычгой структуры:
+```
+struct type_of_struct {
+  поля структуры
+} name_of_struct;  
+```
+    Но лучше разносить объявления структуры и типа струтктуры, что бы не объявлять объект структуры глобально.
+```
+struct type_of_struct {
+  char field_0;
+  int field_1;
+  iny *p_field_2;
+};  
+
+struct type_of_struct name_of_struct_0 = {}, 
+                      name_of_struct_1 = {.field_0 = '0', .field_1 = 1, .p_field_2 = NULL},
+                      name_of_struct_2 = {.p_field_2 = &name_of_struct_1.field_1};
+```
+
+
+    Объявление анонимной структуры, так делать можно, но не рекомендуется, тк отладчик не сможет с ней 
+    работать, также имя и объявление типа не разрывны:
+```
+struct {
+  поля структуры
+} name_of_unonimus_struct;
+```
+    Объявление структуры через typedef, используется для закрытых структур, типа дескрипторов, которые ходят между 
+    функциями и полльзователю не нужно лезть в нутрь структуры, используется редко.
+    Анонимная, badcase:
+```
+typedef struct {
+  поля структуры
+} new_type_name name_of_unonimus_struct;
+```
+    Именованная, goodcase:
+```
+typedef struct type_of_struct {
+  char field_0;
+  int field_1;
+  iny *p_field_2;
+} new_type_name;
+
+type_of_struct name_of_struct_0 = {}, 
+               name_of_struct_1 = {.field_0 = '0', .field_1 = 1, .p_field_2 = NULL},
+               name_of_struct_2 = {.p_field_2 = &name_of_struct_1.field_1};
+```

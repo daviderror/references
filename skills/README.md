@@ -26,7 +26,7 @@
 | primitives         | device controllers |                    |
 | fsm diagramms      | piplining          |                    |
 | counter            | ПРОЭКТЫ??          |                    |
-| <ins>fifo</ins>    |                    |                    |
+| <ins>fifo</ins>    | SoC                |                    |
 | <ins>piso          |                    |                    |
 | sipo               |                    |                    |
 | axi-lite           |                    |                    |
@@ -77,7 +77,7 @@
 | schemes            | optimizatiom       |                    |
 | timings            | Zynq F-S dev drvs  |                    |
 | std lib            | Zynq b-l dev drvs  |                    |
-|                    | tcp/ip??           |                    |
+| SoC                | tcp/ip??           |                    |
 |                    | ARM arch           |                    |
 | <ins>atmega8a_clock</ins> |             |             |
 |                    |                    |                    |
@@ -102,6 +102,7 @@
 | tcp/ip??           |                    |                    |
 | Zynq my pl uart LKM |                   |                    |
 | block schem        |                    |                    |
+| SoC                |                    |                    |
 |                    |                    |                    |
 
 ## environment
