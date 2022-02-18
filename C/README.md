@@ -138,7 +138,7 @@ int main(int argc, char *argv[]){
 
     Позволяет работать с аргументами передаваемыми в userspace програму.
 
-[int main(int argc, char "argv[])](#programm_arguments)
+[int main(int argc, char \*argv[])](#programm_arguments)
 
 
 ```
