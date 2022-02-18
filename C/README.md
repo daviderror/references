@@ -3,7 +3,7 @@
 
 [types](https://github.com/Drakonof/references/blob/main/C/types.md)
 
-[functions]()
+[functions](https://github.com/Drakonof/references/blob/main/C/functions.md)
 
 [implementation_defined_behavior](#implementation_defined_behavior)
 
@@ -33,6 +33,10 @@
 ## types
 
    https://github.com/Drakonof/references/blob/main/C/types.md 
+
+## functions
+ 
+   https://github.com/Drakonof/references/blob/main/C/functions.md  
 
 ## implementation_defined_behavior
     
@@ -138,15 +142,11 @@ int main(int argc, char *argv[]){
 
 ## getopt
 
-    Функция getopt принимает параметры argc и argv в том виде, в каком они передаются функции main 
-    в программе, и строку спецификатора опций, которая сообщает getopt, какие опции определены для 
-    программы и есть ли у них связанные с ними значения. optstring — это просто список символов, 
-    каждый из которых представляет односимвольную опцию. Если за символом следует двоеточие, это 
-    означает, что у опции есть ассоциированное значение, которое будет принято как следующий аргумент.
+Функция getopt принимает [параметры argc и argv](#programm_arguments) в том виде, в каком они передаются функции main в программе, и строку спецификатора опций, которая сообщает getopt, какие опции определены для программы и есть ли у них связанные с ними значения. optstring — это просто список символов, каждый из которых представляет односимвольную опцию. Если за символом следует двоеточие, это означает, что у опции есть ассоциированное значение, которое будет принято как следующий аргумент.
 
 [аргументы программы: int argc и char \*argv[]](#programm_arguments)
 
-Прототип функции: `int getopt(int argc, char *const argv[], const char *optstring);`
+[Прототип функции](#functions): `int getopt(int argc, char *const argv[], const char *optstring);`
 
 ```
 #include <stdio.h>
