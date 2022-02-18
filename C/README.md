@@ -34,9 +34,9 @@
 
    https://github.com/Drakonof/references/blob/main/C/types.md 
 
-## functions
+## [functions](#https://github.com/Drakonof/references/blob/main/C/functions.md)
  
-   https://github.com/Drakonof/references/blob/main/C/functions.md  
+     
 
 ## implementation_defined_behavior
     
