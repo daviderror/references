@@ -1,9 +1,30 @@
 # C 
+[building](#building)
 
-1.  [types](https://github.com/Drakonof/references/blob/main/C/types.md)
-2.  [implementation_defined_behavior](#implementation_defined_behavior)
-2.  [unspecified_behavior](#unspecified_behavior)
-2.  [undefined_behavior](#undefined_behavior)
+[types](https://github.com/Drakonof/references/blob/main/C/types.md)
+
+[implementation_defined_behavior](#implementation_defined_behavior)
+
+[unspecified_behavior](#unspecified_behavior)
+
+[undefined_behavior](#undefined_behavior)
+
+## building
+
+   building == (compilator && assembler && linker)
+
+                       gcc -E                       gcc -S                    gcc -c      libraries       gcc -o
+                +---------------------+       +-----------------+       +-----------------+   |   +-----------------------+ 
+                | C preprocessor      |       | C compiler      |       | Assembler       |   |   | Linker                |
+   c code  ---->|                     |       |                 |       |                 |   +-> |                       |
+                | (includes, defines, | ----> |                 | ----> |                 |       |                       | ----> .out
+   headers ---->|  ifdef and comments |       |                 |       |                 |       |                       |
+    |           |  deleting)          |       | (assembly code) |       | (object code)   | ----> | (executable programm) |
+                +---------------------+       +-----------------+       +-----------------+       +-----------------------+
+
+## types
+
+   https://github.com/Drakonof/references/blob/main/C/types.md 
 
 ## implementation_defined_behavior
     
