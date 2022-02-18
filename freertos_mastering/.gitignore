@@ -1,0 +1,18 @@
+Packages/*
+#--------------------------------------------------
+# todo: bd
+fpga/*
+
+#--------------------------------------------------
+firmware/.metadata/*
+*.project
+electrolux_test/*
+!electrolux_test/src/*
+!electrolux_test/inc/*
+electrolux_test_bsp/*
+freertos_mastering_wrapper_hw_platform_0/*
+*.log
+*.hdf
+#--------------------------------------------------
+
+#--------------------------------------------------
