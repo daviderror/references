@@ -15,6 +15,10 @@
 
 [getopt](#getopt)
 
+[getopt_long](#getopt_long)
+
+[getopt_long_only](#getopt_long_only)
+
 ## building
 
    building == (compilator && assembler && linker)
@@ -32,17 +36,17 @@
 
 ## types
 
-   https://github.com/Drakonof/references/blob/main/C/types.md 
+https://github.com/Drakonof/references/blob/main/C/types.md 
 
-## [functions](#https://github.com/Drakonof/references/blob/main/C/functions.md)
+## functions
+
+https://github.com/Drakonof/references/blob/main/C/functions.md
  
-     
-
 ## implementation_defined_behavior
     
 Компилятор должен выбрать вариант, документировать его и придерживаться его.
 
-Пример: int
+Пример: размер int'а
 
 ## unspecified_behavior
     
@@ -119,16 +123,76 @@ int main(int argc, char *argv[]){
 
 ## getopt
 
-Функция getopt принимает [параметры argc и argv](#programm_arguments) в том виде, в каком они передаются функции main в программе, и строку спецификатора опций, которая сообщает getopt, какие опции определены для программы и есть ли у них связанные с ними значения. optstring — это просто список символов, каждый из которых представляет односимвольную опцию. Если за символом следует двоеточие, это означает, что у опции есть ассоциированное значение, которое будет принято как следующий аргумент.
+[Функция](https://github.com/Drakonof/references/blob/main/C/functions.md) getopt принимает [параметры argc и argv](#programm_arguments) в том виде, в каком они передаются функции main в программе, и строку спецификатора опций, которая сообщает getopt, какие опции определены для программы и есть ли у них связанные с ними значения. optstring — это просто список символов, каждый из которых представляет односимвольную опцию. Если за символом следует двоеточие, это означает, что у опции есть ассоциированное значение, которое будет принято как следующий аргумент.
 
-[Прототип функции](#functions): `int getopt(int argc, char *const argv[], const char *optstring);`
+[Прототип функции](https://github.com/Drakonof/references/blob/main/C/functions.md#prototype): `int getopt(int argc, char *const argv[], const char *optstring);`
+
+Пример:
+
+`./argopt_example -i -lr 'hi there' -f some_file_for_example.с -q`
+
+Код примера:
 
 ```
 #include <stdio.h>
+#include <unistd.h>
+#include <stdlib.h>
 
-int main(int argc, char *argv[]){                 
-    for (int i = 0; i < argc; i++){
-        printf("Argument %d: %s\n", i, argv[i]);
-    };
+int main(int argc, char *argv[]) 
+{
+    int opt = 0;
+    
+    /*
+    Если первый символ optstring:
+    ':' - getopt не будет выводить сообщение об ошибке и возвращать двойные кавычки, и позволит получать ':' и '?' как
+          значения возврата (аргумент не найден и не известный аргумент соответсвенно); 
+    '+' или установлена переменная среды POSIXLY_CORRECT - то при обнаружении параметра, не являющегося параметром, 
+                                                           обработка параметра прекращается;
+    '-' - то каждый параметр, не являющийся параметром, будет обрабатываться, как если бы они были параметрами параметра;
+
+    Если cимвол параметра ввода отсутствует в допустимом символе параметра optstring, getopt возвращает "?"; 
+
+    И помещает неправильный символ в глобальную переменную optopt;
+    По умолчанию getopt () выводит сообщения об ошибках в стандартную ошибку;
+    
+    После аргумента:
+    ':' - требуется указать значение для аргумента
+    '::' - не обязательный аргумент, можно упустить
+    */
+    while (-1 != (opt = getopt(argc, argv, ":if:lr"))) {
+        switch(opt) {
+        case 'i':
+        case 'l':
+        case 'r':
+             printf("option: %c\n", opt);
+        break;
+        case 'f':
+             printf("filename: %s\n", optarg);
+        break;
+        case ':':
+            printf("option needs a value\n");
+        break;
+        case '?':
+            printf("unknown option: %c\n", optopt);
+        break;
+        default:
+            printf("also as in ? unknown option: %c\n", optopt);
+        break
+        }
+    }
+
+    exit(EXIT_SUCCES);
 }
 ```
+log примера:
+
+    option: i
+    option: l
+    option: r
+    filename: some_file_for_example.c
+    unknown option: q
+    argument: hi there
+
+Присер многократно вызывает функцию getopt для обработки аргументов-опций до тех пор, пока не останется ни одного, в этот момент getopt вернет -1. Для каждой опции выбирается подходящее действие, включая обработку неизвестных опций и пропущенных значений.
+
+
