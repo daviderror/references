@@ -9,6 +9,10 @@
 
 [undefined_behavior](#undefined_behavior)
 
+[programm_arguments](#programm_arguments)
+
+[getopt](#getopt)
+
 ## building
 
    building == (compilator && assembler && linker)
@@ -21,6 +25,8 @@
     headers -> |  ifdef and comments |    |                 |    |                 |     |                       |
      |         |  deleting)          |    | (assembly code) |    | (object code)   | --> | (executable programm) |
                +---------------------+    +-----------------+    +-----------------+    +-----------------------+
+
+   `ldd name_of_execution_file` - покажет из каких библиотек состоит исполняемый файл
 
 ## types
 
@@ -114,4 +120,32 @@
 const int c = 10;
 
 const_cast<int&> (c) = 11;
+```
+
+## programm_arguments
+
+```
+// argc - arguments counter, number of the arguments
+// argv - указатель на массив строк аргументов
+int main(int argc, char *argv[]){                 
+    for (int i = 0; i < argc; i++){
+        printf("Argument %d: %s\n", i, argv[i]);
+    };
+}
+```
+
+## getopt
+
+    Позволяет работать с аргументами передаваемыми в userspace програму.
+
+    [int main(int argc, char *argv[])](#programm_arguments)
+
+```
+#include <stdio.h>
+
+int main(int argc, char *argv[]){                 
+    for (int i = 0; i < argc; i++){
+        printf("Argument %d: %s\n", i, argv[i]);
+    };
+}
 ```
