@@ -1,0 +1,49 @@
+src/ps_uart.o src/ps_uart.o: ../src/ps_uart.c \
+ ../../electrolux_test_bsp/ps7_cortexa9_0/include/xscugic.h \
+ ../../electrolux_test_bsp/ps7_cortexa9_0/include/xstatus.h \
+ ../../electrolux_test_bsp/ps7_cortexa9_0/include/xil_types.h \
+ ../../electrolux_test_bsp/ps7_cortexa9_0/include/xil_assert.h \
+ ../../electrolux_test_bsp/ps7_cortexa9_0/include/xil_io.h \
+ ../../electrolux_test_bsp/ps7_cortexa9_0/include/xil_printf.h \
+ ../../electrolux_test_bsp/ps7_cortexa9_0/include/xparameters.h \
+ ../../electrolux_test_bsp/ps7_cortexa9_0/include/xparameters_ps.h \
+ ../../electrolux_test_bsp/ps7_cortexa9_0/include/bspconfig.h \
+ ../../electrolux_test_bsp/ps7_cortexa9_0/include/xpseudo_asm.h \
+ ../../electrolux_test_bsp/ps7_cortexa9_0/include/xreg_cortexa9.h \
+ ../../electrolux_test_bsp/ps7_cortexa9_0/include/xpseudo_asm_gcc.h \
+ ../../electrolux_test_bsp/ps7_cortexa9_0/include/xscugic_hw.h \
+ ../../electrolux_test_bsp/ps7_cortexa9_0/include/xil_exception.h \
+ /media/shimko/CEF0BAC0F0BAADD9/workspace/references/freertos_mastering/firmware/electrolux_test/inc/ps_uart.h \
+ /media/shimko/CEF0BAC0F0BAADD9/workspace/references/freertos_mastering/firmware/electrolux_test/inc/ps_uart_sys.h
+
+../../electrolux_test_bsp/ps7_cortexa9_0/include/xscugic.h:
+
+../../electrolux_test_bsp/ps7_cortexa9_0/include/xstatus.h:
+
+../../electrolux_test_bsp/ps7_cortexa9_0/include/xil_types.h:
+
+../../electrolux_test_bsp/ps7_cortexa9_0/include/xil_assert.h:
+
+../../electrolux_test_bsp/ps7_cortexa9_0/include/xil_io.h:
+
+../../electrolux_test_bsp/ps7_cortexa9_0/include/xil_printf.h:
+
+../../electrolux_test_bsp/ps7_cortexa9_0/include/xparameters.h:
+
+../../electrolux_test_bsp/ps7_cortexa9_0/include/xparameters_ps.h:
+
+../../electrolux_test_bsp/ps7_cortexa9_0/include/bspconfig.h:
+
+../../electrolux_test_bsp/ps7_cortexa9_0/include/xpseudo_asm.h:
+
+../../electrolux_test_bsp/ps7_cortexa9_0/include/xreg_cortexa9.h:
+
+../../electrolux_test_bsp/ps7_cortexa9_0/include/xpseudo_asm_gcc.h:
+
+../../electrolux_test_bsp/ps7_cortexa9_0/include/xscugic_hw.h:
+
+../../electrolux_test_bsp/ps7_cortexa9_0/include/xil_exception.h:
+
+/media/shimko/CEF0BAC0F0BAADD9/workspace/references/freertos_mastering/firmware/electrolux_test/inc/ps_uart.h:
+
+/media/shimko/CEF0BAC0F0BAADD9/workspace/references/freertos_mastering/firmware/electrolux_test/inc/ps_uart_sys.h:

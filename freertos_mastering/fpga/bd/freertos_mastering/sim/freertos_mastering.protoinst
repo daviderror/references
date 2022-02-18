@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"freertos_mastering": {
+			"proto_instances": {
+			}
+		}
+	}
+}

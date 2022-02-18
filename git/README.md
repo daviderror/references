@@ -1,16 +1,27 @@
 # git
 
 [installing](#installing)
+
 [building](#building)
+
 [uninstalling](#uninstalling)
+
 [configs](#configs)
+
 [adding](#adding)
+
 [removing](#removing)
+
 [committing](#committing)
+
 [initialization](#initialization)
+
 [pulling](#pulling)
+
 [clonning](#clonning)
+
 [pushing](#pushing)
+
 [gitignore](#gitignore)
 
 ## installing
@@ -51,6 +62,8 @@
 
 ## configs
 
+`git config -h` - показать все опции конфигурации git'а
+
     To tell Git who you are, run the following two commands:
 ```
 git config --global user.name "drakonof"
@@ -77,6 +90,7 @@ git config --unset user.email
 ## aliases
 
 `git config --global alias.[alias_name] 'config --unset user.email'` - для команд гита
+
 `git config alias.[alias_name] '!echo "hello"; echo "world"'` - для системных команд. Выполняется через '!'
 
 ## adding

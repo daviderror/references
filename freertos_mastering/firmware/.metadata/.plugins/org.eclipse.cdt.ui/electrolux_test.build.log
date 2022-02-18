@@ -1,0 +1,27 @@
+12:22:58 **** Auto Build of configuration Debug for project electrolux_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/ps_uart.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -I"/media/shimko/CEF0BAC0F0BAADD9/workspace/references/freertos_mastering/firmware/electrolux_test/inc" -c -fmessage-length=0 -MT"src/ps_uart.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../electrolux_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/ps_uart.d" -MT"src/ps_uart.o" -o "src/ps_uart.o" "../src/ps_uart.c"
+../src/ps_uart.c: In function 'init_driver_':
+../src/ps_uart.c:189:20: warning: unused variable 'intr_priority' [-Wunused-variable]
+                    intr_priority = 1;
+                    ^~~~~~~~~~~~~
+Finished building: ../src/ps_uart.c
+ 
+Building target: electrolux_test.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../electrolux_test_bsp/ps7_cortexa9_0/lib -o "electrolux_test.elf"  ./src/main.o ./src/ps_uart.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+Finished building target: electrolux_test.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size electrolux_test.elf  |tee "electrolux_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  93588	   3368	  89728	 186684	  2d93c	electrolux_test.elf
+Finished building: electrolux_test.elf.size
+ 
+
+12:22:58 Build Finished (took 266ms)
+

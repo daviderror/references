@@ -13,14 +13,14 @@
 
    building == (compilator && assembler && linker)
 
-                        gcc -E                       gcc -S                    gcc -c      libraries       gcc -o
-                 +---------------------+       +-----------------+       +-----------------+   |   +-----------------------+ 
-                 | C preprocessor      |       | C compiler      |       | Assembler       |   |   | Linker                |
-    c code  ---->|                     |       |                 |       |                 |   +-> |                       |
-                 | (includes, defines, | ----> |                 | ----> |                 |       |                       | ----> .out
-    headers ---->|  ifdef and comments |       |                 |       |                 |       |                       |
-     |           |  deleting)          |       | (assembly code) |       | (object code)   | ----> | (executable programm) |
-                 +---------------------+       +-----------------+       +-----------------+       +-----------------------+
+               gcc -E                     gcc -S                 gcc -c       libraries  gcc -o
+               +---------------------+    +-----------------+    +-----------------+ |   +-----------------------+ 
+               | C preprocessor      |    | C compiler      |    | Assembler       | |   | Linker                |
+    c code  -> |                     |    |                 |    |                 | +-> |                       |
+               | (includes, defines, | -> |                 | -> |                 |     |                       | -> .out
+    headers -> |  ifdef and comments |    |                 |    |                 |     |                       |
+     |         |  deleting)          |    | (assembly code) |    | (object code)   | --> | (executable programm) |
+               +---------------------+    +-----------------+    +-----------------+    +-----------------------+
 
 ## types
 

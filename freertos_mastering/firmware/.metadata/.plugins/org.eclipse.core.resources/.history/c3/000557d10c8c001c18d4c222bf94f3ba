@@ -1,0 +1,8 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+USER_OBJS :=
+
+LIBS := -l/media/shimko/CEF0BAC0F0BAADD9/workspace/references/freertos_mastering/firmware/electrolux_test/inc -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+
