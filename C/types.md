@@ -1,8 +1,12 @@
 # types
 
-1.  [integer](#integer)
-1.  [floating_points](#floating_points)
-1.  [struct](#struct)
+[integer](#integer)
+
+[floating_points](#floating_points)
+
+[struct](#struct)
+
+[enum](#enum)
 
 ## integer
 
@@ -103,7 +107,7 @@ else {
 
 ## struct
 
-    Объявление обычгой структуры:
+### Объявление обычной структуры
 ```
 struct type_of_struct {
   поля структуры
@@ -121,10 +125,9 @@ struct type_of_struct name_of_struct_0 = {},
                       name_of_struct_1 = {.field_0 = '0', .field_1 = 1, .p_field_2 = NULL},
                       name_of_struct_2 = {.p_field_2 = &name_of_struct_1.field_1};
 ```
+### Объявление анонимной структуры
 
-
-    Объявление анонимной структуры, так делать можно, но не рекомендуется, тк отладчик не сможет с ней 
-    работать, также имя и объявление типа не разрывны:
+Так делать можно, но не рекомендуется, тк отладчик не сможет с ней работать, также имя и объявление типа не разрывны:
 ```
 struct {
   поля структуры
@@ -149,4 +152,53 @@ typedef struct type_of_struct {
 type_of_struct name_of_struct_0 = {}, 
                name_of_struct_1 = {.field_0 = '0', .field_1 = 1, .p_field_2 = NULL},
                name_of_struct_2 = {.p_field_2 = &name_of_struct_1.field_1};
+```
+### const struct
+```
+struct defaults_str_t {
+    int num;
+    size_t size;
+};
+
+const struct defaults_str_t defaults {
+    .num = 100,
+    .size = 10
+};
+```
+### наследование структуры
+```
+struct str_name {
+    int b;
+    char a;
+}
+
+struct str_name_inc {
+    struct str_name;
+    char *p_st;
+    bool t;
+}
+```
+
+## enum
+
+В первую очередь этот тип характеризуется как int, но последнее слово о типе enum за компилятором. Можно явно задать тип enum'а, но не факт что сработает. Это делается через задавание первого поля. Те если первое поле enum инициализируется как char, то возможно и компилятор определит данный enum как char.
+
+Все поля не статических enum'ов видны как define'ы, поэтому следует придумывать осмысленные относительные к применению имена самих enum'ов и их полей.
+
+### designated_init
+
+Это расширение GCC. На примере вывода ошибок:
+
+```
+enum error {
+    OK = 0,
+    ERROR,
+    MEM_FAIL
+};
+
+const char *const error_msg[] = {
+    [OK] = "ok",
+    [ERROR] = "error ocured",
+    [MEM_FAIL] = "a memory was failed"
+};
 ```

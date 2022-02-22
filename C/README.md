@@ -5,7 +5,7 @@
 
 [functions](https://github.com/Drakonof/references/blob/main/C/functions.md)
 
-[preprocessor]() 
+[preprocessor](https://github.com/Drakonof/references/blob/main/C/preprocessor.md) 
 
 [implementation_defined_behavior](#implementation_defined_behavior)
 
@@ -31,8 +31,8 @@
     c code  -> |                     |    |                 |    |                 | +-> |                       |
                | (includes, defines, | -> |                 | -> |                 |     |                       | -> .out
     headers -> |  ifdef and comments |    |                 |    |                 |     |                       |
-     |         |  deleting)          |    | (assembly code) |    | (object code)   | --> | (executable programm) |
-               +---------------------+    +-----------------+    +-----------------+    +-----------------------+
+               |  deleting)          |    | (assembly code) |    | (object code)   | --> | (executable programm) |
+               +---------------------+    +-----------------+    +-----------------+     +-----------------------+
 
    `ldd name_of_execution_file` - покажет из каких библиотек состоит исполняемый файл
 
@@ -45,6 +45,8 @@ https://github.com/Drakonof/references/blob/main/C/types.md
 https://github.com/Drakonof/references/blob/main/C/functions.md
 
 ## preprocessor
+
+https://github.com/Drakonof/references/blob/main/C/preprocessor.md
  
 ## implementation_defined_behavior
     
