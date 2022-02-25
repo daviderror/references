@@ -18,3 +18,19 @@ gcc -DDEBUG=1 -02 и тд...
 }
 
 ```
+
+
+```
+#if !defined(SMTH)
+#define SMTH
+
+#endif
+``` 
+вместо 
+
+```
+#ifтвуа SMTH
+#define SMTH
+
+#endif
+```

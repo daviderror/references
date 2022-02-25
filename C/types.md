@@ -118,13 +118,16 @@ struct type_of_struct {
 struct type_of_struct {
   char field_0;
   int field_1;
-  iny *p_field_2;
+  int *p_field_2;
 };  
 
 struct type_of_struct name_of_struct_0 = {}, 
                       name_of_struct_1 = {.field_0 = '0', .field_1 = 1, .p_field_2 = NULL},
                       name_of_struct_2 = {.p_field_2 = &name_of_struct_1.field_1};
 ```
+
+`sizeof (type_of_struct)` // 9 байт при 32х битном int, но! в памяти (физически) эта структра будет выровнена да 4 байт на каждое поле и займет 12 байт 
+
 ### Объявление анонимной структуры
 
 Так делать можно, но не рекомендуется, тк отладчик не сможет с ней работать, также имя и объявление типа не разрывны:
