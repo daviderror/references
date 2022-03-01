@@ -25,8 +25,8 @@
 | block diagramms    | power supply       |                    |
 | primitives         | device controllers |                    |
 | fsm diagramms      | piplining          |                    |
-| counter            | ПРОЭКТЫ??          |                    |
-| <ins>fifo</ins>    | SoC                |                    |
+| counter            | SoC                |                    |
+| <ins>fifo</ins>    | <ins>xc7z010_hyperion</ins>|            |
 | <ins>piso          |                    |                    |
 | sipo               |                    |                    |
 | axi-lite           |                    |                    |
