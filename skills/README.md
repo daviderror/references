@@ -64,7 +64,7 @@
 | :---               | :---               | :---               |
 | Pratta C           | Zynq BM drivers    |                    |
 | C                  | FreeRTOS           |                    |
-| make               | Zynq F-S drivers   |                    |
+|                    | Zynq F-S drivers   |                    |
 | Eclipse            | Zynq bootloader    |                    |
 | <ins>UART</ins>    | timings            |                    |
 | I2C                | Zynq my pl uart driver |                |                    
@@ -103,6 +103,7 @@
 | Zynq my pl uart LKM |                   |                    |
 | block schem        |                    |                    |
 | SoC                |                    |                    |
+| <ins>make</ins>    |                    |                    |
 |                    |                    |                    |
 
 ## environment
@@ -116,5 +117,5 @@
 | jira               | yocto              |                    |
 | mc                 | device tree        |                    |
 | bash               | x2go               |                    |
-| ssh                |                    |                    |
+| ssh                | jenkins            |                    |
 |                    |                    |                    |

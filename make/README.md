@@ -12,7 +12,7 @@ todo gcc flages and etc.. (имплисит рулс не забыть)
 
 [syntax](#syntax)
 
-[.PHONY](#.PHONY)
+[PHONY](#PHONY)
 
 [defines_in_c_code](#defines_in_c_code)
 
@@ -21,6 +21,8 @@ todo gcc flages and etc.. (имплисит рулс не забыть)
 [recursion](#recursion)
 
 [implicit_rules](#implicit_rules)
+
+[cpp](#cpp)
 
 ## installation
 ```
@@ -222,7 +224,10 @@ $(TARGET): $(SRC:.c=.o)$
 ^I$(CC) $(CFLAGC) $^ -o $@
 ```
 
-### Переопределение [Implicit Rules]():
+### Переопределение Implicit Rules
+
+[Implicit Rules](https://github.com/Drakonof/references/tree/main/make#implicit_rules);
+
 ```
 %.o: %.c
     $(CC) $(CFLAGC) -c $< -o $@
@@ -246,7 +251,7 @@ make mylob.o
 
 Удаляет всё, и артифакты, и результаты.
 
-## .PHONY
+## PHONY
 
 Служебный target использующийся чтобы указать цели, которые не порождают файламы и сами при этом ими не являются. Порядок указания target'ов не важен и не определяет default target.
 
@@ -277,5 +282,9 @@ make mylob.o
 todo
 
 ## implicit_rules
+
+todo
+
+## cpp
 
 todo
