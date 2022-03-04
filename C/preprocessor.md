@@ -34,3 +34,15 @@ gcc -DDEBUG=1 -02 и тд...
 
 #endif
 ```
+
+ЛОГИНГ
+
+```
+#if defined(DEBUG) && (DEBUG != 0)
+#define log(x, ...) fprintf(stderr, " >> LOG %s @ L%d: " x "\n", __func__, __LINE__,##__VA_ARGS__)
+#define loglvl(lvl, x, ...) if(DEBUG >= lvl) log(x,##__VA_ARGS__)
+#else
+#define log(x, ...)
+#define loglvl(lvl, x, ...)
+#endif
+```

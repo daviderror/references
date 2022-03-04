@@ -1,34 +1,43 @@
 # kernel space
 
-0.  [kernel_vs_user](#kernel_vs_user)
-1.  [install](#install)
-2.  [reinstall](#reinstall)
-3.  [insmod](#insmod)
-4.  [rmmod](#rmmod)
-5.  [dmesg](#dmesg)
-6.  [echo_printk](#echo_printk)
-7.  [modinfo](#modinfo)
-8.  [lsmode](#lsmod)
-9.  [intrance](#intrance)
-10. [format](#format)
+[kernel_vs_user](#kernel_vs_user)
+
+[install](#install)
+
+[reinstall](#reinstall)
+
+[insmod](#insmod)
+
+[rmmod](#rmmod)
+
+[dmesg](#dmesg)
+
+[echo_printk](#echo_printk)
+
+[modinfo](#modinfo)
+
+[lsmode](#lsmod)
+
+[intrance](#intrance)
+
+[format](#format)
 
 ## kernel_vs_user
 
 Первое отличие кода модуля от пользовательского приложения состоит в том, что ему позволено выполнять супервизорные действия: привилегированные команды, операции с аппаратными портами, реакцию на прерывания. Вторым важным качественным отличием будет то, что пользовательское приложение может позволить себе определённую небрежность в завершении: не освобождать динамически выделенную память, не закрывать открытые файловые дескрипторы и тд - после завершения приложения такие действия за него «подчистит» ядро операционной системы. Следы же некорректных действий модуля останутся на всё время жизни системы (до её перезагрузки): выделенная, но не освобождённая модулю память, например, останется на всё это время как область с потерянными путями доступа, и не может быть освобождена. 
 
 ## preparing
-
-`$ sudo apt-get install build-essential linux-headers-$(uname -r)`
-
-`$ sudo apt-get install linux-source`
-
-`$ sudo apt update`
+```
+$ sudo apt-get install build-essential linux-headers-$(uname -r)
+$ sudo apt-get install linux-source
+$ sudo apt update
+```
 
 ## reinstall
-
-`$ sudo apt install --reinstall linux-headers-$(uname -r)`
-
-`$ sudo apt update`
+```
+$ sudo apt install --reinstall linux-headers-$(uname -r)
+$ sudo apt update
+```
 
 ## insmod
 
@@ -43,21 +52,23 @@
 `asmlinkage int printk( const char * fmt, ... )` - used for printk to the journal from a code. Направляет выводимую строку демону системного журнала.
 
 Первому параметру (форматной строке) может предшествовать (а может и не предшествовать) константа квалификатор, определяющая уровень сообщений. Определения констант для 8 уровней сообщений для printk:
-
-    > #define KERN_EMERG      "<0>"   /* system is unusable                   */
-    > #define KERN_ALERT      "<1>"   /* action must be taken immediately     */
-    > #define KERN_CRIT       "<2>"   /* critical conditions                  */
-    > #define KERN_ERR        "<3>"   /* error conditions                     */
-    > #define KERN_WARNING    "<4>"   /* warning conditions                   */
-    > #define KERN_NOTICE     "<5>"   /* normal but significant condition     */
-    > #define KERN_INFO       "<6>"   /* informational                        */
-    > #define KERN_DEBUG      "<7>"   /* debug-level messages                 */
-
+```
+> #define KERN_EMERG      "<0>"   /* system is unusable                   */
+> #define KERN_ALERT      "<1>"   /* action must be taken immediately     */
+> #define KERN_CRIT       "<2>"   /* critical conditions                  */
+> #define KERN_ERR        "<3>"   /* error conditions                     */
+> #define KERN_WARNING    "<4>"   /* warning conditions                   */
+> #define KERN_NOTICE     "<5>"   /* normal but significant condition     */
+> #define KERN_INFO       "<6>"   /* informational                        */
+> #define KERN_DEBUG      "<7>"   /* debug-level messages                 */
+```
 examples:
-     printk( KERN_WARNING "string" );
-     printk( "<4>" "string" );
-     printk( "<4>string" );
-     printk( "string" );
+```
+printk( KERN_WARNING "string" );
+printk( "<4>" "string" );
+printk( "<4>string" );
+printk( "string" );
+```
 
 Предшествующая константа конкатенируется с первым параметром.
 
@@ -104,12 +115,12 @@ An exit point: `static int __init module_exit(void)  {...}` and `module_exit(hel
 `$ objdump -t module.ko` - shows an information about .ko files
 
 .ko it is ELF. 
-
-    > .text — код модуля (инструкуции);
-    > .init.text — код инициализации модуля
-    > .exit.text  — код завершения модуля; 
-    > .modinfo — текст макросов модуля;
-    > .data — инициализированные данные;
-    > .bss — не инициализированные данные (Block Started Symbol)
-
+```
+.text — код модуля (инструкуции);
+.init.text — код инициализации модуля
+.exit.text  — код завершения модуля; 
+.modinfo — текст макросов модуля;
+.data — инициализированные данные;
+.bss — не инициализированные данные (Block Started Symbol)
+```
 .ko has several objects more then .o. Tnem used for loading of a module.
