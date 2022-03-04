@@ -1,0 +1,11 @@
+fpga/*
+firmware/.metadata/*
+firmware/electrolux_test_bsp/*
+firmware/freertos_mastering_wrapper_hw_platform_0/*
+firmware/electrolux_test/*
+!firmware/electrolux_test/src/*
+!firmware/electrolux_test/inc/*
+*.log
+*.project
+*.hdf
+Packages/*
