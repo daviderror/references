@@ -1,7 +1,7 @@
-firmware/*
-firmware/electrolux_test/*
 !firmware/electrolux_test/src/
 !firmware/electrolux_test/inc/
+firmware/*
+firmware/electrolux_test/*
 fpga/*
 Packages/*
 *.log
