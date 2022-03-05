@@ -4,6 +4,10 @@ todo gcc flages and etc.. (имплисит рулс не забыть)
 
 [installation](#installation)
 
+[removing](#removing)
+
+[launching](#launching)
+
 [work_scheme](#work_scheme)
 
 [building_process](https://github.com/Drakonof/references/tree/main/C#building_process)
@@ -11,6 +15,8 @@ todo gcc flages and etc.. (имплисит рулс не забыть)
 [variables](#variables)
 
 [syntax](#syntax)
+
+[default_target](#default_target)
 
 [PHONY](#PHONY)
 
@@ -30,6 +36,14 @@ sudo apt update
 sudo apt install make
 make -version
 ```
+
+## removing
+
+todo
+
+## launching
+
+`make` - для [default target]()
 
 ## work_scheme
 
@@ -150,7 +164,7 @@ $(BUILDDIR)/$(TARGET): $(addprefix $(BUILDDIR)/,$(SRC:.c=.o))
 
 ### CFLAGC
 
-Переменная хранящая флаги для компилятора. 
+Переменная хранящая флаги для [gcc](https://github.com/Drakonof/references/tree/main/gcc). 
 ```
 ...
 CFLAGC := -O2 -g2 -std=gnu11 -Wall -Wextra -Wpedantic -fms-extensions
@@ -159,19 +173,17 @@ $(BUILDDIR)/$(TARGET): $(addprefix $(BUILDDIR)/,$(SRC:.c=.o))
     $(CC) $(CFLAGC) $^ -o $@
 ...
 ```
--O - степень оптимизации. TODO "оптимизация" как ссылка на оптимизацию; 
+-O - степень [оптимизации](https://github.com/Drakonof/references/tree/main/gcc#optimization); 
 
-Важно чем выше уровень оптимизации
+-g - уровень дебага;
 
--g - уровень дебага.
+Важно: чем выше уровень оптимизации тяжелее отлаживаться.
 
 -std - используемый стандарт языка;
 
--Wall - 
+-W - какие [warnings]((https://github.com/Drakonof/references/tree/main/warnings#)'и выводить в течении сборки. 
 
--Wextra - 
-
--Wpedantic - 
+-fms-extensions - todo
 
 ## syntax
 ```
@@ -184,7 +196,7 @@ prerequisites - исходные данные для порождения target
 
 commands - действия выполняемые утилитой
 
-## default target
+## default_target
 
 Target выполняющийся по команде `make` без явного указания target'а ключем-именем target. Должен стоять первым, может иметь любое имя, в примере его имя "all".
 
