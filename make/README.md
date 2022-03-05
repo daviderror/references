@@ -153,12 +153,25 @@ $(BUILDDIR)/$(TARGET): $(addprefix $(BUILDDIR)/,$(SRC:.c=.o))
 Переменная хранящая флаги для компилятора. 
 ```
 ...
-CFLAGC := -O2 -std=gnu11 -Wall -Wextra -Wpedantic -fms-extensions
+CFLAGC := -O2 -g2 -std=gnu11 -Wall -Wextra -Wpedantic -fms-extensions
 ...
 $(BUILDDIR)/$(TARGET): $(addprefix $(BUILDDIR)/,$(SRC:.c=.o))
     $(CC) $(CFLAGC) $^ -o $@
 ...
 ```
+-O - степень оптимизации. TODO "оптимизация" как ссылка на оптимизацию; 
+
+Важно чем выше уровень оптимизации
+
+-g - уровень дебага.
+
+-std - используемый стандарт языка;
+
+-Wall - 
+
+-Wextra - 
+
+-Wpedantic - 
 
 ## syntax
 ```
