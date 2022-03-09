@@ -1,18 +1,12 @@
 # gdb
 
-[installing](#installing)
-
-[removing](#removing)
-
-[launching](#launching)
-
-[exit](#exit)
-
-[commands](#commands)
-
-[семихостинг](#семихостинг)
-
-[svo](#svo)
++ [installing](#installing)
++ [removing](#removing)
++ [launching](#launching)
++ [exit](#exit)
++ [commands](#commands)
++ [семихостинг](#семихостинг)
++ [svo](#svo)
 
 ## installing
 
@@ -52,7 +46,7 @@ Reading symbols from ./.build/max...(no debugging symbols found)...done.
 
 ## exit
 
-Выход из gdb  выполняется через команду `quit`. Сокращение: `q`. Смотри 
+Выход из gdb  выполняется через команду `quit`. Сокращение: `q`. Смотри [commands](https://github.com/Drakonof/references/tree/main/gdb#commands)
 
 ## commands
 
