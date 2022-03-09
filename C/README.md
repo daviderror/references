@@ -1,5 +1,5 @@
 # C 
-[building](#building)
+[building_process](#building_process)
 
 [types](https://github.com/Drakonof/references/blob/main/C/types.md)
 
@@ -21,9 +21,9 @@
 
 [getopt_long_only](#getopt_long_only)
 
-## building
+## building_process
 
-   building == (compilator && assembler && linker)
+   building_process == (compilator && assembler && linker)
 
                gcc -E                     gcc -S                 gcc -c       libraries  gcc -o
                +---------------------+    +-----------------+    +-----------------+ |   +-----------------------+ 

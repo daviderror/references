@@ -43,7 +43,9 @@ todo
 
 ## launching
 
-`make` - для [default target]()
+`make` - для [default target](https://github.com/Drakonof/references/tree/main/make#default_target)
+
+`make target_name` - для запуска определенного [target](https://github.com/Drakonof/references/tree/main/make#syntax)
 
 ## work_scheme
 

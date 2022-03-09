@@ -48,6 +48,8 @@ Reading symbols from ./.build/max...(no debugging symbols found)...done.
 
 Выход из gdb  выполняется через команду `quit`. Сокращение: `q`. Смотри [commands](https://github.com/Drakonof/references/tree/main/gdb#commands)
 
+Можно выйти через `cntr + c` даже из закерпиченного в бесконечный цикл дебага.
+
 ## commands
 
 Можно юзать tab для доавтозаполнения. Но команды можно сокращать, gdb поймет.
