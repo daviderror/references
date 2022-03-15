@@ -1,70 +1,54 @@
 # git
 
-[installing](#installing)
-
-[building](#building)
-
-[uninstalling](#uninstalling)
-
-[configs](#configs)
-
-[adding](#adding)
-
-[removing](#removing)
-
-[committing](#committing)
-
-[initialization](#initialization)
-
-[pulling](#pulling)
-
-[clonning](#clonning)
-
-[pushing](#pushing)
-
-[gitignore](#gitignore)
++ [installing](#installing)
++ [building](#building)
++ [uninstalling](#uninstalling)
++ [help](#help)
++ [configs](#configs)
++ [adding](#adding)
++ [removing](#removing)
++ [committing](#committing)
++ [initialization](#initialization)
++ [pulling](#pulling)
++ [clonning](#clonning)
++ [pushing](#pushing)
++ [gitignore](#gitignore)
 
 ## installing
 
-    To install:
-
-`sudo apt-get update`
-
-`sudo apt-get install git`
-
-    To check is it complete:
-
-`git --version`
-
-
-
-
+To install:
+```
+sudo apt-get update
+sudo apt-get install git
+git --version
+```
 
 ## building
 
-    It is alternative way to install of git.
+It is alternative way to install of git.
+To install:
+```
+sudo apt-get update
+sudo apt-get install libcurl4-gnutls-dev libexpat1-dev gettext libz-dev libssl-dev asciidoc xmlto docbook2x
+git clone https://git.kernel.org/pub/scm/git/git.git
+make all doc info prefix=/usr"
+sudo make install install-doc install-html install-info install-man prefix=/usr
+git --version
+```
+To check is it complete:
 
-    To install:
+## help
 
-`sudo apt-get update`
+`man git` - help в общем для git'а
 
-`sudo apt-get install libcurl4-gnutls-dev libexpat1-dev gettext libz-dev libssl-dev asciidoc xmlto docbook2x`
-
-`git clone https://git.kernel.org/pub/scm/git/git.git`
-
-`make all doc info prefix=/usr"`
-
-`sudo make install install-doc install-html install-info install-man prefix=/usr`
-
-    To check is it complete:
-
-`git --version`
+`man git-add` - help для определенной команды, к примеру для add
 
 ## configs
 
 `git config -h` - показать все опции конфигурации git'а
 
-    To tell Git who you are, run the following two commands:
+To tell Git who you are, run the following two commands:
+
 ```
 git config --global user.name "drakonof"
 git config --global user.email "soikadigital@gmail.com"
@@ -72,7 +56,7 @@ git config --global user.email "soikadigital@gmail.com"
 
 `git config --list --global` - посмотреть глобальные конфмгурации
 
-     Убрать глобальные настройки:
+Убрать глобальные настройки:
 ```
 git config --unset user.name
 git config --unset user.email
@@ -103,6 +87,8 @@ git config --unset user.email
 
 `git add file.txt file_1.txt file_2.txt` - to add several files
 
+Если репозиторий проинитин, то можно просто из папки с изменениями выполнить `git add .` для добавления изменений из конкретно этой директории.
+
 ## removing
 
 `git rm --cached my-file.ts` - to remove only one file
@@ -127,34 +113,27 @@ git config --unset user.email
 
 ## initialization
 
-    To initialize a new Git repository
-
-`echo "# new_repository_name" >> README.md` - https://github.com/Drakonof/references/tree/main/bash#echo
-
-`git init`
-
-`git add README.md`
-
-`git commit -m "first commit"`
-
-`git remote add origin git@github.com:drakonof/new_repository_name.git`
-
-`git push -u origin master`
+To initialize a new Git repository
+```
+echo "# new_repository_name" >> README.md - https://github.com/Drakonof/references/tree/main/bash#echo
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin git@github.com:drakonof new_repository_name.git
+git push -u origin master
+```
 
 ## gitignore
 
-    .gitignore file exludes files or dirs from committing to a Git repository
+.gitignore file exludes files or dirs from committing to a Git repository
 
-    Example:
+Example:
 
-`*.hex`
-
-`*.bin`
-
-`src/bin/*.json`
-
-`!src/bin/.sone_json.json`
-
-`dir/build/*`
-
-`!dir/biuld/debug/`
+```
+*.hex
+*.bin
+src/bin/*.json
+!src/bin/.sone_json.json
+dir/build/*
+!dir/biuld/debug/
+```
