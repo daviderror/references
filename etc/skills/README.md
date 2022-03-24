@@ -1,9 +1,10 @@
 # skills
 
-1.  [fpga](#fpga)
-2.  [firmware](#firmware)
-3.  [software](#software)
-4.  [environment](#environment)
++ [fpga](#fpga)
++ [firmware](#firmware)
++ [software](#software)
++ [environment](#environment)
++ [requarements](#requarements)
 
 ## fpga
      
@@ -119,3 +120,18 @@
 | bash               | x2go               |                    |
 | ssh                | jenkins            |                    |
 |                    |                    |                    |
+
+## requarements
+
++ <ins>C</ins>, C++, python, bash
++ ARM, <ins>FPGA</ins>, asm, <ins>systemverilog</ins>
++ multitasking, multithreading
++ <ins>dbg</ins>, <ins>gcc</ins>, g++, <ins>qemu</ins>, <ins>make</ins>
++ <ins>jira</ins>, jenkins, <ins>git</ins>
++ embedded linux, freeRTOS
++ micro-services development (?) 
++ MQTT, HTTP
++ Wi-Fi, bluetooth
++ <ins>i2c</ins>, <ins>spi</ins>, <ins>uart</ins>
++ <ins>1G</ins>, <ins>10G</ins>, <ins>pcie</ins>
++ Excellent understanding of data structures and fundamentals algorithms
