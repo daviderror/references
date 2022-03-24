@@ -1,4 +1,4 @@
-# X2Go
+# qemu
 
 1.  [Preparing](#Preparing)
 2.  [Installing](#Installing)
