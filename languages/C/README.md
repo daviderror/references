@@ -1,11 +1,11 @@
 # C 
 [building_process](#building_process)
 
-[types](https://github.com/Drakonof/references/blob/main/C/types.md)
+[types](https://github.com/Drakonof/references/blob/main/languages/C/types.md)
 
-[functions](https://github.com/Drakonof/references/blob/main/C/functions.md)
+[functions](https://github.com/Drakonof/references/blob/main/languages/C/functions.md)
 
-[preprocessor](https://github.com/Drakonof/references/blob/main/C/preprocessor.md) 
+[preprocessor](https://github.com/Drakonof/references/blob/main/languages/C/preprocessor.md) 
 
 [implementation_defined_behavior](#implementation_defined_behavior)
 
@@ -38,15 +38,15 @@
 
 ## types
 
-https://github.com/Drakonof/references/blob/main/C/types.md 
+https://github.com/Drakonof/references/blob/main/languages/C/types.md
 
 ## functions
 
-https://github.com/Drakonof/references/blob/main/C/functions.md
+(https://github.com/Drakonof/references/blob/main/languages/C/functions.md)
 
 ## preprocessor
 
-https://github.com/Drakonof/references/blob/main/C/preprocessor.md
+https://github.com/Drakonof/references/blob/main/languages/C/preprocessor.md
  
 ## implementation_defined_behavior
     
