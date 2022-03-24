@@ -157,3 +157,4 @@
 + tcp_ip
   + [ssh](https://github.com/Drakonof/references/tree/main/tcp_ip/ssh)
     + [console_connection](https://github.com/Drakonof/references/tree/main/tcp_ip/ssh#console_connection)
+    + [X2Go](https://github.com/Drakonof/references/tree/main/linux/tools/X2Go)
