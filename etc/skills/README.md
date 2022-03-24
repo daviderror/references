@@ -12,7 +12,7 @@
 | aprentice          | master             | adept              |
 | :---               | :---               | :---               |
 | Соловьёв           | ~~КНИГА~~          | <ins>hyperion</ins> |
-| <ins>verilog</ins> | <ins>system verilog</ins> |             |
+| <ins>systemverilog</ins> | asm          |             |
 | <ins>rtl</ins>     | fanout             |                    |
 | <ins>vivado</ins>  | <ins>rebulding</ins> |                  |
 | <ins>tb</ins>      | ecoflow            |                    |
