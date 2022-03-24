@@ -21,7 +21,7 @@
 + hyperion_base_staion
 + host app
 
-## NIC
+### NIC
 
 + FPGA для ip блоков (systemverilog, hardware)
 + host kernelspace (C, linux);
