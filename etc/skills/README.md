@@ -135,3 +135,5 @@
 + <ins>i2c</ins>, <ins>spi</ins>, <ins>uart</ins>
 + <ins>1G</ins>, <ins>10G</ins>, <ins>pcie</ins>
 + Excellent understanding of data structures and fundamentals algorithms
++ firmware drivers, freeRTOS drivers, embedded linux drivers, bootlosder, u-boot
++ как работает прцессор
