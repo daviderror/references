@@ -128,7 +128,7 @@
 + multitasking, multithreading
 + <ins>dbg</ins>, <ins>gcc</ins>, g++, <ins>qemu</ins>, <ins>make</ins>
 + <ins>jira</ins>, jenkins, <ins>git</ins>
-+ embedded linux, freeRTOS
++ embedded linux, freeRTOS, buildroot/youcto
 + micro-services development (?) 
 + MQTT, HTTP
 + Wi-Fi, bluetooth
@@ -137,3 +137,4 @@
 + Excellent understanding of data structures and fundamentals algorithms
 + firmware drivers, freeRTOS drivers, embedded linux drivers, bootlosder, u-boot
 + как работает прцессор
++ DMA, virtualization, memory modules
