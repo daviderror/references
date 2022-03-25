@@ -22,6 +22,10 @@
     + [compile_simulation_libraries](https://github.com/Drakonof/references/tree/main/fpga/vivado#compile_simulation_libraries)
     + [customize_commands](https://github.com/Drakonof/references/tree/main/fpga/vivado#customize_commands)
     + [setting_modelsim_as_default_simulator](https://github.com/Drakonof/references/tree/main/fpga/vivado#setting_modelsim_as_default_simulator)
+  + theory
+    + [abstraction](https://github.com/Drakonof/references/tree/main/fpga#abstraction)
+    + [digital_abstractiona](https://github.com/Drakonof/references/tree/main/fpga#digital_abstractiona)
+    + [number_systems](https://github.com/Drakonof/references/tree/main/fpga#number_systems)
 + [vivado](https://github.com/Drakonof/references/tree/main/freertos)
   + empty
 + [languages](https://github.com/Drakonof/references/tree/main/languages)
