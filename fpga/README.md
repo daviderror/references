@@ -1,7 +1,7 @@
 # fpga
 
 + [abstraction](#abstraction)
-+ [digital_abstractiona](#digital_abstractiona)
++ [digital_abstraction](#digital_abstraction)
 + [number_systems](#number_systems)
 
 ## abstraction
@@ -24,7 +24,7 @@ digital circuits - схемы в которых полупродниковые �
 Регулярность - соблюдение единобразия при проектировании модулей системы.
 ```
 
-## digital_abstractiona
+## digital_abstraction
 ```
 Бит - от binary digital, двоичный разряд. D = lnN (D - объём информации) => ln2 = 1 те 2 значения (0 и 1) умещаются в 1 бит информации.
 
