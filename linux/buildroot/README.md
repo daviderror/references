@@ -13,4 +13,4 @@
 
 [Скачать buildroot.](https://buildroot.org/download.html)
 
-![Архив на сайте.](doc/buildroot.img "Архив на сайте.")
+![Архив на сайте.](doc/buildroot_1.png "Архив на сайте.")
