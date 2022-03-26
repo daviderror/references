@@ -1,25 +1,24 @@
 # qemu
 
-1.  [Preparing](#Preparing)
-2.  [Installing](#Installing)
-3.  [Utils](#Utils)
-4.  [Hdd_creation](#Hdd_creation)
-5.  [OS_installing](#OS_installing)
-6.  [Launch](#Launch)
-7.  [Additionally](#Additionally)
++ [preparing](#preparing)
++ [installing](#installing)
++ [utils](#utils)
++ [hdd_creation](#hdd_creation)
++ [OS_installing](#OS_installing)
++ [launch](#launch)
++ [additionally](#additionally)
 
-## Preparing
-     Включить поддержку виртуализации в БИОС.
+## preparing
 
-## Installing
+Включить поддержку виртуализации в БИОС.
+
+## installing
 ```
 $ sudo apt update 
-```
-```
 $ sudo apt install qemu-kvm qemu
 ```
 
-## Utils
+## utils
 
     Эмулятор qemu создает много команд, но их можно разделить на группы:
         qemu-архитектура - эмуляция окружения пользователя для указанной архитектуры;
@@ -29,7 +28,7 @@ $ sudo apt install qemu-kvm qemu
         qqemu-user - оболочка для qemu-архитектура, позволяет запускать программы других архитектур в этой системе;
         qqemu-system - оболочка для qemu-system-архитектура, позволяет полностью эмулировать систему нужной архитектуры.
 
-## Hdd_creation
+## hdd_creation
 ```
 $ sudo qemu-img create -f qcow2 virt_hdd_name.qcow2 40G
 ```
@@ -56,22 +55,15 @@ $ sudo qemu-system-x86_64 -hda virt_hdd_name.qcow2 -boot d -cdrom /full_path_for
 
      Следующим шагом установка ОС. Для Ubuntu: TODO ссылка.
 
-## Launch
+## launch
 ```
 $ sudo qemu-system-x86_64 -hda virt_hdd_name.qcow2 -m 8196 -enable-kvm
 ```
 
-## Additionally
+## additionally
 
-    1. Текущее состояние:
-```
-$ sudo systemctl get-default
-```
-     Отключить графику:
-```
-$ systemctl set-default multi-user.target
-```
-     Включить графику:
-```
-$ systemctl set-default graphical.target
-```
+`sudo systemctl get-default` - текущее состояние;
+
+`systemctl set-default multi-user.target` - отключить графику:
+
+`systemctl set-default graphical.target` - включить графику
