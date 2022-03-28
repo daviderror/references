@@ -138,3 +138,4 @@
 + firmware drivers, freeRTOS drivers, embedded linux drivers, bootlosder, u-boot
 + как работает прцессор
 + DMA, virtualization, memory modules
++ ubus, modbus, ebpf
