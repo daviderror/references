@@ -1,10 +1,14 @@
+#include "uriparser.h"
+#include "logging.h"
+#include "macroutils.h"
+
 #include <arpa/inet.h>
+
 #include <limits.h>
 #include <string.h>
 
-#include "uri_parser.h"
-#include "logging.h"
-#include "macroutils.h"
+#define PCRE2_CODE_UNIT_WIDTH CHAR_BIT
+#include <pcre2.h>  // pkg-config --cflags --libs libpcre2-8
 
 static const char *const c_p_uri = (
     "^ (?P<proto> tcp|udp|unix) : \\/\\/ (?: "
@@ -22,15 +26,17 @@ static const char *const c_p_uri = (
     ")$"
 );
 
-static const char *uri_group_names[] = {"proto", "ip", "host", "port", "path", NULL};
+static const char *uri_groupnames[] = {"proto", "ip", "host", "port", "path", NULL};
 
 static long re_collect_named(const char *regex, const char *string,
-	                         const char **group_names, char **collected)
+	                         const char **groupnames, char **collected)
 {
 	if (NULL == regex || NULL == string || 
-		NULL == group_names || NULL == collected) {
-		return -1L;
+		NULL == groupnames || NULL == collected) {
+		return RE_WRONG_ARGS;
 	}
 
-	
+	long ngroups = 0;
+    
+    while (NULL != groupnames)
 }

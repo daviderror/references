@@ -1,12 +1,12 @@
 # types
 
-[integer](#integer)
++ [integer](#integer)
++ [floating_points](#floating_points)
++ [struct](#struct)
++ [enum](#enum)
++ [arrays](#arrays)
 
-[floating_points](#floating_points)
 
-[struct](#struct)
-
-[enum](#enum)
 
 ## integer
 
@@ -205,3 +205,8 @@ const char *const error_msg[] = {
     [MEM_FAIL] = "a memory was failed"
 };
 ```
+
+## arrays
+
+Массивы можно терменировать NULL, что бы не передавть размер массива для работы с ним, как строки, это часто используется в линуксе:
+`static const char *uri_group_names[] = {"proto", "ip", "host", "port", "path", NULL};`
