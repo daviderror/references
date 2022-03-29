@@ -8,7 +8,8 @@
 #include <string.h>
 #include <stdio.h>
 
-#define PCRE2_CODE_UNIT_WIDTH CHAR_BIT
+#define PCRE2_CODE_UNIT_WIDTH 8
+
 #include <pcre2.h>  // pkg-config --cflags --libs libpcre2-8
 
 static const char *const uri_re = (
