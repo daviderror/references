@@ -7,7 +7,7 @@ LIBS = libpcre2-8
 BUILDDIR = ./.build
 INCDIRS = $(SRCDIR)
 
-CFLAGS = -O2 -std=gnu17 -fms-extensions -Wall -Wextra -Wpedantic
+CFLAGS = -O2 -std=gnu11 -fms-extensions -Wall -Wextra -Wpedantic
 CFLAGS += $(shell pkg-config --cflags $(LIBS))
 CFLAGS += -DDEBUG=$(DEBUG)
 # This will turn all warnings into errors

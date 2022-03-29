@@ -4,12 +4,12 @@
 #include <arpa/inet.h>
 #include <sys/socket.h>
 
-#include <stdint>
+#include <stdint.h>
 
 enum socket_type {
-	STYLE_TCP,
-	STYLE_UDP,
-	STYLE_UNIX
+	STYPE_TCP,
+	STYPE_UDP,
+	STYPE_UNIX
 };
 
 #pragma pack push

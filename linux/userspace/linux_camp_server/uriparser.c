@@ -6,6 +6,7 @@
 
 #include <limits.h>
 #include <string.h>
+#include <stdio.h>
 
 #define PCRE2_CODE_UNIT_WIDTH CHAR_BIT
 #include <pcre2.h>  // pkg-config --cflags --libs libpcre2-8
@@ -47,14 +48,14 @@ static long re_collect_named(const char *regex, const char *string,
     }
 
     log_info("Detected %ld groups", ngroups);
-    
+   
     int re_err = 0;
 
     PCRE2_SIZE _re_errorffset;
     
     // собирает regexp в "некий байткод" для дальнейшей работы с ним
     // _re_errorffset - позиция в regex  где ошибка
-    pcre2_code *re = pcre2_compile((PCRE2_SPTR)regexp, PCRE2_ZERO_TERMENATED, PCRE2_EXTENDED | PCRE2_UTF,
+    pcre2_code *re = pcre2_compile((PCRE2_SPTR)regex, PCRE2_ZERO_TERMINATED, PCRE2_EXTENDED | PCRE2_UTF,
                                   &re_err, &_re_errorffset, NULL);
 
     // если pcre2_compile возвращает NULL, те ошибку
@@ -62,7 +63,7 @@ static long re_collect_named(const char *regex, const char *string,
         char buffer[100];
         
         // вставит в buffer ообщение от ошибке
-        pcre_get_error_message(re_err, (unsigned char *)buffer, arr_len(buffer));
+        pcre2_get_error_message(re_err, (unsigned char *)buffer, arr_len(buffer));
         log_crit("Regexp compilation error %d @ %llu : %s", re_err, (long long unsigned)_re_errorffset, buffer);
 
         return RE_WRONG_PATTERN;
@@ -73,7 +74,7 @@ static long re_collect_named(const char *regex, const char *string,
     int ret = 0;
 
     // алоцирует память для работы с regex по результатом компилировния regex
-    pcre2_match_data *match = pcre2_match_create_from_pattern(re, NULL);
+    pcre2_match_data *match = pcre2_match_data_create_from_pattern(re, NULL);
 
     if (NULL == match) {
         log_crit("Match block could not be obtained");
@@ -97,7 +98,7 @@ static long re_collect_named(const char *regex, const char *string,
     log_info("Match count %ld", mcnt);
     
     // просто посмотреть результат совподений по группам из pcre2_match()
-    if (DEBUG >= LOG_INFO) {
+    if (DEBUG >= 4) {
         PCRE2_SIZE *ovector = pcre2_get_ovector_pointer(match);
 
         for (long i = 0; i < mcnt; i++) {
@@ -158,7 +159,7 @@ static long re_collect_named(const char *regex, const char *string,
         pcre2_match_data_free(match);
     code_free:
         log_info("Deallocating re compiled code");
-        pce2_code_free(re);
+        pcre2_code_free(re);
 
     return ret;
 }
@@ -185,10 +186,10 @@ bool uri_parse(const char *uristring, struct socket_uri *resuri)
     log_info("HOST: %s IP: %s", host, ip);
 
     struct socket_uri res = {
-        .type = (!strcmp(proto, "tcp") ? STYLE_TCP : !strcmp(proto, "udp") ? STYLE_UDP : STYLE_UNIX)
+        .type = (!strcmp(proto, "tcp") ? STYPE_TCP : !strcmp(proto, "udp") ? STYPE_UDP : STYPE_UNIX)
     };
 
-    if (STYLE_UNIX != res.type) {
+    if (STYPE_UNIX != res.type) {
         long long p;
 
         if (NULL == port || sscanf(port, "%lld", &p) < 1 || p > 65535) {
@@ -203,7 +204,7 @@ bool uri_parse(const char *uristring, struct socket_uri *resuri)
         res.path = strdup(path);
 
         if (NULL == res.path) {
-            log.err("path memory allocation failed");
+            log_err("path memory allocation failed");
             return false;
         }
     } else if ((NULL != ip) && (NULL == host)) {
