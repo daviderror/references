@@ -10,12 +10,12 @@
 #define PCRE2_CODE_UNIT_WIDTH CHAR_BIT
 #include <pcre2.h>  // pkg-config --cflags --libs libpcre2-8
 
-static const char *const uri = (
+static const char *const uri_re = (
     "^ (?P<proto> tcp|udp|unix) : \\/\\/ (?: " // именованная группа содержащая tcp или udp или unix, ':', '//', начало группы ip + домен или пути
     "  (?: "                                   // группа ip + домен
     "    (?P<ip> "                             // именованная группа ip
     "        \\d{1,3} (?: \\.\\d{1,3}) {3} "   // 1 - 3 цифры за которыми следует еще 3 группы повторяющихся 1 - 3 цифр с префиксом '.'
-    "    ) | (?P<domein> "                     // именованная группа домена
+    "    ) | (?P<host> "                       // именованная группа домена
     "      (?: [a-zA-Z0-9] | [a-zA-Z0-9][a-zA-Z0-9\\-]{0,61} [a-zA-Z0-9]) "
     "      (?: \\. (?: [a-zA-Z0-9] | [a-zA-Z0-9][a-zA-Z0-9\\-]{0,61} [a-zA-Z0-9])) *"
     "    ) "                                   // конец группы ip + домен
@@ -26,6 +26,7 @@ static const char *const uri = (
     ")$"                                       // конец файла
 );
 
+// группы
 static const char *uri_groupnames[] = {"proto", "ip", "host", "port", "path", NULL};
 
 static long re_collect_named(const char *regex, const char *string,
@@ -39,7 +40,8 @@ static long re_collect_named(const char *regex, const char *string,
 	long ngroups = 0;
     
 
-    // цикл может оказаться бесконечным, это плохая практика, нужен счетчик максимального количества итераций.
+    // 1. цикл может оказаться бесконечным, это плохая практика, нужен счетчик максимального количества итераций.
+    // 2. идет расчет размера нультерминированного массива
     while (NULL != groupnames[ngroups]) {
         ngroups++;
     }
@@ -49,13 +51,17 @@ static long re_collect_named(const char *regex, const char *string,
     int re_err = 0;
 
     PCRE2_SIZE _re_errorffset;
-
+    
+    // собирает regexp в "некий байткод" для дальнейшей работы с ним
+    // _re_errorffset - позиция в regex  где ошибка
     pcre2_code *re = pcre2_compile((PCRE2_SPTR)regexp, PCRE2_ZERO_TERMENATED, PCRE2_EXTENDED | PCRE2_UTF,
                                   &re_err, &_re_errorffset, NULL);
 
+    // если pcre2_compile возвращает NULL, те ошибку
     if (NULL == re) {
         char buffer[100];
-
+        
+        // вставит в buffer ообщение от ошибке
         pcre_get_error_message(re_err, (unsigned char *)buffer, arr_len(buffer));
         log_crit("Regexp compilation error %d @ %llu : %s", re_err, (long long unsigned)_re_errorffset, buffer);
 
@@ -66,6 +72,7 @@ static long re_collect_named(const char *regex, const char *string,
 
     int ret = 0;
 
+    // алоцирует память для работы с regex по результатом компилировния regex
     pcre2_match_data *match = pcre2_match_create_from_pattern(re, NULL);
 
     if (NULL == match) {
@@ -75,6 +82,9 @@ static long re_collect_named(const char *regex, const char *string,
         goto code_free;
     }
 
+    // проверяет переданную строку с переаднным regex
+    // (PCRE2_SIZE)0 - смещение в regex откуда начинать проверять 
+    // возвращает количество групп или -1
     long mcnt = pcre2_match(re, (PCRE2_SPTR) string, (PCRE2_SIZE)strlen(string),(PCRE2_SIZE)0, 0, match, NULL);
 
     if (mcnt < 1) {
@@ -85,7 +95,8 @@ static long re_collect_named(const char *regex, const char *string,
     }
 
     log_info("Match count %ld", mcnt);
-
+    
+    // просто посмотреть результат совподений по группам из pcre2_match()
     if (DEBUG >= LOG_INFO) {
         PCRE2_SIZE *ovector = pcre2_get_ovector_pointer(match);
 
@@ -123,6 +134,7 @@ static long re_collect_named(const char *regex, const char *string,
 
         numfound++;
 
+        // алоцируется и сохраняется результат
         collected[i] = strdup(val);
 
         if (NULL == collected[i]) {
@@ -151,7 +163,7 @@ static long re_collect_named(const char *regex, const char *string,
     return ret;
 }
 
-bool uri_parse(const char *uristring, struct socket_uri *result)
+bool uri_parse(const char *uristring, struct socket_uri *resuri)
 {
     if (NULL == resuri || NULL == uristring) {
         return false;
