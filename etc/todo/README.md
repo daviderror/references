@@ -1,8 +1,5 @@
 ##todo
 
-1. vpn
-2. git на flesh
-
 ## projects
 
 ### IoT

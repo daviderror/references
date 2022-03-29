@@ -185,7 +185,7 @@ bool uri_parse(const char *uristring, struct socket_uri *resuri)
     log_info("HOST: %s IP: %s", host, ip);
 
     struct socket_uri res = {
-        .type = (!strcmp(proto, "tcp") ? STYLE_TCP : !strcmp(proto, "udp") ? STYLE_UDP : STYLE_UNIX);
+        .type = (!strcmp(proto, "tcp") ? STYLE_TCP : !strcmp(proto, "udp") ? STYLE_UDP : STYLE_UNIX)
     };
 
     if (STYLE_UNIX != res.type) {
