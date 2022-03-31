@@ -1,4 +1,4 @@
-# skills
+# total
 
 + [fpga](#fpga)
 + [firmware](#firmware)
@@ -128,7 +128,7 @@
 + multitasking, multithreading
 + <ins>dbg</ins>, <ins>gcc</ins>, g++, <ins>qemu</ins>, <ins>make</ins>
 + <ins>jira</ins>, jenkins, <ins>git</ins>
-+ embedded linux, freeRTOS, buildroot/youcto
++ embedded linux, freeRTOS, buildroot
 + micro-services development (?) 
 + MQTT, HTTP
 + Wi-Fi, bluetooth
@@ -138,4 +138,4 @@
 + firmware drivers, freeRTOS drivers, embedded linux drivers, bootlosder, u-boot
 + как работает прцессор
 + DMA, virtualization, memory modules
-+ ubus, modbus, ebpf
++ ubus, modbus, ebpf, json

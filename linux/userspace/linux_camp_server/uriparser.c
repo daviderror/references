@@ -167,65 +167,60 @@ static long re_collect_named(const char *regex, const char *string,
 
 bool uri_parse(const char *uristring, struct socket_uri *resuri)
 {
-    if (NULL == resuri || NULL == uristring) {
-        return false;
-    }
+    log_dbg("UNIX socket path maxlen: %ld", UNIX_SOCKET_PATH_MAXLEN);
+
+    bool ret = false;
+    if (NULL == resuri || NULL == uristring)
+        return ret;   // fail fast
 
     char *groupvals[arr_len(uri_groupnames) - 1];
     long found = re_collect_named(uri_re, uristring, uri_groupnames, groupvals);
-
-    if (found < 1) {
-        return false;
-    }
+    if (found < 1)
+        return ret;
 
     const char *proto = groupvals[0],
-               *ip = groupvals[1],
-               *host = groupvals[2],
-               *port = groupvals[3],
-               *path = groupvals[4];
+               *host  = groupvals[1],
+               *port  = groupvals[2],
+               *path  = groupvals[3];
 
-    log_info("HOST: %s IP: %s", host, ip);
-
+    log_dbg("PROTO: %s HOST: %s PORT: %s PATH: %s", proto, host, port, path);
     struct socket_uri res = {
-        .type = (!strcmp(proto, "tcp") ? STYPE_TCP : !strcmp(proto, "udp") ? STYPE_UDP : STYPE_UNIX)
+        .type = (!strcmp(proto, "tcp") ? STYPE_TCP :
+                 !strcmp(proto, "udp") ? STYPE_UDP :
+                 STYPE_UNIX),
+
     };
 
     if (STYPE_UNIX != res.type) {
         long long p;
-
-        if (NULL == port || sscanf(port, "%lld", &p) < 1 || p > 65535) {
-            log_err("port conversation failed");
-            return false;
+        if (NULL == port || sscanf(port, "%lld", &p) < 1 || p < 1 || p > 65535) {
+            log_err("port conversion failed");
+            goto dealloc;
         }
-
-        res.port = htons(p);
-    }
-
-    if (NULL != path) {
-        res.path = strdup(path);
-
-        if (NULL == res.path) {
-            log_err("path memory allocation failed");
-            return false;
+        res.host = strdup(host);
+        if (NULL == res.host) {
+            log_err("host conversion failed");
+            goto dealloc;
         }
-    } else if ((NULL != ip) && (NULL == host)) {
-        if (!inet_aton(ip, &res.ip)) {
-            log_err("ip/port conversation failed");
-            return false;
-        }
-        res.host = NULL; 
+        // man says ports need to be in network order
+        res.port = htons(p);    // machine order to network order
     } else {
-        log_crit("Unexpected uri combination");
-        return false;
+        res.path = strdup(path);
+        if (NULL == res.path || strlen(res.path) > UNIX_SOCKET_PATH_MAXLEN) {
+            log_err("path conversion failed");
+            goto dealloc;
+        }
     }
 
+    ret = true;
+    memcpy(resuri, &res, sizeof(res));
+
+dealloc:
     log_info("Freeing intermediate groupvals");
     arr_foreach(v, groupvals) {
-        log_info("  %s", v);
+        log_dbg("  %s", v);
         free(v);
     }
 
-    memcpy(resuri, &res, sizeof(res));
-
-    return true;
+    return ret;
 }
