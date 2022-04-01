@@ -139,3 +139,4 @@
 + как работает прцессор
 + DMA, virtualization, memory modules
 + ubus, modbus, ebpf, json
++ posix, misra
