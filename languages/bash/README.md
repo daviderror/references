@@ -1,31 +1,32 @@
 # Useful Bash scripts
 
-1.  [ls](#ls)
-2.  [mkdir](#mkdir)
-3.  [cd](#cd)
-4.  [whoami](#whoami)
-5.  [su](#su)
-6.  [sudo](#sudo)
-7.  [echo](#echo)
-8.  [cat](#cat)
-9.  [rm](#rm)
-10. [ps](#ps)
-11. [kill](#kill)
-12. [stat](#stat)
-13. [alias](#alias)
-14. [grep](#grep)
-15. [man](#man)
-16. [ln](#ln)
-17. [df](#df)
-18. [chmod](#chmod)
-19. [mv](#mv)
-20. [setsid](#setsid)
-21. [find](#find)
-22. [halt](#halt)
-23. [poweroff](#poweroff)
-24. [reboot](#reboot)
-25. [shutdown](#shutdown)
-26. [i2cdetect](#i2cdetect)
++ [ls](#ls)
++ [mkdir](#mkdir)
++ [cd](#cd)
++ [whoami](#whoami)
++ [su](#su)
++ [sudo](#sudo)
++ [echo](#echo)
++ [cat](#cat)
++ [rm](#rm)
++ [ps](#ps)
++ [kill](#kill)
++ [stat](#stat)
++ [alias](#alias)
++ [grep](#grep)
++ [man](#man)
++ [ln](#ln)
++ [df](#df)
++ [chmod](#chmod)
++ [mv](#mv)
++ [setsid](#setsid)
++ [find](#find)
++ [halt](#halt)
++ [poweroff](#poweroff)
++ [reboot](#reboot)
++ [shutdown](#shutdown)
++ [i2cdetect](#i2cdetect)
++ [nmap](#nmap)
 
 ## ls
 
@@ -482,4 +483,16 @@ $ sudo i2cdetect -l
     print a table of i2c deviced on first i2c bus 
 ```
 $ sudo i2cdetect -y 1
+```
+
+## nmap
+
+1. Установка
+2. Определение диапозона адрнесов, на основе ip адресса хоста (enp0s3). В примере ip адрес 192.168.4.0/24
+3. Сканировать и вывести диапозон адресов
+
+```
+sudo apt-get install nmap
+sudo ip add
+sudo nmap -sn 192.168.4.0/24
 ```
