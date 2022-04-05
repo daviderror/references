@@ -25,6 +25,39 @@
 --------------------------------------------------
 
 ## coding
-1. Raw code
-2. Clear code
-3. Deleting all tabs and etc. extra white spaces
+
+### firmware
+
+0.  subline
+1.  raw code
+2.  make
+3.  dbb
+4.  deleting all tabs and etc. extra white spaces
+5.  misra
+6.  clear code
+7.  make
+8.  dbb
+9.  comments
+10. sphinx
+11. make without dbg
+12. git
+
+### LKM
+
+### software
+
+0.  subline
+1.  raw code
+2.  make
+3.  dbb
+4.  deleting all tabs and etc. extra white spaces
+5.  posix
+6.  clear code
+7.  make
+8.  dbb
+9.  comments
+10. sphinx
+11. make without dbg
+12. git
+
+### hardware

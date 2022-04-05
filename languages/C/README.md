@@ -1,25 +1,39 @@
 # C 
-[building_process](#building_process)
 
-[types](https://github.com/Drakonof/references/blob/main/languages/C/types.md)
++ [about](#about)
++ [building_process](#building_process)
++ [types](https://github.com/Drakonof/references/blob/main/languages/C/types.md)
++ [functions](https://github.com/Drakonof/references/blob/main/languages/C/functions.md)
++ [preprocessor](https://github.com/Drakonof/references/blob/main/languages/C/preprocessor.md) 
++ [implementation_defined_behavior](#implementation_defined_behavior)
++ [unspecified_behavior](#unspecified_behavior)
++ [undefined_behavior](#undefined_behavior)
++ [programm_arguments](#programm_arguments)
++ [getopt](#getopt)
++ [getopt_long](#getopt_long)
++ [getopt_long_only](#getopt_long_only)
 
-[functions](https://github.com/Drakonof/references/blob/main/languages/C/functions.md)
+## about
 
-[preprocessor](https://github.com/Drakonof/references/blob/main/languages/C/preprocessor.md) 
+Язык разработан в компнании Bell Labs с 1969 - 1973 (в основном 1972) Денисом Ритчи. Название унаследованнно от предыдущего языка B.
 
-[implementation_defined_behavior](#implementation_defined_behavior)
+```
+1972 - рождение языка
+1978 - K&R C
+1989 - ANSI C (C89)
+1990 - ISO C (совподает с C89)
+1998 - MISRA-C:1988
+1999 - C99
+2004 - MISRA-C:2004
+2011 - C11
+2012 - MISRA-C:2012
+2016 - MISRA-C:2016 (дополнение)
+2017 - C17 (исправленный C11, нет новых операторов, библиотек, библиотечных функциий и тд)
+2018 - C18 (утвержденный C17, совподает соответвенно с самим C17)
+2020 - MISRA-C:2020 (переиздание MISRA-C:2016)
+```
 
-[unspecified_behavior](#unspecified_behavior)
 
-[undefined_behavior](#undefined_behavior)
-
-[programm_arguments](#programm_arguments)
-
-[getopt](#getopt)
-
-[getopt_long](#getopt_long)
-
-[getopt_long_only](#getopt_long_only)
 
 ## building_process
 
