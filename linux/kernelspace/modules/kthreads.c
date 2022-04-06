@@ -24,6 +24,7 @@ MODULE_PARM_DESC(thread_cnt, "Parameter to the thread");
 
 static struct task_struct *p_thread_hnd = NULL;
 
+
 static int thread_func(void *p_data) {
     set_current_state(TASK_UNINTERRUPTIBLE);
 
@@ -44,6 +45,7 @@ static int thread_func(void *p_data) {
     return 0;
 }
 
+
 static int __init thread_init( void ) { 
     pr_info("kthreads: %s\n", module_name(THIS_MODULE));
     // тк поток запускается на много позже чем создается переменная, то thread_cnt может уже не существовать
@@ -63,6 +65,7 @@ static int __init thread_init( void ) {
     return 0; 
 } 
 
+
 static void __exit thread_exit( void ) { 
        char thread_name [TASK_COMM_LEN] = {};
 
@@ -78,5 +81,5 @@ static void __exit thread_exit( void ) {
    
 } 
 
-module_init( thread_init );  
-module_exit( thread_exit );
+module_init(thread_init);  
+module_exit(thread_exit);

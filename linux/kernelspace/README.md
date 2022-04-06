@@ -1,26 +1,19 @@
 # kernel space
 
-[kernel_vs_user](#kernel_vs_user)
-
-[install](#install)
-
-[reinstall](#reinstall)
-
-[insmod](#insmod)
-
-[rmmod](#rmmod)
-
-[dmesg](#dmesg)
-
-[echo_printk](#echo_printk)
-
-[modinfo](#modinfo)
-
-[lsmode](#lsmod)
-
-[intrance](#intrance)
-
-[format](#format)
++ [kernel_vs_user](#kernel_vs_user)
++ [install](#install)
++ [reinstall](#reinstall)
++ [insmod](#insmod)
++ [rmmod](#rmmod)
++ [dmesg](#dmesg)
++ [echo_printk](#echo_printk)
++ [modinfo](#modinfo)
++ [lsmode](#lsmod)
++ [intrance](#intrance)
++ [format](#format)
++ [jiffie ](#jiffie)
++ [tasklets](#tasklets)
++ [threads](#threads)
 
 ## kernel_vs_user
 
@@ -28,24 +21,24 @@
 
 ## preparing
 ```
-$ sudo apt-get install build-essential linux-headers-$(uname -r)
-$ sudo apt-get install linux-source
-$ sudo apt update
+sudo apt-get install build-essential linux-headers-$(uname -r)
+sudo apt-get install linux-source
+sudo apt update
 ```
 
 ## reinstall
 ```
-$ sudo apt install --reinstall linux-headers-$(uname -r)
-$ sudo apt update
+sudo apt install --reinstall linux-headers-$(uname -r)
+sudo apt update
 ```
 
 ## insmod
 
-`$ sudo insmod module.ko`
+`sudo insmod module.ko`
 
 ## rmmod
 
-`$ sudo rmmod module` - without .ko
+`sudo rmmod module` - without .ko
 
 ## dmesg
 
@@ -70,29 +63,31 @@ printk( "<4>string" );
 printk( "string" );
 ```
 
+`int pr_info( const char * fmt, ... )` - более современный аналог printk
+
 Предшествующая константа конкатенируется с первым параметром.
 
-`$ sudo dmesg` - show all journal messages
+`sudo dmesg` - show all journal messages
 
-`$ dmesg | tail -n2` - show only two tail journal messages
+`dmesg | tail -n2` - show only two tail journal messages
 
-`$ dmesg -n 5` - show only KERN_NOTICE level messeges. A defaul level is KERN_INFO (6)
+`dmesg -n 5` - show only KERN_NOTICE level messeges. A defaul level is KERN_INFO (6)
 
 ## echo_printk
 
 Альтернативный способ dmesg'у для вывода сообщений из ядра
 
-`$ echo 8 > /proc/sys/kernel/printk`
+`echo 8 > /proc/sys/kernel/printk`
 
 ## modinfo
 
-`$ sudo modinfo ./module.ko` 
+`sudo modinfo ./module.ko` 
 
 ## lsmod
 
-`$ lsmod` - show all insmoded modules
+`lsmod` - show all insmoded modules
 
-`$ lsmod  | head -n2` - show only two head insmoded modules
+`lsmod  | head -n2` - show only two head insmoded modules
 
 ## intrance
 
@@ -124,3 +119,58 @@ An exit point: `static int __init module_exit(void)  {...}` and `module_exit(hel
 .bss — не инициализированные данные (Block Started Symbol)
 ```
 .ko has several objects more then .o. Tnem used for loading of a module.
+
+## tasklets
+
+TODO
+
+## jiffie 
+
+TODO
+
+## threads
+
+Используется для выполнеия операций в фоне. Тк драйверы ядра являются асинхронными, то они регируют на события и выполняют соответвующую функцию, но иногда требуются более сложные операции (расчеты и тп), где и используются потоки ядра. Имеют доступ к памяти ядра.
+
+```
+/*
+ * Первый способ созданияе потока ядра.
+ *
+ * @ int (*threadfn)(void *data)) - указатель на функцию для запуска в потоке;
+ * @ void *data - данные для потока;
+ * @ const char namefmt[] - имя потока;
+ * @ ... - формат имени потока (как в printf);
+ *
+ * @ return - handler потока или ERR_PTR(-ENIMEM или -EINTR);
+ */
+struct task_struct *kthread_create(int (*threadfn)(void *data)), void *data, const char namefmt[], ...); 
+```
+
+Поток по умолчанию, после создания, спит. Для его запуска используется функция `void wake_up_process(struct task_struct *)`
+
+```
+struct task_struct *p_k = thread_create(p_thread_foo, data, THREAD_NAME);
+
+if (0 == IS_ERR(p_k)) {
+	wake_up_process(p_k);
+}
+```
+На самом деле `kthread_create` является хэлпером для функции `kthread_create_on_node` в которую указывается конкретный номер (NUMA - non-uniform memory access) cpu, точнее его память, для запуска потока или NUMA_NO_NODE если не важно на каком ядре запускать поток.
+
+TODO: откуда взять списк NUMA?
+
+Но если нужно создать и сразу запустить поток используется хэлпер функция (в данном случае это макрос) `kthread_run()`. По факту этот макрос есть сочетание `kthread_create` и `wake_up_process`. 
+
+```
+/*
+ * Второй и обще принятый способ созданияе потока ядра.
+ *
+ * @ int (*threadfn)(void *data)) - указатель на функцию для запуска в потоке;
+ * @ void *data - данные для потока;
+ * @ const char namefmt[] - имя потока;
+ * @ ... - формат имени потока (как в printf);
+ *
+ * @ return - handler потока или ERR_PTR(-ENIMEM или -EINTR);
+ */
+struct task_struct *kthread_run(int (*threadfn)(void *data)), void *data, const char namefmt[], ...);
+```
