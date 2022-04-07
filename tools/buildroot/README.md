@@ -13,27 +13,30 @@
 
 Все примеры даны для версии buildroot_2022.2.
 
-1. preparing;
-2. download;
-3. create_config_file;
-4. cross_compiling
-5. qemu_system_arm_launch;
-6. programm_running;
+1. [preparing](#preparing);
+2. [download](#download);
+3. [create_config_file](#create_config_file);
+4. [cross_compiling](#cross_compiling);
+5. [qemu_system_arm_launch](#qemu_system_arm_launch);
+6. [programm_running](#programm_running);
 
 
 ## preparing
 
-Для qemu arm [включить виртуализацию](https://github.com/Drakonof/references/tree/main/linux/tools/qemu#preparing) и [установить](https://github.com/Drakonof/references/tree/main/linux/tools/qemu#installing) виртуальную машину.
+### qemu arm
+1. [включить виртуализацию](https://github.com/Drakonof/references/tree/main/linux/tools/qemu#preparing);
+2. [установить](https://github.com/Drakonof/references/tree/main/linux/tools/qemu#installing) виртуальную машину. В частности qemu-system-arm: `sudo apt-get install qemu-system-arm`;
+3. Доставить нехватающие проги из списка: which, sed, make (v.3.81 и позже), binutils, build-essential (только для Debian), gcc (v.4.8 и позже), g++ (v.4.8 и позже), bash, patch, gzip, bzip2, perl (v.5.8.7 и позже), tar, cpio, unzip, rsync, file (должен быть в /usr/bin/file), bc;
+4. Доставить ncurses: `sudo apt-get install libncurses5-dev libncursesw5-dev`;
 
-В частности qemu-system-arm: `sudo apt-get install qemu-system-arm`
-
-Доставить нехватающие проги из списка: which, sed, make (v.3.81 и позже), binutils, build-essential (только для Debian), gcc (v.4.8 и позже), g++ (v.4.8 и позже), bash, patch, gzip, bzip2, perl (v.5.8.7 и позже), tar, cpio, unzip, rsync, file (должен быть в /usr/bin/file), bc;
-
-Доставить ncurses: `sudo apt-get install libncurses5-dev libncursesw5-dev`
+### Zynq
+1. Достать схему платы;
+2. Создать прошивку для PL части [TODO сылка на проект](#TODO);
 
 ## download
 
 [Скачать buildroot.](https://buildroot.org/download.html)
+
 ![Архив на сайте.](doc/buildroot_1.png "Архив на сайте.")
 
 Разархивировать скачанный файл: `tar -xvzf buildroot-2022.02.tar.gz`
