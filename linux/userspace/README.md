@@ -1,0 +1,1 @@
+ioctl, mmap и другие linux fops

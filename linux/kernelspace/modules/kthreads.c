@@ -25,7 +25,8 @@ MODULE_PARM_DESC(thread_cnt, "Parameter to the thread");
 static struct task_struct *p_thread_hnd = NULL;
 
 
-static int thread_func(void *p_data) {
+static int thread_func(void *p_data) 
+{
     set_current_state(TASK_UNINTERRUPTIBLE);
 
     typeof(thread_cnt) *p_par = p_data; // получает значение thread_cnt из памяти
@@ -34,9 +35,7 @@ static int thread_func(void *p_data) {
     kfree(p_par); // удаляет p_par и parama из thread_init
     
     while (!kthread_should_stop()) {
-       
-       
-
+       // переключение планировщика на другую задачу, нужно просто для иммитации работы цикла
        schedule();
     }
 
@@ -46,7 +45,8 @@ static int thread_func(void *p_data) {
 }
 
 
-static int __init thread_init( void ) { 
+static int __init thread_init( void ) 
+{ 
     pr_info("kthreads: %s\n", module_name(THIS_MODULE));
     // тк поток запускается на много позже чем создается переменная, то thread_cnt может уже не существовать
     // поэтому её значения копируются в память (со слов автора урока). ЧТО ЭТО ЗНАЧИТ ХЗ, НУЖНО РАЗОБРАТЬСЯ
@@ -66,7 +66,8 @@ static int __init thread_init( void ) {
 } 
 
 
-static void __exit thread_exit( void ) { 
+static void __exit thread_exit( void ) 
+{ 
        char thread_name [TASK_COMM_LEN] = {};
 
     if (NULL == p_thread_hnd) {
@@ -78,7 +79,6 @@ static void __exit thread_exit( void ) {
     kthread_stop(p_thread_hnd);
 
     pr_info("kthreads: Goodbye, kernel!\n");
-   
 } 
 
 module_init(thread_init);  

@@ -11,9 +11,15 @@
 + [lsmode](#lsmod)
 + [intrance](#intrance)
 + [format](#format)
+
++ [driver_types](#driver_types)
+
++ [module_parameters](#module_parameters)
++ [kmalloc](#kmalloc)
 + [jiffie ](#jiffie)
 + [tasklets](#tasklets)
 + [threads](#threads)
++ [work_queue](#work_queue)
 
 ## kernel_vs_user
 
@@ -120,6 +126,57 @@ An exit point: `static int __init module_exit(void)  {...}` and `module_exit(hel
 ```
 .ko has several objects more then .o. Tnem used for loading of a module.
 
+## driver_types
+
+### char devices
+
+Самый распространённый тип устройств. Наиболее эффективный и лёгкий способ проложить интерфейс от kernelspace к userspace.
+
+## module_parameters
+
+Требует: `#include <linux/moduleparam.h>`
+
+Для передачи параметров в модуль используется макрос котрый ставится для каждого предусмотренного параметра.
+
+1. создать переменную для получения параметра (должна быть `static` и `__initdata`), `__initdata` - говорит о том что память переменной может быть освобождена после выполнения `__init` функции;
+2. принять входной аргумент через макрос module_param;
+3. описать входной аргумент через `MODULE_PARM_DESC`;
+
+```
+/*
+ * Пример
+ */
+static int __initdata param = 0;
+module_param(param, int, 0); 
+MODULE_PARM_DESC(param, "Some param");
+```
+
+```
+/*
+ * @ name - имя параметра;
+ * @ type - тип передаваемого параметра;
+ * @ perm - флаги прав доступа к параметру, 
+ * отображаемому как путевое имя в системе /sys: S_IRWXU 00700     
+ *                                               S_IWUSR 00200
+ *                                               S_IXUSR 00100
+ *                                               S_IRWXG 00070
+ *                                               S_IRGRP 00040
+ *                                               S_IWGRP 00020
+ *                                               S_IXGRP 00010
+ *                                               S_IRWXO 00007
+ *                                               S_IROTH 00004
+ *                                               S_IWOTH 00002
+ *                                               S_IXOTH 00001
+ */
+
+module_param(name, type, perm); 
+```
+Пример: `module_param(thread_cnt, ulong, S_IRUSR | S_IRGRP | S_IROTH);`
+
+## kmalloc
+
+Всегда нужно освобождать, тк в отличие от userspace где память освобождается после завершения программы, в kernelspace, память остаётся выделенной.
+
 ## tasklets
 
 TODO
@@ -128,9 +185,13 @@ TODO
 
 TODO
 
+BogoMIPS - величена скорости производительности процессора, инструкций в секунду.
+
 ## threads
 
 Используется для выполнеия операций в фоне. Тк драйверы ядра являются асинхронными, то они регируют на события и выполняют соответвующую функцию, но иногда требуются более сложные операции (расчеты и тп), где и используются потоки ядра. Имеют доступ к памяти ядра.
+
+Требует: `#include <linux/kthread.h>`
 
 ```
 /*
@@ -174,3 +235,9 @@ TODO: откуда взять списк NUMA?
  */
 struct task_struct *kthread_run(int (*threadfn)(void *data)), void *data, const char namefmt[], ...);
 ```
+Чтобы выйти из потока можно использовать `return` или `do_exit(some_ret_code)`.
+
+Что бы остановить поток используются `int kthread_stop(struct task_struct *k)` и `int kthread_should_stop(void)`.
+
+## work_queue
+
