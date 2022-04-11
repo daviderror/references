@@ -12,13 +12,17 @@
 + [intrance](#intrance)
 + [format](#format)
 
-+ [driver_types](#driver_types)
++ [dev](#dev)
++ [net_devices](#net_devices)
++ [block_devices](#block_devices)
++ [char_devices](#char_devices)
 
 + [module_parameters](#module_parameters)
 + [kmalloc](#kmalloc)
 + [jiffie ](#jiffie)
 + [tasklets](#tasklets)
 + [threads](#threads)
++ [conteiners](#conteiners)
 + [work_queue](#work_queue)
 
 ## kernel_vs_user
@@ -126,11 +130,30 @@ An exit point: `static int __init module_exit(void)  {...}` and `module_exit(hel
 ```
 .ko has several objects more then .o. Tnem used for loading of a module.
 
-## driver_types
+## dev
 
-### char devices
+Идентификаторы устройств:
+Major - 
+
+Minor - 
+
+Префикс 'c' перед правами доступа к устройству говорит о типе символьного устройства.
+TODO картинка
+
+node - 
+
+## net_devices
+
+## block_devices
+
+## char_devices
 
 Самый распространённый тип устройств. Наиболее эффективный и лёгкий способ проложить интерфейс от kernelspace к userspace.
+
+`int (*open)(struct inode *, struct file *);` - открыть символьное устройство для работы с ним.
+
+
+
 
 ## module_parameters
 
@@ -239,5 +262,17 @@ struct task_struct *kthread_run(int (*threadfn)(void *data)), void *data, const 
 
 Что бы остановить поток используются `int kthread_stop(struct task_struct *k)` и `int kthread_should_stop(void)`.
 
+## conteiners
+
+TODO
+
 ## work_queue
 
+work queue - очереди работ, абстракция отложенной работы на базе потоков, один из механизмов bottom half;
+
+В отличии от taskled может спать, эти и решеается выбор межу task и work queue. Те если нужно будет спать то work queue иначе task. Хэндлеры work queue укладываются в связанный списк для создание очереди для выполнения, после этого поток выполнения просыпается, достаёт хэндлер из списка, извлекает функцию выполнения из хэндлера, после удаляется из списк хэндлер, выполняет функцию, после засыпает.
+
+(?)Два способа создания work queue (статическая и динамическкая). После инициализации work queue можно отправить в очередь (можно сразу, а можно с задержкой).
+
+`void flush_scheduled_work(void);` - принудительное выполнение всех задиспаченных work queue.
+`int cancel_delayed_work(struct work_struct *work);` - остановить и закончить определённый work queue.

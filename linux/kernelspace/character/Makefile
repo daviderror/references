@@ -4,6 +4,7 @@ obj-m += lm-hd44780-k.o
 obj-m += lm-bmp280-i2c-k.o
 obj-m += lm-led-pwm-k.o
 obj-m += lm-pwm-k.o
+obj-m += lmk-random.o
 
 all:
 	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) modules
@@ -25,6 +26,9 @@ lm-led-pwm-k:
 
 lm-pwm-k:
 	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) lm-pwm-k.ko
+
+lmk-random:
+	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) lmk-random.ko
 
 clean:
 	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) clean
