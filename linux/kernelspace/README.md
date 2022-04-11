@@ -12,7 +12,6 @@
 + [intrance](#intrance)
 + [format](#format)
 
-+ [dev](#dev)
 + [net_devices](#net_devices)
 + [block_devices](#block_devices)
 + [char_devices](#char_devices)
@@ -130,18 +129,6 @@ An exit point: `static int __init module_exit(void)  {...}` and `module_exit(hel
 ```
 .ko has several objects more then .o. Tnem used for loading of a module.
 
-## dev
-
-Идентификаторы устройств:
-Major - 
-
-Minor - 
-
-Префикс 'c' перед правами доступа к устройству говорит о типе символьного устройства.
-TODO картинка
-
-node - 
-
 ## net_devices
 
 ## block_devices
@@ -152,7 +139,70 @@ node -
 
 `int (*open)(struct inode *, struct file *);` - открыть символьное устройство для работы с ним.
 
+Идентификаторы устройств:
+Major - 
 
+Minor - 
+
+Префикс 'c' перед правами доступа к устройству говорит о типе символьного устройства.
+TODO картинка
+
+Ручное присваевание major устройств и minor, но dev_t нужно получить из макроса MKDEV:
+```
+#define <linux/fs.h>
+
+int register_chrdev_region(dev_t first, unsigned int count, char *name);
+```
+
+Автоматическое присваевание major устройству:
+```
+#define <linux/fs.h>
+
+int alloc_chrdev_region(dev_t *dev, unsigned int firstminor, unsigned int count, char *name);
+```
+
+Что бы перевести major и minir в int из dev_t:
+```
+#include <linux/types.h>
+#include <linux/kdev_t.h>
+
+MAJOR(dev_t dev);
+MINOR(dev_t dev);
+
+```
+
+Наоборот что бы перевести major и minir в dev_t из int:
+```
+#include <linux/types.h>
+#include <linux/kdev_t.h>
+
+MKDEV(int major, int minor);
+
+```
+
+`void unregister_chrdev_region(dev_t first, usigned int count);` - отрегистрировать символььное устройство по завершению
+
+node - 
+
+В модуле должны быть определны операции с фаломи file operations.
+
+Есть два пути нинициализации символьного устройства: статическая и динамическая.
+
+Статическая инициализация:
+```
+#include <linux/cdev.h>
+
+void cdev_init(struct cdev *cdev, struct file_operations *fops);
+int cdev_add(struct cdev *cdev, dev_t dev, unsigned count);
+```
+
+`void cdev_del(struct cdev *cdev);` - удаление символьного устройства;
+
+После `insmod` нужно сождать node:
+```
+mknod -m a=r xwrand c 248 0 
+```
+где: хз (all=read те всем можно только читать) (имя девайса) (тип c==char) MAJOR MINOR
 
 
 ## module_parameters

@@ -81,17 +81,5 @@ static void __exit thread_exit( void )
     pr_info("kthreads: Goodbye, kernel!\n");
 } 
 
-int xw_open(struct inode *, struct file *);
-int xw_release(struct inode *, struct file *);
-
-static struct file_operations xw_fops = {
-    .owner = THIS_MODULE,
-    .open = &xw_open,
-    .release = &xw_release
-
-    // all other fields are needed or NULL
-
-}
-
 module_init(thread_init);  
 module_exit(thread_exit);
