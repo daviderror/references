@@ -27,10 +27,31 @@
 ## coding
 
 ### hardware
+0.  block scheme
+1.  fsm diagramm
+
+0.  subline
+1.  raw code (module + tb)
+2.  tcl waveform
+3.  bash
+4.  modelsim
+5.  clear code (module + tb)
+6.  tcl waveform
+7.  modelsim
+8.  comments
+9.  sphinx
+10. git
+
+0. code (module + tb) to ip
+1. ila + vio
+2. git
+
+
 ### firmware
 ### LKM
 
 ### software
+0.  block scheme
 
 0.  subline
 1.  raw code
@@ -44,4 +65,9 @@
 9.  make
 10. gdb
 11. git
+
+0. lib
+1. git
+
+0. app
 
