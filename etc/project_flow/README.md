@@ -27,11 +27,12 @@
 ## coding
 
 ### hardware
+#### module + tb
 0.  block scheme
 1.  fsm diagramm
 
 0.  subline
-1.  raw code (module + tb)
+1.  meto code (module + tb)
 2.  tcl waveform
 3.  bash
 4.  modelsim
@@ -42,7 +43,8 @@
 9.  sphinx
 10. git
 
-0. code (module + tb) to ip
+#### ip
+0. module + tb
 1. ila + vio
 2. git
 
