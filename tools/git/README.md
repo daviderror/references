@@ -14,6 +14,8 @@
 + [pushing](#pushing)
 + [gitignore](#gitignore)
 
+fix, review, add, mete_
+
 ## installing
 
 To install:

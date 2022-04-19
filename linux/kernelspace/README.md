@@ -12,6 +12,8 @@
 + [intrance](#intrance)
 + [format](#format)
 
++ [system_calls](#system_calls)
+
 + [net_devices](#net_devices)
 + [block_devices](#block_devices)
 + [char_devices](#char_devices)
@@ -129,13 +131,21 @@ An exit point: `static int __init module_exit(void)  {...}` and `module_exit(hel
 ```
 .ko has several objects more then .o. Tnem used for loading of a module.
 
+## system_calls
+
+Системные вызовы позволяют доступ в драйвер из userspace. Ситемные вызовы: open, read, write, close;
+
 ## net_devices
+
+чтение/запись от 1 байта пакетами
 
 ## block_devices
 
+чтения/запись фиксированныим по размеру блоками
+
 ## char_devices
 
-Самый распространённый тип устройств. Наиболее эффективный и лёгкий способ проложить интерфейс от kernelspace к userspace.
+Самый распространённый тип устройств. Наиболее эффективный и лёгкий способ проложить интерфейс от kernelspace к userspace. Минимальный размер чтения/записи 1 байт потоком.
 
 `int (*open)(struct inode *, struct file *);` - открыть символьное устройство для работы с ним.
 
@@ -227,7 +237,7 @@ MODULE_PARM_DESC(param, "Some param");
 ```
 /*
  * @ name - имя параметра;
- * @ type - тип передаваемого параметра;
+ * @ type - тип передаваемого параметра: byte, short, ushort, int, uint, long, ulong, charp, bool, invbool;
  * @ perm - флаги прав доступа к параметру, 
  * отображаемому как путевое имя в системе /sys: S_IRWXU 00700     
  *                                               S_IWUSR 00200
