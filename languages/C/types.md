@@ -6,7 +6,7 @@
 + [enum](#enum)
 + [arrays](#arrays)
 
-
+byte, short, ushort, int, uint, long, ulong, charp, bool, invbool - kermel param types
 
 ## integer
 

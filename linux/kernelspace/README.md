@@ -12,11 +12,15 @@
 + [intrance](#intrance)
 + [format](#format)
 
-+ [system_calls](#system_calls)
++ [system_calls](#system_calls) 
 
 + [net_devices](#net_devices)
 + [block_devices](#block_devices)
 + [char_devices](#char_devices)
+
++ [hot_plug](#hot_plug)
+
++ [gdb](gdb)
 
 + [module_parameters](#module_parameters)
 + [kmalloc](#kmalloc)
@@ -150,9 +154,9 @@ An exit point: `static int __init module_exit(void)  {...}` and `module_exit(hel
 `int (*open)(struct inode *, struct file *);` - открыть символьное устройство для работы с ним.
 
 Идентификаторы устройств:
-Major - 
+Major - вендор
 
-Minor - 
+Minor - тип устройства
 
 Префикс 'c' перед правами доступа к устройству говорит о типе символьного устройства.
 TODO картинка
@@ -202,6 +206,7 @@ node -
 ```
 #include <linux/cdev.h>
 
+struct cdev *cdev_alloc (void);
 void cdev_init(struct cdev *cdev, struct file_operations *fops);
 int cdev_add(struct cdev *cdev, dev_t dev, unsigned count);
 ```
@@ -214,25 +219,41 @@ mknod -m a=r xwrand c 248 0
 ```
 где: хз (all=read те всем можно только читать) (имя девайса) (тип c==char) MAJOR MINOR
 
+## hot_plug
+
++ обнаружение устройства
++ поиск драйвера
++ загрузка драйвера
+
+Для автомвтической загрузки драйвера устройсва в модуле определяется соответвующая структура через `MODULE_DEVICE_TABLE(type, name);`, на примере `pci_device_id` и вымышленных MAJOR 0x10ff и MINOR 0x0001 0x0002:
+```
+static int my_major = 0x10ff, my_minor_1 = 0x0001, my_minor_2 = 0x0002;
+
+static const struct pci_device_id table[] = {
+	{PCI_DEVICE(my_major, my_minor_1)},
+	{PCI_DEVICE(my_major, my_minor_2)},
+    {0}
+};
+
+MODULE_DEVICE_TABLE(pci, table);
+
+```
+
+## gdb
+
+можно юзать, поищи как и потренируйся на распберри и цинке. ну и конечно потом законспектируй
+
+Аналоги: kdb, kgdb, crash, file system;
 
 ## module_parameters
 
 Требует: `#include <linux/moduleparam.h>`
 
-Для передачи параметров в модуль используется макрос котрый ставится для каждого предусмотренного параметра.
-
-1. создать переменную для получения параметра (должна быть `static` и `__initdata`), `__initdata` - говорит о том что память переменной может быть освобождена после выполнения `__init` функции;
-2. принять входной аргумент через макрос module_param;
-3. описать входной аргумент через `MODULE_PARM_DESC`;
-
-```
-/*
- * Пример
- */
-static int __initdata param = 0;
-module_param(param, int, 0); 
-MODULE_PARM_DESC(param, "Some param");
-```
+Для передачи типов как параметров в модуль используется макрос:
++ обычные типы: module_param(name, type, perm);
++ именновынны типов: module_param_named(name, value, type, perm);
++ массивы: module_param_array(name, type, num, perm);
++ строки: module_param_string(name, string, len, perm);
 
 ```
 /*
@@ -256,9 +277,73 @@ module_param(name, type, perm);
 ```
 Пример: `module_param(thread_cnt, ulong, S_IRUSR | S_IRGRP | S_IROTH);`
 
+```
+/*
+ * @ name - символическое имя параметра;
+ * @ value - идентифицирует в списке параметров передаваемую переменную (?);
+ * @ type - тип передаваемого параметра;
+ * @ perm - флаги прав доступа к параметру;
+ */
+
+module_param_named(name, value, type, perm); 
+```
+Пример: `module_param_named(some_string, "some_string", charp, 0);`
+
+```
+/*
+ * @ name - символическое имя параметра;
+ * @ type - тип передаваемого параметра;
+ * @ num  - размер массива (опционально, можно задать как NULL);
+ * @ perm - флаги прав доступа к параметру;
+ */
+
+module_param_array(name, type, num, perm); 
+```
+Пример: `module_param_array(arr, int, NULL, S_IRUSR|S_IWUSR);`
+
+```
+/*
+ * @ name - символическое имя строки;
+ * @ string - строка;
+ * @ len  - размер строки;
+ * @ perm - флаги прав доступа к параметру;
+ */
+
+module_param_string(name, string, len, perm); 
+```
+Пример: 
+```
+static char func_name[NAME_MAX] = "do_fork";
+module_param_string(func, func_name, NAME_MAX, S_IRUGO);
+```
+
+1. создать переменную для получения параметра (должна быть `static` и `__initdata`), `__initdata` - говорит о том что память переменной может быть освобождена после выполнения `__init` функции;
+2. принять входной аргумент через макрос module_param;
+3. описать входной аргумент через `MODULE_PARM_DESC`;
+
+```
+/*
+ * Пример
+ */
+static int __initdata param = 0;
+module_param(param, int, 0); 
+MODULE_PARM_DESC(param, "Some param");
+
+static int __initdata myintArray [ARR_SIZE] = {0};
+module_param_array(myintArray, int, ARR_SIZE, 0);
+MODULE_PARM_DESC(myintArray, "An array of integers");
+```
+
 ## kmalloc
 
 Всегда нужно освобождать, тк в отличие от userspace где память освобождается после завершения программы, в kernelspace, память остаётся выделенной.
+
+Выделение из стандартного пула ядра:
+```
+#define KBUF_SIZE 1024
+
+char *kbuf = kmalloc(KBUF_SIZE, GFP_KERNEL);
+```
 
 ## tasklets
 
