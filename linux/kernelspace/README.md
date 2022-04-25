@@ -35,16 +35,32 @@
 Первое отличие кода модуля от пользовательского приложения состоит в том, что ему позволено выполнять супервизорные действия: привилегированные команды, операции с аппаратными портами, реакцию на прерывания. Вторым важным качественным отличием будет то, что пользовательское приложение может позволить себе определённую небрежность в завершении: не освобождать динамически выделенную память, не закрывать открытые файловые дескрипторы и тд - после завершения приложения такие действия за него «подчистит» ядро операционной системы. Следы же некорректных действий модуля останутся на всё время жизни системы (до её перезагрузки): выделенная, но не освобождённая модулю память, например, останется на всё это время как область с потерянными путями доступа, и не может быть освобождена. 
 
 ## preparing
+### host
 ```
 sudo apt-get install build-essential linux-headers-$(uname -r)
 sudo apt-get install linux-source
 sudo apt update
+sudo apt upgrade
+```
+### raspberry pi
+```
+sudo apt-get install build-essential raspberry-linux-headers
+sudo apt update
+sudo apt upgrade
 ```
 
 ## reinstall
+### host
 ```
 sudo apt install --reinstall linux-headers-$(uname -r)
 sudo apt update
+sudo apt upgrade
+```
+### raspberry pi
+```
+sudo apt install --reinstall raspberry-linux-headers
+sudo apt update
+sudo apt upgrade
 ```
 
 ## insmod
