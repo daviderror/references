@@ -36,7 +36,7 @@
 2.  tcl waveform
 3.  bash
 4.  modelsim
-5.  clear code (module + tb)
+5.  clear code (module + tb) + deleting all tabs and etc. extra white spaces
 6.  tcl waveform
 7.  modelsim
 8.  comments
@@ -47,6 +47,9 @@
 0. module + tb
 1. ila + vio
 2. git
+
+#### project
+todo
 
 
 ### firmware
@@ -59,14 +62,13 @@
 1.  raw code
 2.  make
 3.  gdb
-4.  deleting all tabs and etc. extra white spaces
-5.  posix
-6.  clear code
-7.  comments
-8.  sphinx
-9.  make
-10. gdb
-11. git
+4.  posix
+5.  clear code + deleting all tabs and etc. extra white spaces
+6.  comments
+7.  sphinx
+8.  make
+9. gdb
+10. git
 
 0. lib
 1. git
