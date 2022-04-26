@@ -32,11 +32,11 @@
 1.  fsm diagramm
 
 0.  subline
-1.  meto code (module + tb)
+1.  meto code (module + tb): `check_syntax`
 2.  tcl waveform
 3.  bash
 4.  modelsim
-5.  clear code (module + tb) + deleting all tabs and etc. extra white spaces
+5.  clear code (module + tb) + deleting all tabs and etc. extra white spaces: `check_syntax`
 6.  tcl waveform
 7.  modelsim
 8.  comments
