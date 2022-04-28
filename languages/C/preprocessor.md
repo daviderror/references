@@ -29,7 +29,7 @@ gcc -DDEBUG=1 -02 и тд...
 вместо 
 
 ```
-#ifтвуа SMTH
+#ifndef SMTH
 #define SMTH
 
 #endif
