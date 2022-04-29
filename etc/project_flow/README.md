@@ -28,25 +28,28 @@
 
 ### hardware
 #### module + tb
-0.  block scheme
-1.  fsm diagramm
++  block scheme
++  fsm diagramm
++  git
 
-0.  subline
-1.  meto code (module + tb): `check_syntax`
-2.  tcl waveform
-3.  bash
-4.  modelsim
-5.  clear code (module + tb) + deleting all tabs and etc. extra white spaces: `check_syntax`
-6.  tcl waveform
-7.  modelsim
-8.  comments
-9.  sphinx
-10. git
++  subline
++  meto code (module + tb): `check_syntax`
++  git meto
++  tcl waveform
++  bash
++  modelsim
++  clear code (module + tb) + deleting all tabs and etc. extra white spaces: `check_syntax`
++  git
++  tcl waveform
++  modelsim
++  comments
++  sphinx
++  git
 
 #### ip
-0. module + tb
-1. ila + vio
-2. git
++  module + tb
++  ila + vio
++  git
 
 #### project
 todo
