@@ -16,3 +16,4 @@ MISRA (motor industry software reliability association) - стандарт дл�
 ```
 
 [скачать](https://pvs-studio.com/ru/pvs-studio/download/) PVS-Studio
+

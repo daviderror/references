@@ -22,59 +22,91 @@
 5. app <- test
 6. gitignore
 
---------------------------------------------------
-
 ## coding
 
-### hardware
+### hardware --------------------------------------------------
 #### module + tb
-+  block scheme
-+  fsm diagramm
-+  git
++ block scheme
++ fsm diagramm
++ git
 
-+  subline
-+  meto code (module + tb): `check_syntax`
-+  git meto
-+  tcl waveform
-+  bash
-+  modelsim
-+  clear code (module + tb) + deleting all tabs and etc. extra white spaces: `check_syntax`
-+  git
-+  tcl waveform
-+  modelsim
-+  comments
-+  sphinx
-+  git
++ subline
++ code meta (module + tb): `check_syntax`
++ comments meta
++ git meta
++ tcl waveform
++ bash modelsim
++ code clear (module + tb) + deleting all tabs and etc. extra white spaces: `check_syntax`
++ tcl waveform
++ bash modelsim
++ comments
++ doxygen
++ bash modelsim
++ git
 
 #### ip
-+  module + tb
-+  ila + vio
-+  git
++ module + tb
++ ila + vio
++ git
 
 #### project
 todo
 
 
-### firmware
-### LKM
 
-### software
-0.  block scheme
+### firmware --------------------------------------------------
++ block diagramm
 
-0.  subline
-1.  raw code
-2.  make
-3.  gdb
-4.  posix
-5.  clear code + deleting all tabs and etc. extra white spaces
-6.  comments
-7.  sphinx
-8.  make
-9. gdb
-10. git
++ subline
++ code meta
++ comments meta
++ git meta
++ make gdb
++ make cppcheck
++ make misra
++ code clear + deleting all tabs and etc. extra white spaces
++ comments
++ doxygen ??через make?? 
++ make gdb
++ make
++ git
 
-0. lib
-1. git
++ lib
++ git
 
-0. app
+### LKM --------------------------------------------------
++ 
 
++ subline
++ code meta
++ comments meta
++ git meta
++ make gdb
++ make cppcheck
++ code clear + deleting all tabs and etc. extra white spaces
++ comments
++ doxygen ??через make?? 
++ make gdb
++ make
++ git
+
++ lib
++ git
+
+### software --------------------------------------------------
++ block diagramm
+
++ subline
++ raw code
++ make
++ gdb
++ posix
++ clear code + deleting all tabs and etc. extra white spaces
++ comments
++ sphinx
++ make
++ gdb
++ git
+
++ lib
++ git
