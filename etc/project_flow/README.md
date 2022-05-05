@@ -68,7 +68,7 @@ todo
 + comments
 + doxygen ??через make?? 
 + make gdb
-+ make
++ make realese
 + git
 
 + lib
@@ -88,7 +88,7 @@ todo
 + comments
 + doxygen ??через make?? 
 + make gdb
-+ make
++ make realese
 + git
 
 + lib
@@ -98,15 +98,18 @@ todo
 + block diagramm
 
 + subline
-+ raw code
-+ make
-+ make 
-+ posix
++ code meta
++ comments meta
++ git meta
++ make gdb
++ make cppcheck
++ make misra
++ make posix
 + clear code + deleting all tabs and etc. extra white spaces
 + comments
-+ sphinx
-+ make
-+ gdb
++ doxygen ??через make?? 
++ make gdb
++ make realese
 + git
 
 + lib
