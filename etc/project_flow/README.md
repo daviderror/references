@@ -83,6 +83,7 @@ todo
 + git meta
 + make gdb
 + make cppcheck
++ make misra (?)
 + code clear + deleting all tabs and etc. extra white spaces
 + comments
 + doxygen ??через make?? 
@@ -99,7 +100,7 @@ todo
 + subline
 + raw code
 + make
-+ gdb
++ make 
 + posix
 + clear code + deleting all tabs and etc. extra white spaces
 + comments
