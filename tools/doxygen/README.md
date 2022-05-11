@@ -28,6 +28,9 @@ doxygen - программа генирации программного обе�
 + [file_documentation](#file_documentation)
 + [function_and_methods_documentation](#function_and_methods_documentation)
 + [class_documentation](#class_documentation)
+`doxygen -g Doxygen`
+`Откоректировать Doxygen`
+`doxygen Doxygen`
 
 ## install
 `sudo apt-get install doxygen`
