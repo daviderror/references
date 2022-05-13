@@ -25,18 +25,20 @@
 ## coding
 
 ### hardware --------------------------------------------------
-скорость, атрибуты
+скорость, атрибуты, асёрты
 
 + jira
 
 #### module + tb
 + block scheme
 + fsm diagramm
++ gitignore
 + git
 
 + subline
 + code meta (module + tb): `check_syntax`
 + comments meta
++ gitignore
 + git meta
 + tcl waveform
 + bash modelsim
@@ -51,6 +53,7 @@
 #### ip
 + module + tb
 + ila + vio
++ gitignore
 + git
 
 #### project
@@ -59,7 +62,7 @@ todo
 
 
 ### firmware --------------------------------------------------
-скорость, атрибуты
+скорость, атрибуты, барьеры, асёрты
 
 + jira
 
@@ -68,44 +71,48 @@ todo
 + subline
 + code meta
 + comments meta
++ gitignore
 + git meta
-+ make gdb
++ gdb
 + make cppcheck
 + make misra
 + code clear + deleting all tabs and etc. extra white spaces
 + comments
-+ doxygen ??через make?? 
-+ make gdb
++ make doxygen
++ gdb
 + make realese
 + git
 
 + lib
++ gitignore
 + git
 
 ### LKM --------------------------------------------------
-скорость, атрибуты
+скорость, атрибуты, барьеры, асёрты
 
 + jira
 
 + subline
 + code meta
 + comments meta
++ gitignore
 + git meta
-+ make gdb
++ gdb
 + make cppcheck
-+ make misra (?)
++ make misra
 + code clear + deleting all tabs and etc. extra white spaces
 + comments
-+ doxygen ??через make?? 
-+ make gdb
++ make doxygen
++ gdb
 + make realese
++ gitignore
 + git
 
 + lib
 + git
 
 ### software --------------------------------------------------
-скорость, атрибуты
+скорость, атрибуты, барьеры, асёрты
 
 + jira
 
@@ -114,17 +121,20 @@ todo
 + subline
 + code meta
 + comments meta
++ gitignore
 + git meta
-+ make gdb
++ gdb
 + make cppcheck
 + make misra
 + make posix
 + clear code + deleting all tabs and etc. extra white spaces
 + comments
-+ doxygen ??через make?? 
-+ make gdb
++ make doxygen
++ gdb
 + make realese
++ gitignore
 + git
 
 + lib
++ gitignore
 + git

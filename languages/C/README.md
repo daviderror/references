@@ -6,6 +6,7 @@
 + [functions](https://github.com/Drakonof/references/blob/main/languages/C/functions.md)
 + [preprocessor](https://github.com/Drakonof/references/blob/main/languages/C/preprocessor.md) 
 + [atributes](https://github.com/Drakonof/references/blob/main/languages/C/atributes.md)
++ [memory_bariers](https://github.com/Drakonof/references/blob/main/languages/C/memory_bariers.md)
 + [implementation_defined_behavior](#implementation_defined_behavior)
 + [unspecified_behavior](#unspecified_behavior)
 + [undefined_behavior](#undefined_behavior)
