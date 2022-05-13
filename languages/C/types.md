@@ -5,6 +5,7 @@
 + [struct](#struct)
 + [enum](#enum)
 + [arrays](#arrays)
++ [union](#union)
 
 byte, short, ushort, int, uint, long, ulong, charp, bool, invbool - kermel param types
 
@@ -181,6 +182,14 @@ struct str_name_inc {
     bool t;
 }
 ```
+### Битовые поля
+```
+struct str_bit_fields {
+    int a : 12; // может хранить число мксимум 2^12
+    char b : 3; // может хранить число мксимум 2^3
+}
+```
+Теперь размер этой структуры 15 бит, те 2 байта, где 1 бит в этих 2х байтах будет зарезервирован и не использован.
 
 ## enum
 
@@ -207,6 +216,17 @@ const char *const error_msg[] = {
 ```
 
 ## arrays
-
 Массивы можно терменировать NULL, что бы не передавть размер массива для работы с ним, как строки, это часто используется в линуксе:
 `static const char *uri_group_names[] = {"proto", "ip", "host", "port", "path", NULL};`
+
+## union
+Позволяет хранить в одной области памяти разные типы данных, нужно для экономии места в памяти. Минус в том что в один момент времени там может храниться в один тип данных, перезапись которой может привести к UB.
+
+```
+union union_axample {
+    char a;
+    int b;
+    float c;
+} my_union;
+```
+Память выделяется под самый большой тип в `union`.

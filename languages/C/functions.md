@@ -1,12 +1,9 @@
 # functions
 
-[signature](#signature)
-
-[prototype](#prototype)
-
-[pointer](#pointer)
-
-[typedef](#typedef)
++ [signature](#signature)
++ [prototype](#prototype)
++ [pointer](#pointer)
++ [typedef](#typedef)
 
 ## signature
 

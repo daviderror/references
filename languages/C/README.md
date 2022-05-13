@@ -5,6 +5,7 @@
 + [types](https://github.com/Drakonof/references/blob/main/languages/C/types.md)
 + [functions](https://github.com/Drakonof/references/blob/main/languages/C/functions.md)
 + [preprocessor](https://github.com/Drakonof/references/blob/main/languages/C/preprocessor.md) 
++ [atributes](https://github.com/Drakonof/references/blob/main/languages/C/atributes.md)
 + [implementation_defined_behavior](#implementation_defined_behavior)
 + [unspecified_behavior](#unspecified_behavior)
 + [undefined_behavior](#undefined_behavior)
