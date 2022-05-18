@@ -1,5 +1,7 @@
 # C++
 
++ [](#)
+
 ## оптимизация кода
 
 сайтики: https://eax.me/effective-optimization/
