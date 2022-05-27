@@ -2,33 +2,20 @@
 
 todo gcc flages and etc.. (имплисит рулс не забыть)
 
-[installation](#installation)
-
-[removing](#removing)
-
-[launching](#launching)
-
-[work_scheme](#work_scheme)
-
-[building_process](https://github.com/Drakonof/references/tree/main/C#building_process)
-
-[variables](#variables)
-
-[syntax](#syntax)
-
-[default_target](#default_target)
-
-[PHONY](#PHONY)
-
-[defines_in_c_code](#defines_in_c_code)
-
-[launch](#launch)
-
-[recursion](#recursion)
-
-[implicit_rules](#implicit_rules)
-
-[cpp](#cpp)
++ [installation](#installation)
++ [removing](#removing)
++ [launching](#launching)
++ [work_scheme](#work_scheme)
++ [building_process](https://github.com/Drakonof/references/tree/main/C#building_process)
++ [assignments](#assignments)
++ [syntax](#syntax)
++ [default_target](#default_target)
++ [PHONY](#PHONY)
++ [defines_in_c_code](#defines_in_c_code)
++ [launch](#launch)
++ [recursion](#recursion)
++ [implicit_rules](#implicit_rules)
++ [cpp](#cpp)
 
 ## installation
 ```
@@ -68,17 +55,17 @@ todo
 
 [building_process](https://github.com/Drakonof/references/tree/main/C#building_process)
 
-## variables
+## assignments
 
 `SOME_VAR = some_val` - пример рекурсивной записи в переменую;
 
-Рекурсивная запись в переменую - make в процессе сборки, будет отслеживать изменение some_val в не Makefile (изменение некой переменной/ссылки и тп в результате исполнения другой программы) и использовать её изменяющееся значение в течении сборки;
+Рекурсивная запись в переменую - make в процессе сборки, будет отслеживать изменение `some_val` в не Makefile (изменение некой переменной/ссылки и тп в результате исполнения другой программы) и использовать её изменяющееся значение в течении сборки.
 
 `SOME_VAR := some_val` - пример нерекурсивной записи в переменую;
 
 Нерекурсивная запись в переменую - значение переменной устанавливается единажды в момент присваивания и не изменяется в течении сборки.
 
-`SOME_VAR ?= some_val` - условное присваивание, срабатывает если переменная SOME_VAR еще не была определена;
+`SOME_VAR ?= some_val` - условное присваивание, срабатывает если переменная SOME_VAR еще не была определена, повторное переопределение не сработает, данная переменная будет хранить самое первое значение;
 
 Варианты присваивания нескольких значений переменной (пример для нерекурсивного присваивания, но работает и для других типов):
 
@@ -133,7 +120,7 @@ $(BUILD_DIR)/$(TARGET): $(BUILD_DIR)/$(SRC:.c=.o)
 ...
 INCDIRS := ./inc
 ...
-$(BUILDDIR)/%.o: srz/%.c $(BUILDDIR)
+$(BUILDDIR)/%.o: src/%.c $(BUILDDIR)
     gcc -O2 -std=gnu11 $(addprefix -I,$(INCDIRS)) -c $< -o $@
 ...
 ```
@@ -153,11 +140,11 @@ $(BUILDDIR)/%.o: $(SRCDIRS)/%.c $(BUILDDIR)
 
 ### CC
 
-Переменная хранящая имя компилятора. 
+Переменная хранящая имя компилятора. Можно не объявлять, тк уже предопределена в системе.
 
 ```
 ...
-CC = gcc
+CC ?= gcc
 ...
 $(BUILDDIR)/$(TARGET): $(addprefix $(BUILDDIR)/,$(SRC:.c=.o))
     $(CC) -O2 -std=gnu11 $^ -o $@
@@ -223,7 +210,7 @@ $(TARGET): $(SRC:.c=.o)
 ```
 -o - куда делать аутпут собранного бинарника (т.е. куда собрать бинарник). В данном случае это $@;
 
-$@ - синоним $(TARGET). В примере $@ это $(TARGET);
+$@ - синоним target'a. В примере $@ это $(TARGET);
 
 ### Проверка на правильность табов
 

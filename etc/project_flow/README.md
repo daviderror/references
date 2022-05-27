@@ -45,8 +45,7 @@
 + code clear (module + tb) + deleting all tabs and etc. extra white spaces: `check_syntax`
 + tcl waveform
 + bash modelsim
-+ comments
-+ doxygen
++ doxygen comments
 + bash modelsim
 + git
 
@@ -77,7 +76,7 @@ todo
 + make cppcheck
 + make misra
 + code clear + deleting all tabs and etc. extra white spaces
-+ comments
++ doxygen comments
 + make doxygen
 + gdb
 + make realese
@@ -101,7 +100,7 @@ todo
 + make cppcheck
 + make misra
 + code clear + deleting all tabs and etc. extra white spaces
-+ comments
++ doxygen comments
 + make doxygen
 + gdb
 + make realese
@@ -128,7 +127,7 @@ todo
 + make misra
 + make posix
 + clear code + deleting all tabs and etc. extra white spaces
-+ comments
++ doxygen comments
 + make doxygen
 + gdb
 + make realese
