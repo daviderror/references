@@ -1,5 +1,6 @@
 + [ssh](#ssh)
 + [wifi](#wifi)
++ [linux_headers](#linux_headers)
 
 ## ssh
 
@@ -135,3 +136,13 @@ SSID (Service Set Identifier) — это символьное название �
    `sudo ifup wlan0`
    или 
    `sudo reboot`
+
+## linux_headers
+Установит kernel headers и скомпилировать их. Это нужно тк в компиляторе для kernel нет папки build.
+```
+sudo apt-get install raspberrypi-kernel-headers
+sudo apt update
+sudo apt upgrade
+```
+
+`sudo apt autoremove` - remove
