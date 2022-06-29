@@ -95,12 +95,13 @@ todo
 + code meta
 + comments meta
 + make gcc
++ make insmod, rmmod, mknod, rm nod, chmod
 + gitignore
 + git meta
 + gdb
 + bash test
-+ make cppcheck
-+ make misra
++ cppcheck
++ misra
 + code clear + deleting all tabs and etc. extra white spaces
 + doxygen comments
 + make doxygen
