@@ -1,4 +1,4 @@
-obj-m += hello_printk.o
+obj-m += hello_world.o
 obj-m += kthreads.o
 obj-m += work_queue.o
 
@@ -14,8 +14,8 @@ all:
 tidy:
 	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) clean
 
-hello_printk:
-	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) hello_printk.ko
+hello_world:
+	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) hello_world.ko
 
 kthreads:
 	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) kthreads.ko

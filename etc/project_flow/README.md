@@ -94,9 +94,11 @@ todo
 + subline
 + code meta
 + comments meta
++ make gcc
 + gitignore
 + git meta
 + gdb
++ bash test
 + make cppcheck
 + make misra
 + code clear + deleting all tabs and etc. extra white spaces

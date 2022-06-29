@@ -1,34 +1,22 @@
-obj-m += lm-led-k.o
-obj-m += lm-button-k.o
-obj-m += lm-hd44780-k.o
-obj-m += lm-bmp280-i2c-k.o
-obj-m += lm-led-pwm-k.o
-obj-m += lm-pwm-k.o
-obj-m += lmk-random.o
+obj-m += led-lkm.o
+obj-m += hello_world.o
 
 all:
 	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) modules
 
-lm-led-k:
-	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) lm-led-k.ko
-	
-lm-button-k:
-	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) lm-button-k.ko
+led-lkm:
+	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) led-lkm.ko
 
-lm-hd44780-k:
-	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) lm-hd44780-k.ko
-
-lm-bmp280-i2c-k:
-	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) lm-bmp280-i2c-k.ko
-
-lm-led-pwm-k:
-	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) lm-led-pwm-k.ko
-
-lm-pwm-k:
-	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) lm-pwm-k.ko
-
-lmk-random:
-	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) lmk-random.ko
+hello_world:
+	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) hello_world.ko
 
 clean:
+	-rm -rf .tmp_versions
+	-rm -f modules.order .modules.order.cmd Module.symvers .Module.symvers.cmd
+	-rm -f $(obj-m) $(obj-m:.o=.mod) $(obj-m:.o=.mod.o) $(obj-m:.o=.mod.c) .$(obj-m:.o=.mod.cmd)
+	-rm -f $(addsuffix .cmd,$(addprefix .,$(obj-m)))
+	-rm -f $(addsuffix .cmd,$(addprefix .,$(obj-m:.o=.ko)))
+	-rm -f $(addsuffix .cmd,$(addprefix .,$(obj-m:.o=.mod.o)))
+
+tidy:
 	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) clean
