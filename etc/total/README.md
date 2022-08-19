@@ -1,10 +1,23 @@
 # total
-
++ [schedule](#schedule)
 + [fpga](#fpga)
-+ [firmware](#firmware)
-+ [software](#software)
-+ [environment](#environment)
++ [programming](#programming)
++ [linux](#linux)
++ [ceo](#ceo)
 + [requarements](#requarements)
+
+## schedule
+```
+dark adept --+-- fpga
+             |
+             +-- programming --+-- firmware
+             |                 |
+             |                 +-- software
+             |
+             +-- linux
+             |
+             +-- seo
+```
 
 ## fpga
      
@@ -57,14 +70,15 @@
 | Тарасов            |                    |                    |
 |                    |                    |                    |
 
-## firmware
+## programming
+### firmware
 
      Hobby
 
 | aprentice          | master             | adept              |
 | :---               | :---               | :---               |
-| Pratta C           | Zynq BM drivers    |                    |
-| C                  | FreeRTOS           |                    |
+|                    | Zynq BM drivers    |                    |
+| C (Pratta)         | FreeRTOS           |                    |
 |                    | Zynq F-S drivers   |                    |
 | Eclipse            | Zynq bootloader    |                    |
 | <ins>UART</ins>    | timings            |                    |
@@ -83,7 +97,7 @@
 | <ins>atmega8a_clock</ins> |             |                    |
 |                    |                    |                    |
 
-## software
+### software
 
     Profesional
     After firmware
@@ -107,7 +121,7 @@
 | <ins>make</ins>    |                    |                    |
 |                    |                    |                    |
 
-## environment
+## ceo
 
     Profesional
 
@@ -119,6 +133,15 @@
 | mc                 | device tree        |                    |
 | bash               | x2go               |                    |
 | ssh                | jenkins            |                    |
+|                    |                    |                    |
+
+## linux
+
+| aprentice          | master             | adept              |
+| :---               | :---               | :---               |
+| yocto + petalinux  |                    |                    |
+| linux architect    |                    |                    |
+| bash               |                    |                    |
 |                    |                    |                    |
 
 ## requarements
