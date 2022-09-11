@@ -26,7 +26,7 @@ magus --+-- fpga
 
 | aprentice       | master          | adept     |
 | :---            | :---            | :---      |
-| _vivado_ >        | power supply    | fpga_3 >! |
+| ~~viv~~ado >        | power supply    | fpga_3 >! |
 | modelsim >!     | oscilloscopes   |           |
 | ~~systemverilog~~ > | bandwidth       |           |
 | FPGA arch >     | chose fpga      |           |
