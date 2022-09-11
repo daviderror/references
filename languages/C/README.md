@@ -158,7 +158,7 @@ int main(int argc, char *argv[]){
 
 ```
 #include <stdio.h>
-#include <unistd.h>
+#include <unistd.h>  // optarg
 #include <stdlib.h>
 
 int main(int argc, char *argv[]) 
@@ -184,20 +184,20 @@ int main(int argc, char *argv[])
         case 'i':
         case 'l':
         case 'r':
-             printf("option: %c\n", opt);
+             printf("option: %c\n", opt); // opt - показывает какая опция
         break;
         case 'f':
-             printf("filename: %s\n", optarg);
+             printf("filename: %s\n", optarg); // optarg - показывает какое значение
         break;
         case ':':
             printf("option needs a value\n");
         break;
         case '?':
-            printf("unknown option: %c\n", optopt);
+            printf("unknown option: %c\n", optopt); // optopt - показывает неопознанное значение
         break;
         default:
             printf("also as in ? unknown option: %c\n", optopt);
-        break
+        break;
         }
     }
 

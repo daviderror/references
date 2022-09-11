@@ -1,165 +1,173 @@
-# total
+# magus
 + [schedule](#schedule)
 + [fpga](#fpga)
-+ [programming](#programming)
-+ [linux](#linux)
-+ [ceo](#ceo)
-+ [requarements](#requarements)
++ [firmware](#programming)
++ [software](#linux)
++ [devopps](#ceo)
+
+
+
 
 ## schedule
 ```
-dark adept --+-- fpga
-             |
-             +-- programming --+-- firmware
-             |                 |
-             |                 +-- software
-             |
-             +-- linux
-             |
-             +-- seo
+magus --+-- fpga
+        |
+        +-- firmware
+        |
+        +-- software
+        |
+        +-- devopps
 ```
 
+
+
+
 ## fpga
-     
-     Hobby
 
-| aprentice          | master             | adept              |
-| :---               | :---               | :---               |
-| Соловьёв           | ~~КНИГА~~          | <ins>hyperion</ins> |
-| <ins>systemverilog</ins> | asm          |             |
-| <ins>rtl</ins>     | fanout             |                    |
-| <ins>vivado</ins>  | <ins>rebulding</ins> |                  |
-| <ins>tb</ins>      | ecoflow            |                    |
-| tcl                | 1GE                |                    |
-| modelsim           | 10GE               |                    |
-| pins constraints   | <ins>PCIe</ins>    |                    |
-| fsm                | make               |                    |
-| florplan           | Harris ARM         |                    |
-| timings            | ARM                |                    |
-| block diagramms    | power supply       |                    |
-| primitives         | device controllers |                    |
-| fsm diagramms      | piplining          |                    |
-| counter            | SoC                |                    |
-| <ins>fifo</ins>    | <ins>xc7z010_hyperion</ins>|            |
-| <ins>piso          |                    |                    |
-| sipo               |                    |                    |
-| axi-lite           |                    |                    |
-| axi-stream         |                    |                    |
-| gray counter       |                    |                    |
-| asinc fifo         |                    |                    |
-| single port bram   |                    |                    |
-|<ins>dualport bram</ins> |               |                    |
-| <ins>true dual bram</ins> |             |                    |
-| interrupts         |                    |                    |
-| <ins>uart</ins>    |                    |                    |
-| i2c                |                    |                    |
-| spi                |                    |                    |
-| timer              |                    |                    |
-| stdlib             |                    |                    |
-| <ins>Harris</ins>  |                    |                    |
-| MIPS               |                    |                    |
-| compilation        |                    |                    |
-| optimization       |                    |                    |
-| ILA and VIO        |                    |                    |
-| BD                 |                    |                    |
-| <ins>project struct</ins> |             |                    |
-| <ins>SoC burning</ins> |                |                    |
-| FPGA burning       |                    |                    |
-| bandwidth          |                    |                    |
-| FPGA arch          |                    |                    |
-| Тарасов            |                    |                    |
-|                    |                    |                    |
+| aprentice       | master          | adept     |
+| :---            | :---            | :---      |
+| vivado >        | power supply    | fpga_3 >! |
+| modelsim >!     | oscilloscopes   |           |
+| systemverilog > | bandwidth       |           |
+| FPGA arch >     | chose fpga      |           |
+| Harris          | fpga_2 >        |           |
+| fpga_1 >        | signal gen      |           |
+| scheme reading  | race conditions |           |
+|                 |                 |           |
 
-## programming
-### firmware
 
-     Hobby
+| vivado         | fpga_1             | fpga_2              | modelsim     | systemverilog | fpga_3   | FPGA arch |
+| :---           | :---               | :---                | :---         | :---          |:---      |:---       |
+| SoC burning    | counter            | 1G (PHY,LL,NL,TL)   |              | stdlib        |          | LUT       |
+| FPGA burning   | fifo (sync, async) | 10G (PHY,LL,NL,TL)  |              | primitives    |          | MIO       |
+| VIO            | clockmeter         | PCIE                |              | modules       |          | EMIO      |
+| ILA            | piso               | axi (full)          |              | fsm           |          | BRAM      |
+| Floar planning | sipo               | DDR3                |              | tb            |          | DSP       |
+| Schems         | gray counter       | ARM core            |              | interrupts    |          | clock dom |
+| tcl            | single port bram   | 40G (PHY,LL,NL,TL)  |              | block diagrms |          | ...??     |
+| BD             | dualport bram      | DMA                 |              | fsm diagramms |          |           |
+| rebulding      | true dual bram     | 100G (PHY,LL,NL,TL) |              | fanout        |          |           |
+| IPs            | uart               | mailbox             |              | piplining     |          |           |
+| compilation    | i2c                | JESD                |              | fixed-point   |          |           |
+| optimization   | spi                | ADC                 |              |               |          |           |
+| pin constrs    | timer              | DAC                 |              |               |          |           |
+| time constrs   | random generator   | HyperRAM            |              |               |          |           |
+| ecoflow        | gpio               | NIC                 |              |               |          |           |
+| physcl constrs | axi (lite,stream)  | SDRAM               |              |               |          |           |
+|                | primitives         | DDR4                |              |               |          |           |
+|                | serdes             | SSRAM               |              |               |          |           |
+|                |                    |                     |              |               |          |           |
 
-| aprentice          | master             | adept              |
-| :---               | :---               | :---               |
-|                    | Zynq BM drivers    |                    |
-| C (Pratta)         | FreeRTOS           |                    |
-|                    | Zynq F-S drivers   |                    |
-| Eclipse            | Zynq bootloader    |                    |
-| <ins>UART</ins>    | timings            |                    |
-| I2C                | Zynq my pl uart driver |                |                    
-| SPI                |                    |                    |
-| ADC                |                    |                    |
-| Timers             |                    |                    |
-| EEPROM             |                    |                    |
-| AVR bootloader     | misra              |                    |
-| device drivers     | metaprogramming    |                    |
-| schemes            | optimizatiom       |                    |
-| timings            | Zynq F-S dev drvs  |                    |
-| std lib            | Zynq b-l dev drvs  |                    |
-| SoC                | tcp/ip??           |                    |
-|                    | ARM arch           |                    |
-| <ins>atmega8a_clock</ins> |             |                    |
-|                    |                    |                    |
 
-### software
 
-    Profesional
-    After firmware
 
-| aprentice          | master             | adept              |
-| :---               | :---               | :---               |
-| posix              | Pratta C++         |                    |
-| LKM Rasp Periph    | C++11              |                    |
-| non std lib        | C++14              |                    |
-| base algorithms    | C++17              |                    |
-| base data str      | hft algorithms     |                    |
-| compilatioin       | C++ code timings   |                    |
-| optimizatiom       | tcp/ip??           |                    |
-| timings            |                    |                    |
-| linux arch         |                    |                    |
-| LKM Rasp dev drvs  |                    |                    |
-| tcp/ip??           |                    |                    |
-| Zynq my pl uart LKM |                   |                    |
-| block schem        |                    |                    |
-| SoC                |                    |                    |
-| <ins>make</ins>    |                    |                    |
-|                    |                    |                    |
+## firmware
 
-## ceo
+| aprentice      | master            | adept |
+| :---           | :---              | :---  |
+| eclipse >!     | firm_2            |       |
+| C >!           | timings           |       |
+| firm_1 >       | logix anlz        |       |
+| ARM arch       | chose device      |       |
+| libs           | race conditions   |       |
+| schemes        | ipc (openAMP)     |       |
+| FreeRTOS >!    | deadlocks         |       |
+| multithreading | resourc mangment  |       |
+| multiprocesing | asm               |       |
+| make           | yocto >           |       |
+| compilatioin   | linux arch        |       |
+| doxygen        |                   |       |
+| cppcheck       | ebpf              |       |
+| gcc            | ubus              |       |
+| optimizatiom   | modbus            |       |
+| gdb            |                   |       |
+|                |                   |       |
+|
 
-    Profesional
 
-| aprentice          | master             | adept              |
-| :---               | :---               | :---               |
-| git                | qemu               |                    |
-| readmine           | python             |                    |
-| jira               | yocto              |                    |
-| mc                 | device tree        |                    |
-| bash               | x2go               |                    |
-| ssh                | jenkins            |                    |
-|                    |                    |                    |
+| eclipse        | C           | firm_1                      | firm_2         | stndln drv | LKM drv    | PS     | PS    | devces |yocto      |
+| :---           | :---        | :---                        | :---           | :---       | :---       | :---   | :---  |  :---  | :---      |
+|                | std lib     | bootloader (AVR,Zynq,MB)    | 1G (NL,TL,AL)  | PS >>      | PS >>      | spi    |       |        | petalinux |
+|                | prgrm strct | u-boot                      | 10G (NL,TL,AL) | PL >>      | PL >>      | i2c    |       |        | u-boot    |
+|                | metprgrmmng | stndln drv (AVR,Zynq,MB) >> | bluetooth      | my_PL >>!  | my_PL >>!  | timers |       |        | BSP       |
+|                | optmizatiom | LKM drv (Zynq) >>           | wi-fi          | devces >>! | devces >>! | gpio   |       |        | devicetree|
+|                | fixed point | lwip                        | micro-services |            |            | uart   |       |        |           |
+|                | non std lib |                             | MQTT           |            |            | EEPROM |       |        |           |
+|                | misra       |                             | FTP            |            |            |        |       |        |           |
+|                | posix       | atmega8a_clock              | HTTPS          |            |            |        |       |        |           |
+|                | sockets     | more AVR apps!              | DNS            |            |            |        |       |        |           |
+|                |             | more Zynq apps!             |                |            |            |        |       |        |           |
+|                |             | more Zynq network apps!     |                |            |            |        |       |        |           |
+|                |             | zynq7000_warehouse          |                |            |            |        |       |        |           |
+|                |             |                             |                |            |            |        |       |        |           |
 
-## linux
 
-| aprentice          | master             | adept              |
-| :---               | :---               | :---               |
-| yocto + petalinux  |                    |                    |
-| linux architect    |                    |                    |
-| bash               |                    |                    |
-|                    |                    |                    |
 
-## requarements
 
-+ <ins>C</ins>, C++, python, bash
-+ ARM, <ins>FPGA</ins>, asm, <ins>systemverilog</ins>
-+ multitasking, multithreading
-+ <ins>dbg</ins>, <ins>gcc</ins>, g++, <ins>qemu</ins>, <ins>make</ins>
-+ <ins>jira</ins>, jenkins, <ins>git</ins>
-+ embedded linux, freeRTOS, buildroot
-+ micro-services development (?) 
-+ MQTT, HTTP
-+ Wi-Fi, bluetooth
-+ <ins>i2c</ins>, <ins>spi</ins>, <ins>uart</ins>
-+ <ins>1G</ins>, <ins>10G</ins>, <ins>pcie</ins>
-+ Excellent understanding of data structures and fundamentals algorithms
-+ firmware drivers, freeRTOS drivers, embedded linux drivers, bootlosder, u-boot
-+ как работает прцессор
-+ DMA, virtualization, memory modules
-+ ubus, modbus, ebpf, json
-+ posix, misra
+## software
+
+| aprentice           | master  | adept |
+| :---                | :---    | :---  |
+| subline             | json    |       |
+| python              | yaml    |       |
+| base algorithms     |         |       |
+| base data str       |         |       |
+| block schem         |         |       |
+| design patterns     |         |       |
+|                     |         |       |
+
+
+| ?    | ?    | soft_1     | 1G (AL) |
+| :--- | :--- | :---       | :---    |
+|      |      | 1G (AL) >> | MQTT    |
+|      |      | soccets    | HTTPS   |
+|      |      | TCP server | FTP     |
+|      |      | UDP server | DNS     |
+|      |      | ssh        |         |
+|      |      |            |         |
+
+
+
+
+
+## devopps
+
+| aprentice   | master        | adept       |
+| :---        | :---          | :---        |
+| git_1 >     | git_2 >       |             |
+| jira        |               |             |
+| docker      | agile         |             |
+| qemu        | azure         |             |
+| github      | confluence    |             |
+| linux adm > |               |             |
+| bash        |               |             |
+| eng interm  | eng up-interm | eng advance |
+|             |               |             |
+
+
+| git_1     | git_2      | linux adm |
+| :---      | :---       | :---      |
+| clone     | rebase     | ssh       |
+| pull      | chery pick | bios      |
+| push      | conflicts  | grub      |
+| add       | submodules |           |
+| commit    | reset      |           |
+| branch    | .git       |           |
+| gitignore |            |           |
+| checkout  |            |           |
+| switch    |            |           |
+| config    |            |           |
+| aliases   |            |           |
+| fetch     |            |           |
+| merge     |            |           |
+| log       |            |           |
+| status    |            |           |
+| claen     |            |           |
+|           |            |           |
+
+
+
+
+## todo
+
+c++11, c++14, C++17, hft, C++ code timings 

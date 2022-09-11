@@ -1,5 +1,9 @@
 # Useful Bash scripts
 
++ [variables](#variables)
++ [branching](#branching)
+
+
 + [ls](#ls)
 + [mkdir](#mkdir)
 + [cd](#cd)
@@ -27,6 +31,22 @@
 + [shutdown](#shutdown)
 + [i2cdetect](#i2cdetect)
 + [nmap](#nmap)
+
+## variables
+
+```
+var_name="Artyom"
+x=2
+y=3
+
+echo $var_name
+echo "Привет $var_name"
+echo 'Привет $var_name'
+```
+
+## branching
+
+
 
 ## ls
 

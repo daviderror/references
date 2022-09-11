@@ -25,39 +25,35 @@
 ## coding
 
 ### hardware --------------------------------------------------
-скорость, атрибуты, асёрты
+скорость, атрибуты, асёрты, пайплайн, фанаут, synopsys translate_off
 
 + jira
 
-#### module + tb
-+ block scheme
+#### module and tb
 + fsm diagramm
++ code meta (module and tb): `check_syntax`
++ comments meta
++ tcl waveform
++ bash modelsim
 + gitignore
 + git
-
-+ subline
-+ code meta (module + tb): `check_syntax`
-+ comments meta
-+ gitignore
-+ git meta
-+ tcl waveform
-+ bash modelsim
-+ code clear (module + tb) + deleting all tabs and etc. extra white spaces: `check_syntax`
-+ tcl waveform
-+ bash modelsim
-+ doxygen comments
-+ bash modelsim
++ code clear (module and tb) and deleting all tabs and etc. extra white spaces: `check_syntax`
++ doxygen comments (module and tb)
 + git
 
 #### ip
-+ module + tb
-+ ila + vio
++ block scheme
++ module and tb
++ ila and vio
 + gitignore
++ firmware/LKM driver and shell test
 + git
 
 #### project
-todo
-
++ creatoin
++ tcl pins
++ tcl timings
++ tcl recovery
 
 
 ### firmware --------------------------------------------------
@@ -75,7 +71,7 @@ todo
 + gdb
 + make cppcheck
 + make misra
-+ code clear + deleting all tabs and etc. extra white spaces
++ code clear and deleting all tabs and etc. extra white spaces
 + doxygen comments
 + make doxygen
 + gdb
@@ -102,7 +98,7 @@ todo
 + bash test
 + cppcheck
 + misra
-+ code clear + deleting all tabs and etc. extra white spaces
++ code clear and deleting all tabs and etc. extra white spaces
 + doxygen comments
 + make doxygen
 + gdb
@@ -129,7 +125,7 @@ todo
 + make cppcheck
 + make misra
 + make posix
-+ clear code + deleting all tabs and etc. extra white spaces
++ clear code and deleting all tabs and etc. extra white spaces
 + doxygen comments
 + make doxygen
 + gdb
