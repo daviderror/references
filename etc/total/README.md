@@ -26,9 +26,9 @@ magus --+-- fpga
 
 | aprentice       | master          | adept     |
 | :---            | :---            | :---      |
-| vivado >        | power supply    | fpga_3 >! |
+| __vivado__ >        | power supply    | fpga_3 >! |
 | modelsim >!     | oscilloscopes   |           |
-| systemverilog > | bandwidth       |           |
+| ~~systemverilog~~ > | bandwidth       |           |
 | FPGA arch >     | chose fpga      |           |
 | Harris          | fpga_2 >        |           |
 | fpga_1 >        | signal gen      |           |
@@ -82,7 +82,6 @@ magus --+-- fpga
 | optimizatiom   | modbus            |       |
 | gdb            |                   |       |
 |                |                   |       |
-|
 
 
 | eclipse        | C           | firm_1                      | firm_2         | stndln drv | LKM drv    | PS     | PS    | devces |yocto      |
