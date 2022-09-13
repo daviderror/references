@@ -137,7 +137,8 @@ magus --+-- fpga
 | <details><summary>git_1 </summary>     | git_2 >       |             |
   clone
   pull  
-  push    
+  push
+  </details>    
 | jira        |               |             |
 | docker      | agile         |             |
 | qemu        | azure         |             |
