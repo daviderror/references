@@ -81,6 +81,7 @@ magus --+-- fpga
 | gcc            | ubus              |       |
 | optimizatiom   | modbus            |       |
 | gdb            |                   |       |
+| cross-compilng |                   |       |
 |                |                   |       |
 
 
@@ -133,7 +134,10 @@ magus --+-- fpga
 
 | aprentice   | master        | adept       |
 | :---        | :---          | :---        |
-| git_1 >     | git_2 >       |             |
+| <details><summary>git_1 </summary>     | git_2 >       |             |
+  clone
+  pull  
+  push    
 | jira        |               |             |
 | docker      | agile         |             |
 | qemu        | azure         |             |
@@ -149,11 +153,11 @@ magus --+-- fpga
 | clone     | rebase     | ssh       |
 | pull      | chery pick | bios      |
 | push      | conflicts  | grub      |
-| add       | submodules |           |
-| commit    | reset      |           |
+| add       | submodules | тчка встн |
+| commit    | reset      | fops arch |
 | branch    | .git       |           |
-| gitignore |            |           |
-| checkout  |            |           |
+| gitignore | diff       |           |
+| checkout  | trics      |           |
 | switch    |            |           |
 | config    |            |           |
 | aliases   |            |           |
