@@ -1,15 +1,7 @@
-obj-m += led-lkm.o
-obj-m += hello_world.o
+obj-m += timer.o
 
 all:
 	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) modules
-
-led-lkm:
-	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) led-lkm.ko
-
-hello_world:
-	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) hello_world.ko
-
 clean:
 	-rm -rf .tmp_versions
 	-rm -f modules.order .modules.order.cmd Module.symvers .Module.symvers.cmd

@@ -99,3 +99,12 @@ printf("TOTAL TIME (ms) = %f\n", total_time_ms);
 + strace и ltrace
 + gprof и gprof2dot для gcc
 + bcc/eBPF
+
+
+
+
+
+
+
+---------------------------------------------------
+
