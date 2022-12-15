@@ -108,6 +108,10 @@ MAINTAINER Artem Shimko <artyom.shimko@gmail.com>
 RUN apt-get update
 ```
 
+## pull
+
+`docker pull <image>`
+
 
 ## build
 
@@ -146,3 +150,15 @@ RUN apt-get update
 ## Copy
 
 `docker cp [IMAGE_ID]:[/file/path/within/container] [/host/path/target]`
+
+## remove
+
+`docker rmi <image>`
+
+или 
+
+`docker image rm <image>`
+
+или если нужен force
+
+`docker image rm -f <image>`

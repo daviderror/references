@@ -26,9 +26,9 @@ magus --+-- fpga
 
 | profesional          | added                 | just to help           |
 | :---                 | :---                  | :---                   |
-| SystemVerilog (FPGA) | bash (linux adm)      | tcl (Vivado, Modelsim) |
+| SystemVerilog (FPGA) | chisel                | tcl (Vivado, Modelsim) |
 | C (firmware, LKM)    | asm (firmware)        | yaml (CI/CD, Docker)   |
-| Python (software)    | C++ (linux userspace) |                        |
+| Python (software)    | C++ (linux userspace) | bash (linux adm)       |
 
 
 ## fpga
